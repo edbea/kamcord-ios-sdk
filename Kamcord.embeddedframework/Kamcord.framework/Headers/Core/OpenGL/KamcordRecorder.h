@@ -43,9 +43,6 @@
 // Call after [context presentRenderbuffer:GL_RENDERBUFFER]
 + (BOOL)afterPresentRenderbuffer;
 
-// DEPRECATED
-+ (BOOL)afterPresentRenderBuffer:(GLuint)framebuffer;
-
 // Call to capture a frame of video before the call to beforePresentRenderbuffer
 // For instance if the game has a HUD, call captureFrame before drawing the HUD;
 // the HUD will not appear in the final video.

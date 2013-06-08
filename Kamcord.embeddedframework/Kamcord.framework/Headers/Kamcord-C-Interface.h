@@ -5,30 +5,57 @@
  *
  */
 
-#ifndef Kamcord_Kamcord_C_Interface_h
-#define Kamcord_Kamcord_C_Interface_h
+#ifndef __KAMCORD_C_INTERFACE_H__
+#define __KAMCORD_C_INTERFACE_H__
 
-namespace KamcordC
-{
+#ifdef __cplusplus
+extern "C" {
+#endif
     /*******************************************************************
      *
-     * VKamcord config
+     * Kamcord config
      *
      */
     
     /*
      *
-     * Automatically disable Kamcord on certain devices.
+     * Automatically disable Kamcord on certain devices. Disabling Kamcord
+     * on a device makes all medthod calls on those devices turn into NO-OPs.
      * Call this method before you call any other Kamcord methods.
      *
+     * @param   disableiPod4G           Disable Kamcord on iPod1G, 2G, 3G, and 4G.
+     * @param   disableiPod5G           Disable Kamcord on iPod5G.
+     * @param   disableiPhone3GS        Disable Kamcord on iPhone 3GS.
+     * @param   disableiPhone4          Disable Kamcord on iPhone 4.
+     * @param   disableiPad1            Disable Kamcord on iPad 1.
+     * @param   disableiPad2            Disable Kamcord on iPad 2.
+     * @param   disableiPadMini         Disable Kamcord on iPad Mini.
+     *
      */
-    void SetDeviceBlacklist(bool disableiPod4G,
-                            bool disableiPod5G,
-                            bool disableiPhone3GS,
-                            bool disableiPhone4,
-                            bool disableiPad1,
-                            bool disableiPad2,
-                            bool disableiPadMini);
+    void Kamcord_SetDeviceBlacklist(bool disableiPod4G,
+                                    bool disableiPod5G,
+                                    bool disableiPhone3GS,
+                                    bool disableiPhone4,
+                                    bool disableiPad1,
+                                    bool disableiPad2,
+                                    bool disableiPadMini);
+    
+    /*
+     *
+     * Kamcord initialization. Must be called before you can start recording.
+     *
+     * @param   developerKey            Your Kamcord developer key.
+     * @param   developerSecret         Your Kamcord developerSecret.
+     * @param   appName                 The name of your application.
+     * @param   parentViewController    The view controller that will present the Kamcord UI.
+     *                                  This object must be an instance of UIViewController.
+     *
+     */
+    void Kamcord_Init(const char * developerKey,
+                      const char * developerSecret,
+                      const char * appName,
+                      void * parentViewController);
+    
     
     /*
      *
@@ -39,22 +66,7 @@ namespace KamcordC
      *  - The device has been blacklisted by SetDeviceBlacklist(...);
      *
      */
-    bool IsEnabled();
-    
-    /*
-     *
-     * Returns the current device orientation.
-     *
-     */
-    const char * DeviceOrientation();
-    
-    /*
-     *
-     * Set the device orientation.
-     *
-     */
-    void SetDeviceOrientation(const char * deviceOrientation);
-    
+    bool Kamcord_IsEnabled();
     
     /*******************************************************************
      *
@@ -67,35 +79,35 @@ namespace KamcordC
      * Start video recording.
      *
      */
-	void StartRecording();
+	void Kamcord_StartRecording();
     
     /*
      *
      * Stop video recording.
      *
      */
-    void StopRecording();
+    void Kamcord_StopRecording();
     
     /*
      *
      * Pause video recording.
      *
      */
-    void Pause();
+    void Kamcord_Pause();
     
     /*
      *
      * Resume video recording.
      *
      */
-    void Resume();
+    void Kamcord_Resume();
     
     /*
      *
      * Returns true if the video is recording.
      *
      */
-    bool IsRecording();
+    bool Kamcord_IsRecording();
     
     /*
      *
@@ -105,17 +117,22 @@ namespace KamcordC
      * We suggest you set the title to contain some game-specific information such as
      * the level, score, and other relevant game metrics.
      *
+     * @parama  title   The title of the last recorded video.
+     *
      */
-    void SetVideoTitle(const char * title);
+    void Kamcord_SetVideoTitle(const char * title);
     
     /*
      *
      * Set the level and score for the recorded video.
      * This metadata is used to rank videos in the watch view.
      *
+     * @param   level   The level for the last recorded video.
+     * @param   score   The score the user just achieved on the given level.
+     *
      */
-    void SetLevelAndScore(const char * level,
-                          double score);
+    void Kamcord_SetLevelAndScore(const char * level,
+                                  double score);
     
     /*
      *
@@ -125,7 +142,7 @@ namespace KamcordC
      * the scene without the HUD.
      *
      */
-    void CaptureFrame();
+    void Kamcord_CaptureFrame();
     
     /*******************************************************************
      *
@@ -139,14 +156,14 @@ namespace KamcordC
      * recently recorded video.
      *
      */
-    void ShowView();
+    void Kamcord_ShowView();
     
     /*
      *
      * Show the watch view, which has a feed of videos shared by other users.
      *
      */
-    void ShowWatchView();
+    void Kamcord_ShowWatchView();
     
     
     /*******************************************************************
@@ -158,53 +175,68 @@ namespace KamcordC
     /*
      *
      * For native iOS 6 Facebook integration, set your Facebook App ID
-     * so all Facebook actions will happen through your game's Facebook app..
+     * so all Facebook actions will happen through your game's Facebook app.
+     *
+     * @param   facebookAppID   Your app's Facebook App ID.
      *
      */
-    void SetFacebookAppID(const char * facebookAppID);
+    void Kamcord_SetFacebookAppID(const char * facebookAppID);
     
     /*
      *
      * Set the description for when the user shares to Facebook.
      *
+     * @param   description     Your app's description when a user shares a video on Facebook.
+     *
      */
-    void SetFacebookDescription(const char * description);
+    void Kamcord_SetFacebookDescription(const char * description);
     
     /*
      *
      * Set the video description and tags for YouTube.
      *
+     * @param   description     The video's description when it's shared on YouTube.
+     * @param   tags            The video's tags when it's shared on YouTube.
+     *
      */
-    void SetYouTubeSettings(const char * description,
-                            const char * tags);
+    void Kamcord_SetYouTubeSettings(const char * description,
+                                    const char * tags);
 
     /*
      *
      * Set the default tweet.
      *
+     * @param   tweet           The default tweet.
+     *
      */
-    void SetDefaultTweet(const char * tweet);
+    void Kamcord_SetDefaultTweet(const char * tweet);
     
     /*
      *
      * The Twitter desscription for the embedded video.
      *
+     * @param   twitterDescription  The twitter description for the embedded video.
+     *
      */
-    void SetTwitterDescription(const char * twitterDescription);
+    void Kamcord_SetTwitterDescription(const char * twitterDescription);
 
     /*
      *
      * Set the default email subject.
      *
+     * @param   subject         The default subject if the user shares via email.
+     *
      */
-    void SetDefaultEmailSubject(const char * subject);
+    void Kamcord_SetDefaultEmailSubject(const char * subject);
 
     /*
      *
      * Set the default email body.
      *
+     * @param   body            The default email body if the user shares via email.
+     *
      */
-    void SetDefaultEmailBody(const char * body);
+    void Kamcord_SetDefaultEmailBody(const char * body);
     
     
     /*******************************************************************
@@ -218,15 +250,17 @@ namespace KamcordC
      * Set the FPS of the recorded video. Valid values are 30 and 60 FPS.
      * The default setting is 30 FPS.
      *
+     * @param   videoFPS        The recorded video's FPS.
+     *
      */
-    void SetVideoFPS(int videoFPS);
+    void Kamcord_SetVideoFPS(int videoFPS);
     
     /*
      *
      * Returns the FPS of the recorded video.
      *
      */
-    int VideoFPS();
+    int Kamcord_VideoFPS();
     
     /*
      *
@@ -237,15 +271,17 @@ namespace KamcordC
      * of video will be recorded and shared. The default setting is 300 seconds
      * with a maximum of up to 1 hour = 60 * 60 = 3600 seconds.
      *
+     * @param   seconds         The maximum length of a recorded video.
+     *
      */
-    void SetMaximumVideoLength(unsigned int seconds);
+    void Kamcord_SetMaximumVideoLength(unsigned int seconds);
     
     /*
      *
      * Returns the maximum video length.
      *
      */
-    unsigned int MaximumVideoLength();
+    unsigned int Kamcord_MaximumVideoLength();
     
     /*******************************************************************
      *
@@ -257,15 +293,19 @@ namespace KamcordC
      *
      * Enable automatic gameplay of the week push notifications.
      *
+     * @param   notificationsEnabled    Enable video push notifications?
+     *
      */
-    void SetNotificationsEnabled(bool notificationsEnabled);
+    void Kamcord_SetNotificationsEnabled(bool notificationsEnabled);
     
     /*
      *
      * Fire a test gameplay of the week push notfication.
      *
      */
-    void FireTestNotification();
+    void Kamcord_FireTestNotification();
+#ifdef __cplusplus
 }
+#endif
 
 #endif

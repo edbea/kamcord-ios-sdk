@@ -1,10 +1,12 @@
 //
 //  KCCustomUI.h
 //  cocos2d-ios
-//
-//  Created by Haitao Mao on 4/10/13.
-//
-//
+/*
+ *
+ * Created by Haitao Mao.
+ * Copyright (c) 2013 Kamcord. All rights reserved.
+ *
+ */
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
@@ -12,11 +14,14 @@
 /* An abstract representation of a Kamcord gameplay video. This video can either live locally or on the Kamcord servers. When the video has been uploaded, the copy stored on local disk will be deleted shortly after and the video live only on the server. */
 @interface KCVideoTicket : NSObject
 
-/* Metadata for the video. The title, level, score, can be modified before the video starts uploading. */
+/* Metadata for the video. The title, message, level, score, thumbnailURL can be modified before the video starts uploading. */
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * message;
 @property (nonatomic, retain) NSString * level;
 @property (nonatomic, retain) NSNumber * score;
+@property (nonatomic, retain) NSString * thumbnailURL;
 - (NSString *)getVideoID;
+- (NSString *)getVideoURL;
 - (CGImageRef)getThumbnail;
 
 /* Check the status of a local video. These will both be true if this video lives on the Kamcord server. */
@@ -33,19 +38,19 @@
 @optional
 
 /* Called when the video has finished its local processing and is ready to be replayed and uploaded */
-- (void)videoFinishedProcessing;
+- (void)videoFinishedProcessing:(NSUInteger)localVideoID;
 
 /* Called when the video has finished uploading, video ID is available */
-- (void)videoFinishedUploading;
+- (void)videoFinishedUploading:(NSUInteger)localVideoID;
 
 /* Called when the upload failed for some reason */
-- (void)videoUploadFailed;
+- (void)videoUploadFailed:(NSUInteger)localVideoID;
 
 /* Called when the video data has been retrieved from Kamcord servers */
 - (void)videoFinishedRetrievalWithTicket:(KCVideoTicket *)ticket;
 
 /* Called if the video data retrieval failed for some reason */
-- (void)videoRetrievalFailed;
+- (void)videoRetrievalFailed:(NSString *)videoID;
 @end
 
 
@@ -67,7 +72,7 @@
    upload to start, and NO if the upload is already happening or the video has already been deleted. */
 + (BOOL)uploadVideo:(KCVideoTicket *)ticket;
 
-/* Retrieves the video ticket for the video with the given just a video ID. The delegate will be passed the ticket once the download finishes. */
+/* Retrieves the video ticket for the video with the given just a video ID. The delegate will be passed the ticket once the retrieval finishes. */
 + (void)retrieveTicketForVideoWithID:(NSString *)videoID
                             delegate:(id <VideoTicketDelegate>)delegate;
 
