@@ -21,6 +21,7 @@
  * Called when the Kamcord view appears and disappears.
  *
  */
+- (void)mainViewWillAppear;
 - (void)mainViewDidAppear;
 - (void)mainViewWillDisappear;
 - (void)mainViewDidDisappear;
@@ -30,6 +31,7 @@
  * Called when the Kamcord watch view appears and disappears
  *
  */
+- (void)watchViewWillAppear;
 - (void)watchViewDidAppear;
 - (void)watchViewWillDisappear;
 - (void)watchViewDidDisappear;
@@ -87,18 +89,18 @@
  * named videoWillUploadToURL: indicates that the video will actually
  * begin uploading.
  *
- * @param       message             The message the user entered.
+ * @param       user title          The video title that the user entered.
  * @param       facebook            Share to Facebook selected?
  * @param       twitter             Share to Twitter selected?
  * @param       youtube             Share to YouTube selected?
  * @param       email               Share via email selected?
  *
  */
-- (void)shareButtonPressedWithMessage:(NSString *)message
-                      shareToFacebook:(BOOL)facebook
-                       shareToTwitter:(BOOL)twitter
-                       shareToYouTube:(BOOL)youtube
-                       shareWithEmail:(BOOL)email;
+- (void)shareButtonPressedWithUserTitle:(NSString *)userTitle
+                        shareToFacebook:(BOOL)facebook
+                         shareToTwitter:(BOOL)twitter
+                         shareToYouTube:(BOOL)youtube
+                         shareWithEmail:(BOOL)email;
 
 
 /*

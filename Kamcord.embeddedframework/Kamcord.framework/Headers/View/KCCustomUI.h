@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * level;
 @property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) NSString * thumbnailURL;
+- (NSUInteger)getLocalVideoID;
 - (NSString *)getVideoID;
 - (NSString *)getVideoURL;
 - (CGImageRef)getThumbnail;

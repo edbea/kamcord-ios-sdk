@@ -19,7 +19,6 @@
  * Core Kamcord video recording.
  *
  */
-#import "KamcordMacros.h"
 #import "KamcordProtocols.h"
 #import "Core/OpenGL/KamcordRecorder.h"
 #import "View/KCViewController.h"
@@ -33,17 +32,7 @@
 
 /*
  *
- * Audio overlay
- *
- */
-#import "Core/Audio/KCAudio.h"
-#ifndef KCUNITY_VERSION
-#import "Core/Audio/KCSound.h"
-#endif
-
-/*
- *
- * Current verion is 1.3.2 (5/29/2013)
+ * Current verion is 1.4.0 (6/26/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -69,22 +58,6 @@ typedef enum
 
 /*
  *
- * Devices that can be automatically blacklisted.
- *
- * DEPRECATED sinced Version 1.3.2.
- *
- */
-static NSString * const DEVICE_TYPE_IPOD_4G     = @"DEVICE_TYPE_IPOD_4G";
-static NSString * const DEVICE_TYPE_IPOD_5G     = @"DEVICE_TYPE_IPOD_5G";
-static NSString * const DEVICE_TYPE_IPHONE_3GS  = @"DEVICE_TYPE_IPHONE_3GS";
-static NSString * const DEVICE_TYPE_IPHONE_4    = @"DEVICE_TYPE_IPHONE_4";
-static NSString * const DEVICE_TYPE_IPAD_1      = @"DEVICE_TYPE_IPAD_1";
-static NSString * const DEVICE_TYPE_IPAD_2      = @"DEVICE_TYPE_IPAD_2";
-static NSString * const DEVICE_TYPE_IPAD_MINI   = @"DEVICE_TYPE_IPAD_MINI";
-static NSString * const DEVICE_TYPE_SINGLE_CORE = @"DEVICE_TYPE_SINGLE_CORE";
-
-/*
- *
  * Keys for skinning the Kamcord UI. For more information, please refer to here:
  * https://github.com/kamcord/kamcord-ios-sdk/wiki/Using-the-Kamcord-API%3A-Skinning-the-Kamcord-UI
  *
@@ -106,22 +79,13 @@ typedef enum
     KC_SHARE_TITLE_PLACEHOLDER_TEXT_COLOR,
     KC_SHARE_TITLE_TEXT_COLOR,
     KC_SHARE_GRID_LABEL_COLOR,
+    KC_THUMBNAIL_CELL_COLOR,
     KC_TABLE_CELL_SPLIT_COLOR,
     KC_POWERED_BY_KAMCORD_COLOR,
-    KC_REFRESH_ARROW,
-    KC_REFRESH_TEXT_SPINNER_COLOR,
-    KC_PROGRESS_VIEW_BACKGROUND,
-    KC_WATCH_VIEW_CELL_BACKGROUND,
-    KC_WATCH_VIEW_VIDEO_TITLE_COLOR,
-    KC_WATCH_VIEW_VIDEO_TIME_COLOR,
     KC_SETTINGS_SIGN_IN_BUTTON,
     KC_SETTINGS_SIGN_IN_BUTTON_TEXT_COLOR,
     KC_SETTINGS_SIGN_OUT_BUTTON,
     KC_SETTINGS_SIGN_OUT_BUTTON_TEXT_COLOR,
-    KC_WATCH_VIEW_TOP_BAR_BACKGROUND,
-    KC_WATCH_VIEW_TOP_BUTTON_SELECTED,
-    KC_WATCH_VIEW_TOP_BUTTON_DESELECTED,
-    KC_WATCH_VIEW_TOGGLE_BUTTON_TEXT_COLOR,
     KC_NOTIFICATION_CALL_TO_ACTION_BUTTON_TEXT,
 } KC_UI_COMPONENT;
 
@@ -447,6 +411,16 @@ typedef enum
 
 
 // -------------------------------------------------------------------------
+// Voice Recording
+// -------------------------------------------------------------------------
+/*
+ * You can turn on voice recording, this method must be called before the
+ * video starts recording
+ */
++ (void)setVoiceEnabled:(bool)enabled;
++ (BOOL)voiceEnabled;
+
+// -------------------------------------------------------------------------
 // Video Metadata and Social Media Settings
 // -------------------------------------------------------------------------
 
@@ -671,6 +645,27 @@ typedef enum
 + (NSUInteger)videoFPS;
 
 // -------------------------------------------------------------------------
+// OpenGL Commands
+// -------------------------------------------------------------------------
+
+/*
+ *
+ * Call this method to save the current state of the rendered frame out to video.
+ * This is useful if you have HUD layer and would like to capture a video
+ * without the HUD. You can call this method before your HUD draws and
+ * Kamcord will write that pre-HUD frame to the video.
+ *
+ */
++ (void)captureFrame;
+
+/*
+ *
+ * Returns a snapshot of the currently rendered frame.
+ *
+ */
++ (UIImage *)snapshot;
+
+// -------------------------------------------------------------------------
 // Custom Skinning
 // For more information, please visit here:
 // https://github.com/kamcord/kamcord-ios-sdk/wiki/Using-the-Kamcord-API%3A-Skinning-the-Kamcord-UI
@@ -688,90 +683,15 @@ typedef enum
   forUiComponent:(KC_UI_COMPONENT)uiComponent;
 
 // -------------------------------------------------------------------------
-// Deprecated API methods
+// Audio Overlay
 // -------------------------------------------------------------------------
 
 /*
  *
- * You can gracefully turn off Kamcord on the devices listed at the top
- * of this header file by using the following method call.
- * If you use this method, make sure it's the first Kamcord call you make.
- *
- * Pass in an NSArray consisting of any of the devices listed above
- * (i.e. DEVICE_TYPE_IPOD, etc.).
- *
- * @param   blacklist       An NSArray of strings (defined above)
- *
- * DEPRECATED as of 1.3.2. Superseded by setDeviceBlacklist:(KC_DEVICE_TYPE)blacklist
+ * These methods allow you to add one background audio track to the recorded video.
  *
  */
-+ (void)setDeviceBlacklist_Deprecated:(NSArray *)blacklist;
-
-/*
- *
- * Pass in your developer key, secret, and application name.
- *
- * DEPRECATED as of 1.3.2. Superseded by setDeveloperKey:developerSecret:appName:parentViewController:
- *
- */
-+ (void)setDeveloperKey:(NSString *)key
-        developerSecret:(NSString *)secret
-                appName:(NSString *)name;
-
-/*
- *
- * Set the resolution of the recorded video
- *
- * When you release your game, use one of:
- *  - SMART_VIDEO_RESOLUTION/LOW_VIDEO_RESOLUTION
- *  - MEDIUM_VIDEO_RESOLUTION
- *
- * For trailers, use TRAILER_VIDEO_RESOLUTION.
- *
- * DEPRECATED since Version 1.3.2. Superseded by setVideoQuality:.
- *
- */
-typedef enum
-{
-    SMART_VIDEO_RESOLUTION      = 0,
-    LOW_VIDEO_RESOLUTION        = 0,
-    MEDIUM_VIDEO_RESOLUTION     = 1,
-    TRAILER_VIDEO_RESOLUTION    = 2,
-} KC_VIDEO_RESOLUTION;
-
-+ (void)setVideoResolution:(KC_VIDEO_RESOLUTION)resolution;
-+ (KC_VIDEO_RESOLUTION)videoResolution;
-
-+ (void)setYouTubeVideoCategory:(NSString *)category;
-+ (NSString *)youtubeCategory;
-
-+ (void)setFacebookTitle:(NSString *)title
-                 caption:(NSString *)caption
-             description:(NSString *)description;
-+ (NSString *)facebookTitle;
-+ (NSString *)facebookCaption;
-
-+ (void)setDefaultEmailSubject:(NSString *)subject
-                          body:(NSString *)body;
-
-+ (void)setDefaultTitle:(NSString *)title;
-+ (NSString *)defaultTitle;
-
-
-#ifndef KCUNITY_VERSION
-
-/*
- * Deprecated audio recording API (since Version 1.0.2).
- */
-+ (KCAudio *)playSound:(NSString *)filename
-                  loop:(BOOL)loop;
-+ (KCAudio *)playSound:(NSString *)filename;
-+ (KCAudio *)playSoundAtURL:(NSURL *)fileURL;
-
-// If you have specific sounds you want to overlay at particular times,
-// pass in an array populated with KCSound objects.
-+ (BOOL)stopRecordingAndAddSounds:(NSArray *)sounds;
-
-#endif
++ (void)overlayBackgroundTrack:(NSString *)filename;
++ (void)overlayBackgroundTrackAtURL:(NSURL *)fileURL;
 
 @end
