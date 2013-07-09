@@ -63,7 +63,7 @@ extern "C" {
      * enabled, but is disabled if any of the following conditions are met:
      *
      *  - The version of iOS is < 5.0
-     *  - The device has been blacklisted by SetDeviceBlacklist(...);
+     *  - The device has been blacklisted by Kamcord_SetDeviceBlacklist(...);
      *
      */
     bool Kamcord_IsEnabled();
@@ -104,7 +104,8 @@ extern "C" {
     
     /*
      *
-     * Returns true if the video is recording.
+     * Returns true if the video is recording. Note that there might be a slight
+     * delay after you call Kamcord_StartRecording() before this method returns true.
      *
      */
     bool Kamcord_IsRecording();
