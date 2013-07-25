@@ -301,18 +301,11 @@ typedef enum
 /*
  *
  * Set the quality of the recorded video. The default setting
- * is MEDIUM_VIDEO_QUALITY;
+ * is KC_MEDIUM_VIDEO_QUALITY;
  *
  * @param   quality     The desired recorded video quality.
  *
  */
-typedef enum
-{
-    KC_LOW_VIDEO_QUALITY        = 0,
-    KC_MEDIUM_VIDEO_QUALITY     = 1,
-    KC_TRAILER_VIDEO_QUALITY    = 2,    // Should only be used to make trailers. Do *NOT* release your game with this settings.
-} KC_VIDEO_QUALITY;
-
 + (void)setVideoQuality:(KC_VIDEO_QUALITY)quality;
 
 /*
@@ -415,10 +408,10 @@ typedef enum
 // -------------------------------------------------------------------------
 /*
  * You can turn on voice recording, this method must be called before the
- * video starts recording
+ * video starts recording. This only works on devices with iOS 6+.
  */
-+ (void)setVoiceEnabled:(bool)enabled;
-+ (BOOL)voiceEnabled;
++ (void)setVoiceOverlayEnabled:(BOOL)enabled;
++ (BOOL)voiceOverlayEnabled;
 
 // -------------------------------------------------------------------------
 // Video Metadata and Social Media Settings
@@ -660,10 +653,20 @@ typedef enum
 
 /*
  *
- * Returns a snapshot of the currently rendered frame.
+ * Returns a snapshot of the currently rendered frame. If the frame is only partially
+ * rendered, this will return a snapshot of that. If you'd like to get a snapshot
+ * of the next fully rendered frame, please call snapshotNextFrameWithCompletionHandler:
  *
  */
 + (UIImage *)snapshot;
+
+/*
+ *
+ * Creates a snapshot of the next fully rendered frame and calls back when
+ * that image is ready.
+ *
+ */
++ (void)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage *))handler;
 
 // -------------------------------------------------------------------------
 // Custom Skinning

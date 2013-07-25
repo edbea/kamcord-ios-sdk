@@ -102,6 +102,28 @@
  */
 + (UIImage *)snapshot;
 
+/*
+ *
+ * Takes a snapshot of the next frame and calls back when the frame is captured.
+ *
+ * Returns YES if a snashot will be taken. Returns NO if you've previously called this
+ * but haven't gotten a callback yet.
+ *
+ */
++ (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage *))handler;
+
+/*
+ *
+ * Takes a snapshot of the next frame and saves it to the given local file URL.
+ * This runs asynchronously and will call back into the completion handler once it's done.
+ *
+ * Returns YES if a snashot will be taken. Returns NO if you've previously called this
+ * but haven't gotten a callback yet.
+ *
+ */
++ (BOOL)saveSnapshotToURL:(NSURL *)destinationURL
+    withCompletionHandler:(void(^)(NSURL *))handler;
+
 /*!
  *
  * Set the target video FPS. The default value is 30 FPS.

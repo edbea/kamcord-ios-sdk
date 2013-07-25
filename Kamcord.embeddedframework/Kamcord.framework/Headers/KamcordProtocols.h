@@ -7,6 +7,8 @@
  *
  */
 
+#import <CoreGraphics/CoreGraphics.h>
+
 /*****************************************************************
  *
  * General Kamcord callbacks
@@ -28,7 +30,7 @@
 
 /*
  *
- * Called when the Kamcord watch view appears and disappears
+ * Called when the Kamcord watch-only view appears and disappears
  *
  */
 - (void)watchViewWillAppear;
@@ -62,13 +64,6 @@
  *
  */
 - (void)videoFinishedProcessing:(BOOL)success;
-
-/*
- *
- * Called when the user presses the button in the Gameplay of the Week UI.
- *
- */ 
-- (void)notificationCallToActionButtonPressed;
 
 #if KCUNITY_VERSION
 /*
@@ -114,7 +109,7 @@
 
 /*
  *
- * Called when the video has finished uploading or faile dot upload.
+ * Called when the video has finished uploading or failed to upload.
  *
  * @param       success             Did the video upload successfully? If the value is NO, there
  *                                  was most likely an issue with the connection quality.

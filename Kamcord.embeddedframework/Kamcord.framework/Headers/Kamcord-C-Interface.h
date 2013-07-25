@@ -68,6 +68,23 @@ extern "C" {
      */
     bool Kamcord_IsEnabled();
     
+    /*
+     *
+     * Enable or disable the live voice overlay.
+     *
+     * @param   enabled             Whether to enable or disable the live voiced overlay feature.
+     *                              By default, this is disabled.
+     *
+     */
+    void Kamcord_SetVoiceOverlayEnabled(bool eanbled);
+    
+    /*
+     *
+     * Returns true if live voice overlay has been enabled.
+     *
+     */
+    bool Kamcord_VoiceOverlayEnabled();
+    
     /*******************************************************************
      *
      * Video recording
@@ -145,6 +162,26 @@ extern "C" {
      */
     void Kamcord_CaptureFrame();
     
+    /*
+     *
+     * Set the video quality to low, medium, or trailer. Please do *NOT* release your game
+     * with trailer quality, as it makes immensely large videos with only a slight
+     * video quality improvement over medium.
+     *
+     * The default and recommended quality seting is KC_MEDIUM_VIDEO_QUALITY.
+     *
+     * @param   quality     The desired video quality.
+     *
+     */
+    typedef enum
+    {
+        KC_LOW_VIDEO_QUALITY        = 0,
+        KC_MEDIUM_VIDEO_QUALITY     = 1,
+        KC_TRAILER_VIDEO_QUALITY    = 2,    // Should only be used to make trailers. Do *NOT* release your game with this settings.
+    } KC_VIDEO_QUALITY;
+    
+    void Kamcord_SetVideoQuality(KC_VIDEO_QUALITY videoQuality);
+    
     /*******************************************************************
      *
      * Kamcord UI
@@ -214,7 +251,7 @@ extern "C" {
     
     /*
      *
-     * The Twitter desscription for the embedded video.
+     * The Twitter description for the embedded video.
      *
      * @param   twitterDescription  The twitter description for the embedded video.
      *
