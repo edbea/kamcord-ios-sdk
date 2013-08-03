@@ -120,4 +120,26 @@
 - (void)videoFinishedUploadingWithSuccess:(BOOL)success
                            kamcordVideoID:(NSString *)videoID;
 
+/*
+ *
+ * Called when a Facebook share completes.
+ *
+ * @param       videoID             The Kamcord video ID.
+ * @param       success             Whether or not the Facebook share was successful.
+ *
+ */
+- (void)      video:(NSString *)videoID
+wasSharedToFacebook:(BOOL)success;
+
+/*
+ *
+ * Called when a Twitter share completes.
+ *
+ * @param       videoID             The Kamcord video ID.
+ * @param       success             Whether or not the Twitter share was successful.
+ *
+ */
+- (void)     video:(NSString *)videoID
+wasSharedToTwitter:(BOOL)success;
+
 @end

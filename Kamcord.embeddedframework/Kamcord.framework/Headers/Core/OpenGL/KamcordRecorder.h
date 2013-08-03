@@ -109,20 +109,14 @@
  * Returns YES if a snashot will be taken. Returns NO if you've previously called this
  * but haven't gotten a callback yet.
  *
- */
-+ (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage *))handler;
-
-/*
- *
- * Takes a snapshot of the next frame and saves it to the given local file URL.
- * This runs asynchronously and will call back into the completion handler once it's done.
- *
- * Returns YES if a snashot will be taken. Returns NO if you've previously called this
- * but haven't gotten a callback yet.
+ * @param   handler         The completion handler once the next frame's snapshot is ready.
+ *                          If you passed in a non-nil destinationURL (below), the second
+ *                          argument will be the local URL of the image on disk.
+ * @param   destinationURL  If non-nil, the snapshot will be saved to the given local URL.
  *
  */
-+ (BOOL)saveSnapshotToURL:(NSURL *)destinationURL
-    withCompletionHandler:(void(^)(NSURL *))handler;
++ (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage * image, NSURL * imageURL))handler
+                                     saveToURL:(NSURL *)destinationURL;
 
 /*!
  *

@@ -662,11 +662,20 @@ typedef enum
 
 /*
  *
- * Creates a snapshot of the next fully rendered frame and calls back when
- * that image is ready.
+ * Takes a snapshot of the next frame and calls back when the frame is captured.
+ *
+ * Returns YES if a snashot will be taken. Returns NO if you've previously called this
+ * but haven't gotten a callback yet.
+ *
+ * @param   handler         The completion handler once the next frame's snapshot is ready.
+ *                          If you passed in a non-nil destinationURL (below), the second
+ *                          argument will be the local URL of the image on disk.
+ * @param   destinationURL  If non-nil, the snapshot will be saved to the given local URL.
  *
  */
-+ (void)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage *))handler;
++ (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage * image, NSURL * imageURL))handler
+                                     saveToURL:(NSURL *)destinationURL;
+
 
 // -------------------------------------------------------------------------
 // Custom Skinning
