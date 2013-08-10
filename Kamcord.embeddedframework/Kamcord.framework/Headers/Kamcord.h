@@ -9,6 +9,13 @@
 
 /*
  *
+ * Kamcord protocols to receive callbacks.
+ *
+ */
+#import "KamcordProtocols.h"
+
+/*
+ *
  * Import C interface.
  *
  */
@@ -19,20 +26,18 @@
  * Core Kamcord video recording.
  *
  */
-#import "KamcordProtocols.h"
-#import "Core/OpenGL/KamcordRecorder.h"
-#import "View/KCViewController.h"
+#import "KamcordRecorder.h"
 
 /*
  *
  * Import custom UI API.
  *
  */
-#import "View/KCCustomUI.h"
+#import "KamcordCustomUI.h"
 
 /*
  *
- * Current verion is 1.4.0 (6/26/2013)
+ * Current version is 1.4.4 (8/09/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -407,11 +412,26 @@ typedef enum
 // Voice Recording
 // -------------------------------------------------------------------------
 /*
- * You can turn on voice recording, this method must be called before the
- * video starts recording. This only works on devices with iOS 6+.
+ *
+ * To enable voice recording for the user, this method must be called before the
+ * video starts recording.
+ *
  */
 + (void)setVoiceOverlayEnabled:(BOOL)enabled;
 + (BOOL)voiceOverlayEnabled;
+
+/*
+ *
+ * Once voice overlay is enabled, the user must activate it by going to the
+ * Kamcord Settings UI and enabling it there. You can also programatically active
+ * it with the following API calls.
+ *
+ * Please note that voice overlay *must* first be enabled before trying to
+ * activate it.
+ *
+ */
++ (void)activateVoiceOverlay:(BOOL)activate;
++ (BOOL)voiceOverlayActivated;
 
 // -------------------------------------------------------------------------
 // Video Metadata and Social Media Settings

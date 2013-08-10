@@ -1,6 +1,6 @@
 //
-//  KCCustomUI.h
-//  cocos2d-ios
+//  KamcordCustomUI.h
+//
 /*
  *
  * Created by Haitao Mao.
