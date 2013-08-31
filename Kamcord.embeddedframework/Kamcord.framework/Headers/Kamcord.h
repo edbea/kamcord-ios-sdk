@@ -73,11 +73,15 @@ typedef enum
     KC_NAV_BAR_TEXT_COLOR,
     KC_BACKGROUND,
     KC_BACKGROUND_TALL,
+    KC_TOOLBAR_BACK_BUTTON,
+    KC_TOOLBAR_BACK_BUTTON_LANDSCAPE,
     KC_TOOLBAR_DONE_BUTTON,
+    KC_TOOLBAR_DONE_BUTTON_LANDSCAPE,
     KC_TOOLBAR_DONE_BUTTON_TEXT_COLOR,
     KC_TABLE_CELL_BACKGROUND_COLOR,
     KC_TABLE_CELL_TEXT_COLOR,
     KC_TOOLBAR_SHARE_BUTTON,
+    KC_TOOLBAR_SHARE_BUTTON_LANDSCAPE,
     KC_TOOLBAR_SHARE_BUTTON_TEXT_COLOR,
     KC_MAIN_SHARE_BUTTON,
     KC_MAIN_SHARE_BUTTON_TEXT_COLOR,
@@ -641,7 +645,7 @@ typedef enum
  * meets your expectations on older devices, you can increase the FPS of the recorded
  * video in production builds as well.
  *
- * The only valid values are 15, 30, and 60.
+ * Valid values are 15, 20, 30, and 60.
  *
  * @param       videoFPS            Set the FPS of the recorded video.
  *

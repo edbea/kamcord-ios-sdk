@@ -19,6 +19,14 @@ extern "C" {
     
     /*
      *
+     * Returns a C string which is the Kamcord version. You *must*
+     * strdup this return value if you want to use it later.
+     *
+     */
+    const char * Kamcord_Version();
+    
+    /*
+     *
      * Automatically disable Kamcord on certain devices. Disabling Kamcord
      * on a device makes all medthod calls on those devices turn into NO-OPs.
      * Call this method before you call any other Kamcord methods.

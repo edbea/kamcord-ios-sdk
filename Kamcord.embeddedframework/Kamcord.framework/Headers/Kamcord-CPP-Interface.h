@@ -56,12 +56,16 @@ public:
                                     bool shareWithEmail) = 0;
     
     // When the video begins to upload.
-    // If you want to save the onlineVideoURL, you *must* strdup(...) it.
-    virtual void videoWillUploadToURL(const char * onlineVideoURL) = 0;
+    // If you want to save the videoID or onlineVideoURL, you *must* strdup(...) them.
+    virtual void videoWillUploadToURL(const char * videoID, const char * onlineVideoURL) = 0;
+    
+    // When the video upload progresses.
+    // If you want to save the video ID, you *must* strdup(...) it.
+    virtual void videoUploadProgressed(const char * videoID, float progress) = 0;
     
     // When the video upload finishes.
-    // If you want to save the kamcordVideoID, you *must* strdup(...) it.
-    virtual void videoFinishedUploading(bool success, const char * kamcordVideoID) = 0;
+    // If you want to save the video ID, you *must* strdup(...) it.
+    virtual void videoFinishedUploading(const char * videoID, bool success) = 0;
 };
 
 #endif

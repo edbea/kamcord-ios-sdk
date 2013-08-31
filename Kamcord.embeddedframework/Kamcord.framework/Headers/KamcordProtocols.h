@@ -81,7 +81,7 @@
  * This is called when the user presses the share button and has successfully
  * authorized with Facebook/Twitter/YouTube. This callback does NOT
  * indicate that the share will successfully begin. The callback below
- * named videoWillUploadToURL: indicates that the video will actually
+ * named video:willUploadToURL: indicates that the video will actually
  * begin uploading.
  *
  * @param       user title          The video title that the user entered.
@@ -102,23 +102,36 @@
  *
  * Called when the video has started uploading.
  *
- * @param       kamcordURLString    The web URL of the video once it becomes uploaded.
+ * @param       videoID     The Kamcord video ID.
+ * @param       videoURL    The web URL of the video once it becomes uploaded.
  *
  */
-- (void)videoWillUploadToURL:(NSString *)kamcordURLString;
+- (void)  video:(NSString *)videoID
+willUploadToURL:(NSString *)videoURL;
+
+/*
+ *
+ * Called while the video upload is progressing.
+ *
+ * @param       videoID             The Kamcord video ID.
+ * @param       progress            The progress from 0.0 to 1.0.
+ *
+ */
+- (void)   video:(NSString *)videoID
+uploadProgressed:(float)progress;
 
 /*
  *
  * Called when the video has finished uploading or failed to upload.
  *
- * @param       success             Did the video upload successfully? If the value is NO, there
- *                                  was most likely an issue with the connection quality.
  * @param       videoID             The Kamcord video ID that can be used to query for information
  *                                  about the video.
+ * @param       success             Did the video upload successfully? If the value is NO, there
+ *                                  was most likely an issue with the connection quality.
  *
  */
-- (void)videoFinishedUploadingWithSuccess:(BOOL)success
-                           kamcordVideoID:(NSString *)videoID;
+- (void)               video:(NSString *)videoID
+finishedUploadingWithSuccess:(BOOL)success;
 
 /*
  *
