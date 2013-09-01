@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.4.4 (8/09/2013)
+ * Current version is 1.5.1 (8/31/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
