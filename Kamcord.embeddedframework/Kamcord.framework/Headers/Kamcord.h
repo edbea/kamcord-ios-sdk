@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.5.1 (8/31/2013)
+ * Current version is 1.5.2 (9/09/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -71,6 +71,7 @@ typedef enum
 {
     KC_NAV_BAR = 0,
     KC_NAV_BAR_TEXT_COLOR,
+    KC_TAB_BAR,
     KC_BACKGROUND,
     KC_BACKGROUND_TALL,
     KC_TOOLBAR_BACK_BUTTON,
