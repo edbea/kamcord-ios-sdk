@@ -56,6 +56,17 @@
 
 /*
  *
+ * Call this method to create framebuffers where the size of the screen
+ * isn't equal to the size of the primary buffer. For the target size,
+ * pass in the desired size of the primary buffer.
+ *
+ */
++ (BOOL)createFramebuffers:(GLuint)defaultFramebuffer
+           msaaFramebuffer:(GLuint)msaaFramebuffer
+               primarySize:(CGSize)primarySize;
+
+/*
+ *
  * Call this alongside any code you have that deletes your framebuffers.
  *
  */
