@@ -30,7 +30,7 @@
 
 /*
  *
- * Called when the Kamcord watch-only view appears and disappears
+ * Called when the Kamcord watch-only or gameplay of the week view appears and disappears
  *
  */
 - (void)watchViewWillAppear;

@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.5.3 (9/26/2013)
+ * Current version is 1.6.0 (10/04/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -324,7 +324,7 @@ typedef enum
 /*
  *
  * Set the quality of the recorded video. The default setting
- * is KC_MEDIUM_VIDEO_QUALITY;
+ * is KC_STANDARD_VIDEO_QUALITY;
  *
  * @param   quality     The desired recorded video quality.
  *
@@ -655,11 +655,7 @@ typedef enum
  * Controls the target frames-per-second of the recorded video.
  * By default, most of our games run at 60 FPS while the recorded video is at 30 FPS.
  *
- * This is mainly exposed for tweaking the FPS of trailer videos but if the performance
- * meets your expectations on older devices, you can increase the FPS of the recorded
- * video in production builds as well.
- *
- * Valid values are 15, 20, 30, and 60.
+ * Valid values are 15, 20, 30.
  *
  * @param       videoFPS            Set the FPS of the recorded video.
  *

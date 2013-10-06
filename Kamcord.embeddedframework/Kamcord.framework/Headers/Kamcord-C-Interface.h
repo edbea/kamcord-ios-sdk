@@ -201,20 +201,19 @@ extern "C" {
     
     /*
      *
-     * Set the video quality to low, medium, or trailer. Please do *NOT* release your game
+     * Set the video quality to standard or trailer. Please do *NOT* release your game
      * with trailer quality, as it makes immensely large videos with only a slight
-     * video quality improvement over medium.
+     * video quality improvement over standard.
      *
-     * The default and recommended quality seting is KC_MEDIUM_VIDEO_QUALITY.
+     * The default and recommended quality seting is KC_STANDARD_VIDEO_QUALITY.
      *
      * @param   quality     The desired video quality.
      *
      */
     typedef enum
     {
-        KC_LOW_VIDEO_QUALITY        = 0,
-        KC_MEDIUM_VIDEO_QUALITY     = 1,
-        KC_TRAILER_VIDEO_QUALITY    = 2,    // Should only be used to make trailers. Do *NOT* release your game with this settings.
+        KC_STANDARD_VIDEO_QUALITY     = 0,
+        KC_TRAILER_VIDEO_QUALITY    = 1,    // Should only be used to make trailers. Do *NOT* release your game with this settings.
     } KC_VIDEO_QUALITY;
     
     void Kamcord_SetVideoQuality(KC_VIDEO_QUALITY videoQuality);
