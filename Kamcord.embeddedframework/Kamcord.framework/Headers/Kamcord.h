@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.6.0 (10/04/2013)
+ * Current version is 1.6.2 (11/01/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -272,6 +272,7 @@ typedef enum
 /*
  *
  * Show the Kamcord share view and watch view inside the previously set parentViewController;
+ * This is identical to [Kamcord showViewInViewController:[Kamcord parentViewController]].
  *
  */
 + (void)showView;
@@ -288,6 +289,7 @@ typedef enum
 /*
  *
  * Show the Kamcord watch view inside the previously set parentViewController.
+ * This is identical to [Kamcord showWatchViewInViewController:[Kamcord parentViewController]].
  *
  */
 + (void)showWatchView;
@@ -377,22 +379,6 @@ typedef enum
                                height:(NSUInteger)height
                  parentViewController:(UIViewController *)parentViewController;
 
-/*
- *
- * Attach arbitrary key/value metadata to the last recorded video
- * that you can retrieve later from the Kamcord servers.
- *
- * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
- *
- */
-+ (void)setVideoMetadata:(NSDictionary *)metadata;
-
-/*
- *
- * Returns the previously set video metadata.
- *
- */
-+ (NSDictionary *)videoMetadata;
 
 // -------------------------------------------------------------------------
 // Audio Recording
@@ -400,7 +386,7 @@ typedef enum
 
 /*
  *
- * Note: This method is only to be used for non cocos2d/cocos2d-x/Unity game engines.
+ * Note: This method is only to be used for non-OpenAL/Unity game engines.
  *       For cocos2d/cocos2d-x/Unity, Kamcord will figure out the correct asbd and
  *       set it automatically. Using this method in those cases will most likely
  *       break audio recording.
@@ -415,7 +401,8 @@ typedef enum
 
 /*
  *
- * Write the live audio bytes to the recorded video.
+ * Write the live audio bytes to the recorded video. Again, this is only for custom audio engines.
+ * If you use OpenAL or Unity's game engine, there is no need for this method.
  *
  * @param       data        A pointer to the raw PCM bytes to record into the currently recording video.
  *                          The data format of this data must match the previously set asbd.
@@ -431,8 +418,13 @@ typedef enum
 // -------------------------------------------------------------------------
 /*
  *
- * To enable voice recording for the user, this method must be called before the
- * video starts recording.
+ * This enables voice recording so that either (1) your user can activate it
+ * (i.e. turn on microphone voice recording )in the Kamcord Settings UI or
+ * (2) you can activate it on behalf of the user by calling 
+ * [Kamcord activateVoiceOverlay:YES] (defined below).
+ *
+ * The main reason this method exists is to disable voice overlay in your games
+ * so that your users cannot enable voice overlay via the Kamcord Settings UI.
  *
  */
 + (void)setVoiceOverlayEnabled:(BOOL)enabled;
@@ -457,7 +449,49 @@ typedef enum
 
 /*
  *
- * Set the level and score of the last recorded video.
+ * Attach arbitrary key/value metadata to the last recorded video
+ * that you can retrieve later from the Kamcord servers.
+ *
+ * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
+ *
+ */
++ (void)setVideoMetadata:(NSDictionary *)metadata;
+
+/*
+ *
+ * Returns the previously set video metadata.
+ *
+ */
++ (NSDictionary *)videoMetadata;
+
+/*
+ *
+ * This method will query the Kamcord servers for metadata you've previously
+ * associated with an uploaded video via the setVideoMetadata API call.
+ * When the server request returns, the original metadata you had set
+ * will be returned to you as the first argument of the block.
+ * There is also NSError argument in the block that will indicate if the
+ * request was successful (for example, if the connection failed due to
+ * a poor internet connection). The returned NSDictionary is valid if and only if
+ * the NSError object is nil.
+ *
+ * You can get the Kamcord Video ID to pass to this method by implementing the
+ * KamcordDelegate protocol defined in Common/Core/KamcordProtocols.h.
+ * Implement the videoFinishedUploadingWithSuccess:kamcordVideoID: callback
+ * to get the Kamcord Video ID.
+ *
+ * @param       kamcordVideoID      The unique Kamcord ID for a previously shared video.
+ * @param       completionHandler   A block that handles the returned metadata from the server.
+ *
+ */
++ (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
+                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler;
+
+/*
+ *
+ * Set the level and score of the last recorded video. This information may be used
+ * in the Kamcord Watch View, so we recommend that, if appropriate for your game, you 
+ * set it after every [Kamcord stopRecording] and before [Kamcord showView].
  *
  * @param       level       The level of the last recorded video.
  * @param       score       The score of the last recorded video.
@@ -513,7 +547,25 @@ typedef enum
 
 /*
  *
- * By default, all shares to Facebook will be done via the Kamcord Faceboo app.
+ * For iOS 6+, if you have a Facebook app you'd like to share from, you can set its
+ * Facebook App ID here for native iOS 6 sharing. Setting sharedAuth to YES
+ * will give Kamcord access to the app's Facebook auth instead of Kamcord requesting
+ * its own permissions. To use sharedAuth, you *MUST* request the publish_actions
+ * permission and be using Facebook SDK 3.1 or later. The advantage of sharedAuth is
+ * that the user is not prompted for auth again. If you aren't using the Facebook SDK
+ * in your game, you can set sharedAuth to NO and we'll take care of things using the
+ * Kamcord Facebook app.
+ *
+ * @param       facebookAppId   The Facebook App ID.
+ * @param       sharedAuth      Whether Facebook auth should be shared between the app and Kamcord.
+ *
+ */
++ (void)setFacebookAppID:(NSString *)facebookAppID
+              sharedAuth:(BOOL)sharedAuth;
+
+/*
+ *
+ * By default, all shares to Facebook will be done via the Kamcord Facebook app.
  * However, for iOS 6, if you have a Facebook app you'd like to share from, you can set its
  * Facebook App ID here for native iOS 6 sharing. 
  *
@@ -530,6 +582,15 @@ typedef enum
  *
  */
 + (NSString *)facebookAppID;
+
+/*
+ *
+ * Returns whether Facebook authentication is shared between the app and Kamcord.
+ *
+ * @returns     The previously set Facebook shared auth.
+ *
+ */
++ (BOOL)facebookAuthShared;
 
 /*
  *
@@ -622,29 +683,6 @@ typedef enum
  *
  */
 + (NSString *)defaultEmailBody;
-
-/*
- *
- * This method will query the Kamcord servers for metadata you've previously
- * associated with an uploaded video via the setVideoMetadata API call.
- * When the server request returns, the original metadata you had set
- * will be returned to you as the first argument of the block.
- * There is also NSError argument in the block that will indicate if the
- * request was successful (for example, if the connection failed due to
- * a poor internet connection). The returned NSDictionary is valid if and only if
- * the NSError object is nil.
- *
- * You can get the Kamcord Video ID to pass to this method by implementing the
- * KamcordDelegate protocol defined in Common/Core/KamcordProtocols.h.
- * Implement the videoFinishedUploadingWithSuccess:kamcordVideoID: callback
- * to get the Kamcord Video ID.
- *
- * @param       kamcordVideoID      The unique Kamcord ID for a previously shared video.
- * @param       completionHandler   A block that handles the returned metadata from the server.
- *
- */
-+ (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
-                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler;
 
 // -------------------------------------------------------------------------
 // Advanced Settings
@@ -739,5 +777,11 @@ typedef enum
  */
 + (void)overlayBackgroundTrack:(NSString *)filename;
 + (void)overlayBackgroundTrackAtURL:(NSURL *)fileURL;
+
+// -------------------------------------------------------------------------
+// Private APIs: Do not use.
+// -------------------------------------------------------------------------
++ (void)setMode:(unsigned long long)mode;
++ (unsigned long long)mode;
 
 @end

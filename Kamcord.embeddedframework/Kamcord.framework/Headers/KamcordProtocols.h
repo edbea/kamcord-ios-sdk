@@ -65,7 +65,7 @@
  */
 - (void)videoFinishedProcessing:(BOOL)success;
 
-#if KCUNITY_VERSION
+#if KC_IS_UNITY
 /*
  *
  * Called when the thumbnail image for the video is ready.

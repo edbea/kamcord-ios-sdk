@@ -172,7 +172,7 @@ extern "C" {
      * We suggest you set the title to contain some game-specific information such as
      * the level, score, and other relevant game metrics.
      *
-     * @parama  title   The title of the last recorded video.
+     * @param   title   The title of the last recorded video.
      *
      */
     void Kamcord_SetVideoTitle(const char * title);
@@ -239,6 +239,12 @@ extern "C" {
      */
     void Kamcord_ShowWatchView();
     
+    /*
+     *
+     * Shows the Gameplay of the Week view in the default view controller.
+     *
+     */
+    void Kamcord_ShowPushNotifView();
     
     /*******************************************************************
      *
@@ -378,6 +384,23 @@ extern "C" {
      *
      */
     void Kamcord_FireTestNotification();
+    
+    /*******************************************************************
+     *
+     * OpenGL (if using KamcordRecorder and a custom game engine)
+     *
+     */
+    
+    /*
+     *
+     * Returns the current framebuffer that the engine should render to if it wants
+     * the results of that render to appear on the screen.
+     *
+     * @returns The active framebuffer.
+     *
+     */
+    int KamcordRecorder_ActiveFramebuffer();
+    
 #ifdef __cplusplus
 }
 #endif

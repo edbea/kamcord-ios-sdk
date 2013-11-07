@@ -20,6 +20,10 @@
 + (BOOL)initWithEAGLContext:(EAGLContext *)context
                       layer:(CAEAGLLayer *)layer;
 
++ (BOOL)initWithEAGLContext:(EAGLContext *)context
+                      layer:(CAEAGLLayer *)layer
+                   rotation:(int)degrees;
+
 /*
  *
  * Call this method to create framebuffers if you don't use MSAA.
@@ -100,11 +104,12 @@
 
 /*
  *
- * Anywhere in your OpenGL code where you would normally bind your defaultFramebuffer,
- * instead bind [KamcordRecorder kamcordFramebuffer].
+ * Anywhere in your OpenGL code where you would normally bind your defaultFramebuffer
+ * for rendering, instead bind [KamcordRecorder activeFramebuffer].
  *
  */
-+ (GLuint)kamcordFramebuffer;
++ (GLuint)kamcordFramebuffer;   // Deprecated in V 1.6.1 in favor of: - (GLuint)activateFramebuffer;
++ (GLuint)activeFramebuffer;
 
 /*
  *
