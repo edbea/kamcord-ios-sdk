@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.6.2 (11/01/2013)
+ * Current version is 1.6.4 (12/01/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -98,6 +98,7 @@ typedef enum
     KC_SETTINGS_SIGN_OUT_BUTTON,
     KC_SETTINGS_SIGN_OUT_BUTTON_TEXT_COLOR,
     KC_NOTIFICATION_CALL_TO_ACTION_BUTTON_TEXT,
+    KC_CROSS_PROMO_IMAGE,
 } KC_UI_COMPONENT;
 
 /*
@@ -305,6 +306,15 @@ typedef enum
 
 /*
  *
+ * Is a Kamcord view showing?
+ *
+ * @returns     Whether or not a Kamcord view is showing.
+ *
+ */
++ (BOOL)isViewShowing;
+
+/*
+ *
  * Receive callbacks about the life of a recorded video. Please note that this
  * object is *NOT* retained by Kamcord.
  *
@@ -320,6 +330,7 @@ typedef enum
  * Returns the current Kamcord delegate.
  *
  * @returns     The current Kamcord delegate.
+ *
  */
 + (id <KamcordDelegate>)delegate;
 
@@ -379,6 +390,40 @@ typedef enum
                                height:(NSUInteger)height
                  parentViewController:(UIViewController *)parentViewController;
 
+/*
+ * Returns true if there is at least one video matching the constraints
+ *
+ * @param      constraints              A dictionary of (NSString *) metadataDisplayKey ->
+ *                                      (NSObject *) value. NSString and NSNumber are supported for value.
+ *
+ */
++ (BOOL)videoExistsForMetadataConstraints:(NSDictionary *)constraints;
+
+/*
+ * Shows a Kamcord Video player playing a video with all metadata conforming to the constraints
+ * given
+ *
+ * @param      constraints              A dictionary of (NSString *) metadataDisplayKey ->
+ *                                      (ID *) value. NSString and NSNumber are supported for
+ * @param      title                    The desired title to be displayed in the shown player.
+ *                                      If nil is passed in, it uses the title the video was shared with.
+ *
+ */
++ (void)showVideoWithMetadataConstraints:(NSDictionary *)constraints
+                              withTitle:(NSString *)title;
+
+/*
+ *
+ * Shows a Kamcord Video player playing the video corresponding to the Id
+ *
+ * @param      videoID                  ID of the video to be played.
+ * @param      title                    The desired title to be displayed in the shown player.
+ *                                      If nil is passed in, it uses the title the video was shared with.
+ *
+ */
++ (void)showVideoWithVideoID:(NSString *)videoID
+                   withTitle:(NSString *)title;
+
 
 // -------------------------------------------------------------------------
 // Audio Recording
@@ -387,9 +432,9 @@ typedef enum
 /*
  *
  * Note: This method is only to be used for non-OpenAL/Unity game engines.
- *       For cocos2d/cocos2d-x/Unity, Kamcord will figure out the correct asbd and
- *       set it automatically. Using this method in those cases will most likely
- *       break audio recording.
+ *       For cocos2d/cocos2d-x/Unity (and other OpenAL-based sound engines),
+ *       Kamcord will figure out the correct asbd set it automatically.
+ *       Using this method in those cases will most likely break audio recording.
  *
  * Declare the ASBD of the audio stream. This method MUST be called before
  * any audio data is written and before startRecording is called.
@@ -419,7 +464,7 @@ typedef enum
 /*
  *
  * This enables voice recording so that either (1) your user can activate it
- * (i.e. turn on microphone voice recording )in the Kamcord Settings UI or
+ * (i.e. turn on microphone voice recording) in the Kamcord Settings UI or
  * (2) you can activate it on behalf of the user by calling 
  * [Kamcord activateVoiceOverlay:YES] (defined below).
  *
@@ -492,6 +537,8 @@ typedef enum
  * Set the level and score of the last recorded video. This information may be used
  * in the Kamcord Watch View, so we recommend that, if appropriate for your game, you 
  * set it after every [Kamcord stopRecording] and before [Kamcord showView].
+ * Set the level and score of the last recorded video.
+ * Note: Older API, bias towards setDeveloperMetadata
  *
  * @param       level       The level of the last recorded video.
  * @param       score       The score of the last recorded video.
@@ -502,11 +549,38 @@ typedef enum
 
 /*
  *
+ * Set a piece of metadata for the recorded video
+ * All metadata is cleared with the start of a recorded video
+ *
+ * @param       metadataType       The type of metaData (see KC_METADATA_TYPE for more info)
+ * @param       displayKey         Describe what the metadata is
+ * @param       displayValue       A string representation of the value for this metadata
+ * @param       numericValue       A numeric representation of the value for this metadata
+ *
+ */
++ (void)setDeveloperMetadata:(KC_METADATA_TYPE)metadataType
+                  displayKey:(NSString *)displayKey
+                displayValue:(NSString *)displayValue;
+
++ (void)setDeveloperMetadata:(KC_METADATA_TYPE)metadataType
+                  displayKey:(NSString *)displayKey
+                displayValue:(NSString *)displayValue
+                numericValue:(NSNumber *)numericValue;
+
+/*
+ *
  * Return the level and score of the last video (after it's been set).
  *
  */
 + (NSString *)level;
 + (NSNumber *)score;
+
+/*
+ *
+ * Returns the developer metadata pieces currently set
+ *
+ */
++ (NSDictionary *)developerMetadata;
 
 /*
  *

@@ -189,6 +189,66 @@ extern "C" {
     void Kamcord_SetLevelAndScore(const char * level,
                                   double score);
     
+    typedef enum
+    {
+        KC_LEVEL = 0,       // For a level played in the video.
+        KC_SCORE,           // For a score for the video.
+        KC_LIST,            // For a ',' delimited list of values to apply to a key, numerical value if given will apply to all.
+        KC_OTHER = 1000,    // For arbitrary key to value metadata.
+    } KC_METADATA_TYPE;
+    
+    /*
+     *
+     * Set a piece of metadata for the recorded video
+     * All metadata is cleared with the start of a recorded video
+     *
+     * @param       metadataType       The type of metaData (see KC_METADATA_TYPE for more info)
+     * @param       displayKey         Describe what the metadata is
+     * @param       displayValue       A string representation of the value for this metadata
+     * @param       numericValue       A numeric representation of the value for this metadata
+     *
+     */
+    void Kamcord_SetDeveloperMetadata(KC_METADATA_TYPE metadataType,
+                                      const char * displayKey,
+                                      const char * displayValue);
+    
+    void Kamcord_SetDeveloperMetadataWithNumericValue(KC_METADATA_TYPE metadataType,
+                                                      const char * displayKey,
+                                                      const char * displayValue,
+                                                      double numericValue);
+    
+    /*
+     * Returns true if there is at least one video matching the constraints
+     *
+     * @param      jsonDictionary           A json serialized dictionary of metadataDisplayKey ->
+     *                                      value. A value is either a displayValue or a numericValue
+     *                                      see Kamcord_SetDeveloperMetadata* for info
+     *
+     */
+    bool Kamcord_VideoExistsWithMetadataConstraints(const char * jsonDictionary);
+    
+    
+    /*
+     * Used to play a video that conforms to the given constraints
+     *
+     * @param       jsonDictionary        see Kamcord_VideoExistsWithMetadataConstraints for explanation
+     * @param     title                  An optional title to be displayed for the video.
+     *                                   If NULL is passed in, the title that was shared with the
+     *                                   video will be used.
+     *
+     */
+    void Kamcord_ShowVideoWithMetadataConstraints(const char * jsonDictionary, const char * title);
+    
+    /*
+     * Used to play the video with id 'videoID'
+     *  
+     * @param     videoID                The videoID for the desired video
+     * @param     title                  An optional title to be displayed for the video.
+     *                                   If NULL is passed in, the title that was shared with the
+     *                                   video will be used.
+     */
+    void Kamcord_ShowVideoWithVideoID(const char * videoID, const char * title);
+    
     /*
      *
      * Use this to record the OpenGL frame to video in its currently rendered state.
@@ -212,11 +272,31 @@ extern "C" {
      */
     typedef enum
     {
-        KC_STANDARD_VIDEO_QUALITY     = 0,
-        KC_TRAILER_VIDEO_QUALITY    = 1,    // Should only be used to make trailers. Do *NOT* release your game with this settings.
+        KC_STANDARD_VIDEO_QUALITY   = 0,
+        KC_TRAILER_VIDEO_QUALITY    = 1,    // Should only be used to make trailers. Do *NOT* release your game with this setting.
     } KC_VIDEO_QUALITY;
     
     void Kamcord_SetVideoQuality(KC_VIDEO_QUALITY videoQuality);
+    
+    /*
+     *
+     * Set the recorded audio quality. We recommend you use the defaults, which are:
+     *
+     *     - Num Channels: 2
+     *     - Frequency: 44100
+     *     - Bitrate: 64000
+     *
+     * The audio recording settings for single core devices cannot be changed due
+     * to performance reasons.
+     *
+     * @param   numChannels     The number of audio channels in the recording. Can be 1 or 2.
+     * @param   frequency       The recording frequency in Hz.
+     * @param   bitrate         The recording bitrate in bits per second.
+     *
+     */
+    void Kamcord_SetAudioRecordingProperties(unsigned int numChannels,
+                                             unsigned int frequency,
+                                             unsigned int bitrate);
     
     /*******************************************************************
      *

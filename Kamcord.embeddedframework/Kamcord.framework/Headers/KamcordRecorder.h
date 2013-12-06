@@ -108,8 +108,8 @@
  * for rendering, instead bind [KamcordRecorder activeFramebuffer].
  *
  */
-+ (GLuint)kamcordFramebuffer;   // Deprecated in V 1.6.1 in favor of: - (GLuint)activateFramebuffer;
 + (GLuint)activeFramebuffer;
++ (GLuint)kamcordFramebuffer;   // Deprecated in V 1.6.1 in favor of: - (GLuint)activateFramebuffer;
 
 /*
  *
