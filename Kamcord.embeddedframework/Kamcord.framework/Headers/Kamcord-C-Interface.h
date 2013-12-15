@@ -481,6 +481,13 @@ extern "C" {
      */
     int KamcordRecorder_ActiveFramebuffer();
     
+    /*******************************************************************
+     *
+     * Private API
+     *
+     */
+    void Kamcord_SetMode(long long unsigned mode);
+    
 #ifdef __cplusplus
 }
 #endif

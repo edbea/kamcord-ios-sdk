@@ -111,6 +111,11 @@
 + (GLuint)activeFramebuffer;
 + (GLuint)kamcordFramebuffer;   // Deprecated in V 1.6.1 in favor of: - (GLuint)activateFramebuffer;
 
++ (GLuint)kamcordRTT;
++ (GLuint)kamcordRTT2;
++ (BOOL)isDoubleBuffering;
++ (int)currentRTT;
+
 /*
  *
  * Takes a snapshot of the current screen and returns an UIImage.

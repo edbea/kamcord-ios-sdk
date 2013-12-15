@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.6.4 (12/01/2013)
+ * Current version is 1.6.5 (12/14/2013)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -53,12 +53,14 @@ typedef enum
     KC_DEVICE_TYPE_IPOD_5G          = 1 << 1,
     KC_DEVICE_TYPE_IPHONE_3GS       = 1 << 2,
     KC_DEVICE_TYPE_IPHONE_4         = 1 << 3,
-    KC_DEVICE_TYPE_IPAD_1           = 1 << 4,
-    KC_DEVICE_TYPE_IPAD_2           = 1 << 5,
-    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 6,
+    KC_DEVICE_TYPE_IPHONE_4S        = 1 << 4,
+    KC_DEVICE_TYPE_IPAD_1           = 1 << 5,
+    KC_DEVICE_TYPE_IPAD_2           = 1 << 6,
+    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 7,
+    KC_DEVICE_TYPE_IPAD_3           = 1 << 8,
     
     // Equivalent to (KC_DEVICE_TYPE_IPOD_4G | KC_DEVICE_TYPE_IPHONE_3GS | KC_DEVICE_TYPE_IPHONE_4 | KC_DEVICE_TYPE_IPAD_1)
-    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 4)
+    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 5)
 } KC_DEVICE_TYPE;
 
 /*
@@ -758,6 +760,13 @@ typedef enum
  */
 + (NSString *)defaultEmailBody;
 
+/*
+ * This method will allow you to upload a video to Facebook with the given parameters
+ */
++ (void)uploadVideoToFacebookWithAccessToken:(NSString *)accessToken
+                                       title:(NSString *)title
+                                 description:(NSString *)description;
+
 // -------------------------------------------------------------------------
 // Advanced Settings
 // -------------------------------------------------------------------------
@@ -822,23 +831,6 @@ typedef enum
 + (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage * image, NSURL * imageURL))handler
                                      saveToURL:(NSURL *)destinationURL;
 
-
-// -------------------------------------------------------------------------
-// Custom Skinning
-// For more information, please visit here:
-// https://github.com/kamcord/kamcord-ios-sdk/wiki/Using-the-Kamcord-API%3A-Skinning-the-Kamcord-UI
-// -------------------------------------------------------------------------
-
-/*
- *
- * Set the value for a particular part of the UI you'd like to reskin.
- *
- * @param       value               The value of the component you'd like to skin. Can be an UIImage or a UIColor.
- * @param       uiComponent         The key for the component you'd like to skin.
- *
- */
-+ (void)setValue:(NSObject *)value
-  forUiComponent:(KC_UI_COMPONENT)uiComponent;
 
 // -------------------------------------------------------------------------
 // Audio Overlay
