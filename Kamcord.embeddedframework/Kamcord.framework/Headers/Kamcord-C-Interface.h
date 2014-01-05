@@ -44,9 +44,11 @@ extern "C" {
                                     bool disableiPod5G,
                                     bool disableiPhone3GS,
                                     bool disableiPhone4,
+                                    bool disableiPhone4S,
                                     bool disableiPad1,
                                     bool disableiPad2,
-                                    bool disableiPadMini);
+                                    bool disableiPadMini,
+                                    bool disableiPad3);
     
     /*
      *
