@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.6.7 (01/26/2014)
+ * Current version is 1.6.8 (02/06/2014)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -113,6 +113,11 @@ typedef enum
  *
  * @returns     A string describing the current Kamcord SDK.
  *
+ */
++ (NSString *)SDKVersion;
+
+/*
+ * Deprecated version of [Kamcord SDKVersion].
  */
 + (NSString *)kamcordSDKVersion;
 
