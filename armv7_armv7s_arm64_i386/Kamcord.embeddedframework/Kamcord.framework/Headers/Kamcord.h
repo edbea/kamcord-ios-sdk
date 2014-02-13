@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.6.8 (02/06/2014)
+ * Current version is 1.7.0 (2/12/2014)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -58,8 +58,8 @@ typedef enum
 
 /*
  *
- * Keys for skinning the Kamcord UI. For more information, please refer to here:
- * https://github.com/kamcord/kamcord-ios-sdk/wiki/Using-the-Kamcord-API%3A-Skinning-the-Kamcord-UI
+ * This has been removed as of version 1.7.0. This enum is here for legacy reasons
+ * and will be removed in a future release.
  *
  */
 typedef enum
@@ -410,7 +410,7 @@ typedef enum
  *
  */
 + (void)showVideoWithMetadataConstraints:(NSDictionary *)constraints
-                              withTitle:(NSString *)title;
+                               withTitle:(NSString *)title;
 
 /*
  *
