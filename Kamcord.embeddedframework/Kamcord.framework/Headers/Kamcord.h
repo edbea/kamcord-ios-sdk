@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.7.0 (2/12/2014)
+ * Current version is 1.7.2 (2014-03-12)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -47,13 +47,17 @@ typedef enum
     KC_DEVICE_TYPE_IPHONE_3GS       = 1 << 2,
     KC_DEVICE_TYPE_IPHONE_4         = 1 << 3,
     KC_DEVICE_TYPE_IPHONE_4S        = 1 << 4,
-    KC_DEVICE_TYPE_IPAD_1           = 1 << 5,
-    KC_DEVICE_TYPE_IPAD_2           = 1 << 6,
-    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 7,
-    KC_DEVICE_TYPE_IPAD_3           = 1 << 8,
+    KC_DEVICE_TYPE_IPHONE_5         = 1 << 5,
+    KC_DEVICE_TYPE_IPHONE_5S        = 1 << 6,
+    KC_DEVICE_TYPE_IPAD_1           = 1 << 7,
+    KC_DEVICE_TYPE_IPAD_2           = 1 << 8,
+    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 9,
+    KC_DEVICE_TYPE_IPAD_3           = 1 << 10,
+    KC_DEVICE_TYPE_IPAD_4           = 1 << 11,
+    KC_DEVICE_TYPE_IPAD_AIR         = 1 << 12,
     
     // Equivalent to (KC_DEVICE_TYPE_IPOD_4G | KC_DEVICE_TYPE_IPHONE_3GS | KC_DEVICE_TYPE_IPHONE_4 | KC_DEVICE_TYPE_IPAD_1)
-    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 5)
+    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 7)
 } KC_DEVICE_TYPE;
 
 /*

@@ -35,9 +35,15 @@ extern "C" {
      * @param   disableiPod5G           Disable Kamcord on iPod5G.
      * @param   disableiPhone3GS        Disable Kamcord on iPhone 3GS.
      * @param   disableiPhone4          Disable Kamcord on iPhone 4.
+     * @param   disableiPhone4S         Disable Kamcord on iPhone 4S.
+     * @param   disableiPhone5          Disable Kamcord on iPhone 5.
+     * @param   disableiPhone5S         Disable Kamcord on iPhone 5S.
      * @param   disableiPad1            Disable Kamcord on iPad 1.
      * @param   disableiPad2            Disable Kamcord on iPad 2.
      * @param   disableiPadMini         Disable Kamcord on iPad Mini.
+     * @param   disableiPad3            Disable Kamcord on iPad 3.
+     * @param   disableiPad4            Disable Kamcord on iPad 4.
+     * @param   disableiPadAir          Disable Kamcord on iPad Air.
      *
      */
     void Kamcord_SetDeviceBlacklist(bool disableiPod4G,
@@ -45,10 +51,14 @@ extern "C" {
                                     bool disableiPhone3GS,
                                     bool disableiPhone4,
                                     bool disableiPhone4S,
+                                    bool disableiPhone5,
+                                    bool disableiPhone5S,
                                     bool disableiPad1,
                                     bool disableiPad2,
                                     bool disableiPadMini,
-                                    bool disableiPad3);
+                                    bool disableiPad3,
+                                    bool disableiPad4,
+                                    bool disableiPadAir);
     
     /*
      *
