@@ -258,4 +258,27 @@
 
 "Enter the username or email address of your Kamcord profile." = "Kamcordプロフィールのユーザー名かメールアドレスを入力してください。";
 
-"Close" = "閉じる";
+"Close" = "閉じる";"The page is taking a long time to load. Check your Internet connection and try again." = "The page is taking a long time to load. Check your Internet connection and try again.";
+
+"You must install the LINE App before you can share to LINE." = "You must install the LINE App before you can share to LINE.";
+
+"Enable Voice Overlay" = "Enable Voice Overlay";
+
+"Retry" = "Retry";
+
+"The server is not responding. Try again at a later time." = "The server is not responding. Try again at a later time.";
+
+"You must install the WeChat App before you can share to WeChat." = "You must install the WeChat App before you can share to WeChat.";
+
+"LINE App Not Found" = "LINE App Not Found";
+
+"gameplay" = "gameplay";
+
+"Cannot Connect to Server" = "Cannot Connect to Server";
+
+"WeChat App Not Found" = "WeChat App Not Found";
+
+"Please reconnect and try again." = "Please reconnect and try again.";
+
+"Slow Internet Connection" = "Slow Internet Connection";
+

@@ -11,6 +11,22 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+    
+    /*
+     *
+     * The different places a user can share a replay to.
+     *
+     */
+    typedef enum
+    {
+        KC_SHARE_TARGET_FACEBOOK = 0,
+        KC_SHARE_TARGET_TWITTER,
+        KC_SHARE_TARGET_YOUTUBE,
+        KC_SHARE_TARGET_EMAIL,
+        KC_SHARE_TARGET_WECHAT,
+        KC_SHARE_TARGET_LINE,
+    } KC_SHARE_TARGET;
+    
     /*******************************************************************
      *
      * Kamcord config
@@ -189,18 +205,6 @@ extern "C" {
      */
     void Kamcord_SetVideoTitle(const char * title);
     
-    /*
-     *
-     * Set the level and score for the recorded video.
-     * This metadata is used to rank videos in the watch view.
-     *
-     * @param   level   The level for the last recorded video.
-     * @param   score   The score the user just achieved on the given level.
-     *
-     */
-    void Kamcord_SetLevelAndScore(const char * level,
-                                  double score);
-    
     typedef enum
     {
         KC_LEVEL = 0,       // For a level played in the video.
@@ -208,6 +212,29 @@ extern "C" {
         KC_LIST,            // For a ',' delimited list of values to apply to a key, numerical value if given will apply to all.
         KC_OTHER = 1000,    // For arbitrary key to value metadata.
     } KC_METADATA_TYPE;
+    
+    /*
+     *
+     * Set the ways users can share their videos. You can use this method to choose which
+     * forms of social media users will have access to when they go to share a replay. By default
+     * the sharing options are Facebook, Twitter, Youtube, Email. You must pass in
+     * exactly four valid distinct KC_SHARE_TARGET enums, else nothing will be changed. The order
+     * of these parameters will affect how the share options are laid out in the UI.
+     *
+     * Note: If you select KC_SHARE_TARGET_WECHAT as an option, you *MUST* call 
+     *       Kamcord_SetWeChatAppID(...) with a valid WeChat App ID, else your
+     *       user will not be able to share to WeChat.
+     *
+     * @param       target1             The top-left element of the share grid
+     * @param       target2             The top-right element of the share grid
+     * @param       target3             The bottom-left element of the share grid
+     * @param       target4             The bottom-right element of the share grid
+     *
+     */
+    void Kamcord_SetShareTargets(KC_SHARE_TARGET target1,
+                                 KC_SHARE_TARGET target2,
+                                 KC_SHARE_TARGET target3,
+                                 KC_SHARE_TARGET target4);
     
     /*
      *
@@ -356,6 +383,32 @@ extern "C" {
     
     /*
      *
+     * For iOS 6+, if you have a Facebook app you'd like to share from, you can set its
+     * Facebook App ID here for native iOS 6 sharing. Setting sharedAuth to YES
+     * will give Kamcord access to the app's Facebook auth instead of Kamcord requesting
+     * its own permissions. To use sharedAuth, you *MUST* request the publish_actions
+     * permission and be using Facebook SDK 3.1 or later. The advantage of sharedAuth is
+     * that the user is not prompted for auth again. If you aren't using the Facebook SDK
+     * in your game, you can set sharedAuth to NO and we'll take care of things using the
+     * Kamcord Facebook app.
+     *
+     * @param       facebookAppId   The Facebook App ID.
+     * @param       sharedAuth      Whether Facebook auth should be shared between the app and Kamcord.
+     *
+     */
+    void Kamcord_SetFacebookAppIDAndShareAuth(const char * facebookAppID, bool useSharedAuth);
+    
+    /*
+     *
+     * Sets the WeChat App ID so that you can set it as a share target in the share grid.
+     *
+     * @param       weChatAppId   The WeChat App ID.
+     *
+     */
+    void Kamcord_SetWeChatAppID(const char * weChatAppID);
+    
+    /*
+     *
      * Set the description for when the user shares to Facebook.
      *
      * @param   description     Your app's description when a user shares a video on Facebook.
@@ -492,6 +545,27 @@ extern "C" {
      *
      */
     int KamcordRecorder_ActiveFramebuffer();
+    
+    /*******************************************************************
+     *
+     * Deprecated methods
+     *
+     */
+    
+    /*
+     * As of 1.7.3, this has been deprecated in favor of setDeveloperMetadata:...
+     *
+     * The metadata documentation can be found here: https://github.com/kamcord/kamcord-ios-sdk/wiki/Kamcord-Settings-and-Features#general-video-metadata
+     *
+     * Set the level and score for the recorded video.
+     * This metadata is used to rank videos in the watch view.
+     *
+     * @param   level   The level for the last recorded video.
+     * @param   score   The score the user just achieved on the given level.
+     *
+     */
+    void Kamcord_SetLevelAndScore(const char * level,
+                                  double score);
     
     /*******************************************************************
      *

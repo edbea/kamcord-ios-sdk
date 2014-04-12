@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.7.2 (2014-03-12)
+ * Current version is 1.7.3 (2014-04-11)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -61,44 +61,17 @@ typedef enum
 } KC_DEVICE_TYPE;
 
 /*
- *
- * This has been removed as of version 1.7.0. This enum is here for legacy reasons
- * and will be removed in a future release.
+ * 
+ * The various screens of the Kamcord UI.
  *
  */
 typedef enum
 {
-    KC_NAV_BAR = 0,
-    KC_NAV_BAR_TEXT_COLOR,
-    KC_TAB_BAR,
-    KC_BACKGROUND,
-    KC_BACKGROUND_TALL,
-    KC_TAB_BAR_SELECTED_COLOR,
-    KC_TOOLBAR_BACK_BUTTON,
-    KC_TOOLBAR_BACK_BUTTON_LANDSCAPE,
-    KC_TOOLBAR_DONE_BUTTON,
-    KC_TOOLBAR_DONE_BUTTON_LANDSCAPE,
-    KC_TOOLBAR_DONE_BUTTON_TEXT_COLOR,
-    KC_TABLE_CELL_BACKGROUND_COLOR,
-    KC_TABLE_CELL_TEXT_COLOR,
-    KC_TOOLBAR_SHARE_BUTTON,
-    KC_TOOLBAR_SHARE_BUTTON_LANDSCAPE,
-    KC_TOOLBAR_SHARE_BUTTON_TEXT_COLOR,
-    KC_MAIN_SHARE_BUTTON,
-    KC_MAIN_SHARE_BUTTON_TEXT_COLOR,
-    KC_SHARE_TITLE_PLACEHOLDER_TEXT_COLOR,
-    KC_SHARE_TITLE_TEXT_COLOR,
-    KC_SHARE_GRID_LABEL_COLOR,
-    KC_THUMBNAIL_CELL_COLOR,
-    KC_TABLE_CELL_SPLIT_COLOR,
-    KC_POWERED_BY_KAMCORD_COLOR,
-    KC_SETTINGS_SIGN_IN_BUTTON,
-    KC_SETTINGS_SIGN_IN_BUTTON_TEXT_COLOR,
-    KC_SETTINGS_SIGN_OUT_BUTTON,
-    KC_SETTINGS_SIGN_OUT_BUTTON_TEXT_COLOR,
-    KC_NOTIFICATION_CALL_TO_ACTION_BUTTON_TEXT,
-    KC_CROSS_PROMO_IMAGE,
-} KC_UI_COMPONENT;
+    KC_WATCH_TAB = 0,
+    KC_PROFILE_TAB,
+    KC_CROSS_PROMO_TAB,
+    KC_SHARE_TAB,
+} KC_UI_INITIAL_TAB;
 
 /*
  *
@@ -119,11 +92,6 @@ typedef enum
  *
  */
 + (NSString *)SDKVersion;
-
-/*
- * Deprecated version of [Kamcord SDKVersion].
- */
-+ (NSString *)kamcordSDKVersion;
 
 /*
  *
@@ -294,7 +262,7 @@ typedef enum
 /*
  *
  * Show the Kamcord watch view inside the previously set parentViewController.
- * This is identical to [Kamcord showWatchViewInViewController:[Kamcord parentViewController]].
+ * This is identical to [Kamcord showWatchViewInViewController:[Kamcord parentViewController] initialTab:KC_WATCH_TAB].
  *
  */
 + (void)showWatchView;
@@ -307,6 +275,17 @@ typedef enum
  *
  */
 + (void)showWatchViewInViewController:(UIViewController *)parentViewController;
+
+/*
+ *
+ * Show the Kamcord watch view inside the given UIViewController.
+ *
+ * @param       parentViewController    The UIViewController that will show the Kamcord watch view.
+ *
+ * @param       initialTab              The initial tab that will be open. Can either be the watch tab, the profile tab, or the cross promotion tab if you have the cross promotion feature enabled for your game. The default screen is the watch screen.
+ *
+ */
++ (void)showWatchViewInViewController:(UIViewController *)parentViewController initialTab:(KC_UI_INITIAL_TAB)initialTab;
 
 /*
  *
@@ -378,21 +357,13 @@ typedef enum
 
 /*
  *
- * Returns a UIView of the thumbnail cropped to the given width and height.
- * When the thumbnail is tapped, the Kamcord UI will be shown.
+ * Is there a valid video such that [Kamcord showView] would show the Kamcord UI?
+ * Note that [Kamcord showView] is always safe to call, even if there is no video.
  *
- * @param       width                   The desired width of the thumbnail.
- * @param       height                  The desired height of the thumbnail.
- * @param       parentViewController    The UIViewController that will present the Kamcord UI
- *                                      when the thumbnail is tapped.
- *
- * @returns     A UIView which has a thumbnail of the last recorded video. When the user taps
- *              on this UIView, it will present the Kamcord UI in the given parentViewController.
+ * @returns     Whether or not there's a valid video that [Kamcord showView] could present.
  *
  */
-+ (UIView *)getThumbnailViewWithWidth:(NSUInteger)width
-                               height:(NSUInteger)height
-                 parentViewController:(UIViewController *)parentViewController;
++ (BOOL)hasValidVideo;
 
 /*
  * Returns true if there is at least one video matching the constraints
@@ -427,7 +398,6 @@ typedef enum
  */
 + (void)showVideoWithVideoID:(NSString *)videoID
                    withTitle:(NSString *)title;
-
 
 // -------------------------------------------------------------------------
 // Audio Recording
@@ -498,58 +468,28 @@ typedef enum
 
 /*
  *
- * Attach arbitrary key/value metadata to the last recorded video
- * that you can retrieve later from the Kamcord servers.
+ * Set the ways users can share their videos. You can use this method to choose which 
+ * forms of social media users will have access to when they go to share a replay. By default
+ * the sharing options are Facebook, Twitter, Youtube, Email. You must pass in
+ * exactly four valid distinct KC_SHARE_TARGET enums, else nothing will be changed. The order
+ * of these parameters will affect how the share options are laid out in the UI.
  *
- * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
+ * The possible values are defined in Kamcord-C-Interface.h.
  *
- */
-+ (void)setVideoMetadata:(NSDictionary *)metadata;
-
-/*
+ * Note: If you select KC_SHARE_TARGET_WECHAT as an option, you *MUST* call
+ *       [Kamcord setWeChatAppID:...] with a valid WeChat App ID, else your
+ *       user will not be able to share to WeChat.
  *
- * Returns the previously set video metadata.
- *
- */
-+ (NSDictionary *)videoMetadata;
-
-/*
- *
- * This method will query the Kamcord servers for metadata you've previously
- * associated with an uploaded video via the setVideoMetadata API call.
- * When the server request returns, the original metadata you had set
- * will be returned to you as the first argument of the block.
- * There is also NSError argument in the block that will indicate if the
- * request was successful (for example, if the connection failed due to
- * a poor internet connection). The returned NSDictionary is valid if and only if
- * the NSError object is nil.
- *
- * You can get the Kamcord Video ID to pass to this method by implementing the
- * KamcordDelegate protocol defined in Common/Core/KamcordProtocols.h.
- * Implement the videoFinishedUploadingWithSuccess:kamcordVideoID: callback
- * to get the Kamcord Video ID.
- *
- * @param       kamcordVideoID      The unique Kamcord ID for a previously shared video.
- * @param       completionHandler   A block that handles the returned metadata from the server.
+ * @param       target1             The top-left element of the share grid
+ * @param       target2             The top-right element of the share grid
+ * @param       target3             The bottom-left element of the share grid
+ * @param       target4             The bottom-right element of the share grid
  *
  */
-+ (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
-                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler;
-
-/*
- *
- * Set the level and score of the last recorded video. This information may be used
- * in the Kamcord Watch View, so we recommend that, if appropriate for your game, you 
- * set it after every [Kamcord stopRecording] and before [Kamcord showView].
- * Set the level and score of the last recorded video.
- * Note: Older API, bias towards setDeveloperMetadata
- *
- * @param       level       The level of the last recorded video.
- * @param       score       The score of the last recorded video.
- *
- */
-+ (void)setLevel:(NSString *)level
-           score:(NSNumber *)score;
++ (void)setShareTargetsWithTarget1:(KC_SHARE_TARGET)target1
+                           target2:(KC_SHARE_TARGET)target2
+                           target3:(KC_SHARE_TARGET)target3
+                           target4:(KC_SHARE_TARGET)target4;
 
 /*
  *
@@ -730,6 +670,24 @@ typedef enum
 
 /*
  *
+ * Sets the WeChat App ID so you can set it as a share target in the share grid.
+ *
+ * @param       weChatAppId   The WeChat App ID.
+ *
+ */
++ (void)setWeChatAppId:(NSString *)weChatAppId;
+
+/*
+ *
+ * Returns the previously set WeChat App ID.
+ *
+ * @returns     The previously set WeChat App ID.
+ *
+ */
++ (NSString *)weChatAppId;
+
+/*
+ *
  * Set the default email subject if the user shares a video via email.
  *
  * @param       subject         The default email subject.
@@ -808,7 +766,7 @@ typedef enum
  *                                  use the 2x version on retina devices.
  *
  */
-+ (void)setCrossPromoIcon:(NSString *)imageName;
++ (void)enableCrossPromotionWithImageName:(NSString *)imageName;
 
 // -------------------------------------------------------------------------
 // OpenGL Commands
@@ -861,6 +819,69 @@ typedef enum
  */
 + (void)overlayBackgroundTrack:(NSString *)filename;
 + (void)overlayBackgroundTrackAtURL:(NSURL *)fileURL;
+
+// -------------------------------------------------------------------------
+// Deprecated methods
+// -------------------------------------------------------------------------
+
+/*
+ *
+ * Attach arbitrary key/value metadata to the last recorded video
+ * that you can retrieve later from the Kamcord servers.
+ *
+ * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
+ *
+ */
++ (void)setVideoMetadata:(NSDictionary *)metadata;
+
+/*
+ *
+ * Returns the previously set video metadata.
+ *
+ */
++ (NSDictionary *)videoMetadata;
+
+/*
+ *
+ * This method will query the Kamcord servers for metadata you've previously
+ * associated with an uploaded video via the setVideoMetadata API call.
+ * When the server request returns, the original metadata you had set
+ * will be returned to you as the first argument of the block.
+ * There is also NSError argument in the block that will indicate if the
+ * request was successful (for example, if the connection failed due to
+ * a poor internet connection). The returned NSDictionary is valid if and only if
+ * the NSError object is nil.
+ *
+ * You can get the Kamcord Video ID to pass to this method by implementing the
+ * KamcordDelegate protocol defined in Common/Core/KamcordProtocols.h.
+ * Implement the videoFinishedUploadingWithSuccess:kamcordVideoID: callback
+ * to get the Kamcord Video ID.
+ *
+ * @param       kamcordVideoID      The unique Kamcord ID for a previously shared video.
+ * @param       completionHandler   A block that handles the returned metadata from the server.
+ *
+ */
++ (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
+                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler;
+
+/*
+ *
+ * As of 1.7.3, this has been deprecated in favor of setDeveloperMetadata:...
+ *
+ * The metadata documentation can be found here: https://github.com/kamcord/kamcord-ios-sdk/wiki/Kamcord-Settings-and-Features#general-video-metadata
+ *
+ * Set the level and score of the last recorded video. This information may be used
+ * in the Kamcord Watch View, so we recommend that, if appropriate for your game, you
+ * set it after every [Kamcord stopRecording] and before [Kamcord showView].
+ * Set the level and score of the last recorded video.
+ * Note: Older API, bias towards setDeveloperMetadata
+ *
+ * @param       level       The level of the last recorded video.
+ * @param       score       The score of the last recorded video.
+ *
+ */
++ (void)setLevel:(NSString *)level
+           score:(NSNumber *)score;
 
 // -------------------------------------------------------------------------
 // Private APIs: Do not use.
