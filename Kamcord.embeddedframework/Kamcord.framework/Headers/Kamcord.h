@@ -48,16 +48,17 @@ typedef enum
     KC_DEVICE_TYPE_IPHONE_4         = 1 << 3,
     KC_DEVICE_TYPE_IPHONE_4S        = 1 << 4,
     KC_DEVICE_TYPE_IPHONE_5         = 1 << 5,
-    KC_DEVICE_TYPE_IPHONE_5S        = 1 << 6,
-    KC_DEVICE_TYPE_IPAD_1           = 1 << 7,
-    KC_DEVICE_TYPE_IPAD_2           = 1 << 8,
-    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 9,
-    KC_DEVICE_TYPE_IPAD_3           = 1 << 10,
-    KC_DEVICE_TYPE_IPAD_4           = 1 << 11,
-    KC_DEVICE_TYPE_IPAD_AIR         = 1 << 12,
+    KC_DEVICE_TYPE_IPHONE_5C        = 1 << 6,
+    KC_DEVICE_TYPE_IPHONE_5S        = 1 << 7,
+    KC_DEVICE_TYPE_IPAD_1           = 1 << 8,
+    KC_DEVICE_TYPE_IPAD_2           = 1 << 9,
+    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 10,
+    KC_DEVICE_TYPE_IPAD_3           = 1 << 11,
+    KC_DEVICE_TYPE_IPAD_4           = 1 << 12,
+    KC_DEVICE_TYPE_IPAD_AIR         = 1 << 13,
     
     // Equivalent to (KC_DEVICE_TYPE_IPOD_4G | KC_DEVICE_TYPE_IPHONE_3GS | KC_DEVICE_TYPE_IPHONE_4 | KC_DEVICE_TYPE_IPAD_1)
-    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 7)
+    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 8)
 } KC_DEVICE_TYPE;
 
 /*
@@ -468,6 +469,40 @@ typedef enum
 
 /*
  *
+ * Sets the WeChat App ID so you can set it as a share target in the share grid.
+ *
+ * In order to use WeChat, you *MUST* link you app against libWeChatSDK.a and
+ * add "-ObjC" to Build Settings => Other Linker Flags.
+ *
+ * @param       weChatAppId   The WeChat App ID.
+ *
+ */
++ (void)setWeChatAppId:(NSString *)weChatAppId;
+
+/*
+ *
+ * Returns whether or not WeChat sharing is enabled. In order to enable WeChat
+ * sharing, you *MUST* do the following:
+ *
+ *      1. Link you app against libWeChatSDK.a.
+ *      2. Add "-ObjC" to Build Settings => Other Linker Flags.
+ *      3. [Kamcord setWeChatAppID:...] with a valid WeChat app ID.
+ *
+ * ATTENTION: As of 2014-04-14, the latest available WeChat static lib (libWeChatSDK.a)
+ * only contains slices for armv7, armv7s, and i386. This means that if you
+ * want WeChat to work on arm64 devices like the iPhone 5S, iPad Air, and
+ * iPad Mini Retina, you *MUST* build your app to target the armv7 and armv7s
+ * architectures but *NOT* include arm64. If you include arm64 as a valid architecture,
+ * WeChat will only be available on non arm64 devices (and this method wil return NO on arm64 devices)!
+ * This restriction will be removed as soon as WeChat releases a new SDK that has an arm64 slice.
+ *
+ * @returns     Whether or not WeChat sharing is enabled on the current device.
+ *
+ */
++ (BOOL)isWeChatEnabled;
+
+/*
+ *
  * Set the ways users can share their videos. You can use this method to choose which 
  * forms of social media users will have access to when they go to share a replay. By default
  * the sharing options are Facebook, Twitter, Youtube, Email. You must pass in
@@ -479,6 +514,9 @@ typedef enum
  * Note: If you select KC_SHARE_TARGET_WECHAT as an option, you *MUST* call
  *       [Kamcord setWeChatAppID:...] with a valid WeChat App ID, else your
  *       user will not be able to share to WeChat.
+ *
+ *       You *MUST* also link your app against libWeChatSDK.a and
+ *       add "-ObjC" to Build Settings => Other Linker Flags.
  *
  * @param       target1             The top-left element of the share grid
  * @param       target2             The top-right element of the share grid
@@ -667,15 +705,6 @@ typedef enum
  *
  */
 + (NSString *)twitterDescription;
-
-/*
- *
- * Sets the WeChat App ID so you can set it as a share target in the share grid.
- *
- * @param       weChatAppId   The WeChat App ID.
- *
- */
-+ (void)setWeChatAppId:(NSString *)weChatAppId;
 
 /*
  *

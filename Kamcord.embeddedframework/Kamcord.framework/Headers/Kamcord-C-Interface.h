@@ -53,6 +53,7 @@ extern "C" {
      * @param   disableiPhone4          Disable Kamcord on iPhone 4.
      * @param   disableiPhone4S         Disable Kamcord on iPhone 4S.
      * @param   disableiPhone5          Disable Kamcord on iPhone 5.
+     * @param   disableiPhone5C         Disable Kamcord on iPhone 5C.
      * @param   disableiPhone5S         Disable Kamcord on iPhone 5S.
      * @param   disableiPad1            Disable Kamcord on iPad 1.
      * @param   disableiPad2            Disable Kamcord on iPad 2.
@@ -68,6 +69,7 @@ extern "C" {
                                     bool disableiPhone4,
                                     bool disableiPhone4S,
                                     bool disableiPhone5,
+                                    bool disableiPhone5C,
                                     bool disableiPhone5S,
                                     bool disableiPad1,
                                     bool disableiPad2,
