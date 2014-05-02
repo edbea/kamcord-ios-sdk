@@ -155,7 +155,7 @@ extern "C" {
      * Start video recording.
      *
      */
-	void Kamcord_StartRecording();
+    void Kamcord_StartRecording();
     
     /*
      *
@@ -318,6 +318,48 @@ extern "C" {
     } KC_VIDEO_QUALITY;
     
     void Kamcord_SetVideoQuality(KC_VIDEO_QUALITY videoQuality);
+    
+    /*
+     *
+     * For iOS, if you have a custom audio engine that's not OpenAL or FMOD and want to
+     * record audio along with the video, please set the audio stream parameters
+     * on startup. The audio bytes *MUST* be linear PCM with 1 frame per packet.
+     *
+     * @param   sampleRate      The number of sample frames per second in the data stream.
+     * @param   iOSFormatFlags  The format flags as defined in <CoreAudio/CoreAudioTypes.h>.
+     * @param   bytesPerSample  The number of bytes per audio sample. This is typically 2 (16-bit)
+     *                          or 4 (32-bit). Do *NOT* account for whether or not the audio
+     *                          stream is mono or stereo (i.e. numChannels below is 1 or 2).
+     *                          This is the number of bytes per mono channel. If you set
+     *                          numChannels below to 2, we will take that into account in
+     *                          our internal calculations.
+     * @param   numChannels     How many channels are encoded in the input stream.
+     *                          Valid values are 1 or 2.
+     *
+     * As an example, here is the setting that Kamcord's OpenAL implementation uses:
+     *
+     *      sampleRate      : 44100.0
+     *      iosFormatFlags  : kAudioFormatFlagIsSignedInteger | kAudioFormatFlagsNativeEndian | kAudioFormatFlagIsPacked
+     *      bytesPerSample  : sizeof(AudioSampleType) (this is equal to 2 bytes per sample)
+     *      numChannels     : 2
+     *
+     *
+     */
+    void Kamcord_SetAudioStreamDescription(float sampleRate,
+                                           unsigned int iOSFormatFlags,
+                                           unsigned int bytesPerSample,
+                                           unsigned int numChannels);
+    
+    /*
+     *
+     * Write the following audio bytes (with the format set by Kamcord_SetAudioStreamDescription)
+     * to the video. If no video is being recorded, this method does nothing.
+     *
+     * @param   data        The pointer to the audio data byte stream.
+     * @param   numSamples  The number of audio samples in this data buffer.
+     *
+     */
+    void Kamcord_WriteAudioBytes(void * data, unsigned int numSamples);
     
     /*
      *

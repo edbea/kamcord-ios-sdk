@@ -9,6 +9,13 @@
 
 /*
  *
+ * Convenience definition for deprecated methods
+ *
+ */
+#define __deprecated    __attribute__((deprecated))
+
+/*
+ *
  * Kamcord protocols to receive callbacks.
  *
  */
@@ -30,7 +37,7 @@
 
 /*
  *
- * Current version is 1.7.3 (2014-04-11)
+ * Current version is 1.7.4 (2014-05-02)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -623,6 +630,28 @@ typedef enum
 
 /*
  *
+ * If you use Facebook shared auth and want to use SSO, you must call this method when
+ * Facebook calls back into your app. This is typically done in your application delegate like so:
+ *
+ * - (BOOL)application:(UIApplication *)application
+ *             openURL:(NSURL *)url
+ *   sourceApplication:(NSString *)sourceApplication
+ *          annotation:(id)annotation
+ * {
+ *     // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+ *     BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication] &&
+ *                       [Kamcord handleOpenURL:url];
+ *
+ *     return wasHandled;
+ * }
+ *
+ * @param       url         The URL that was passed to your app from the Facebook app callback.
+ *
+ */
++ (BOOL)handleOpenURL:(NSURL *)url;
+
+/*
+ *
  * By default, all shares to Facebook will be done via the Kamcord Facebook app.
  * However, for iOS 6, if you have a Facebook app you'd like to share from, you can set its
  * Facebook App ID here for native iOS 6 sharing. 
@@ -861,14 +890,14 @@ typedef enum
  * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
  *
  */
-+ (void)setVideoMetadata:(NSDictionary *)metadata;
++ (void)setVideoMetadata:(NSDictionary *)metadata __deprecated;
 
 /*
  *
  * Returns the previously set video metadata.
  *
  */
-+ (NSDictionary *)videoMetadata;
++ (NSDictionary *)videoMetadata __deprecated;
 
 /*
  *
@@ -891,7 +920,7 @@ typedef enum
  *
  */
 + (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
-                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler;
+                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler __deprecated;
 
 /*
  *
@@ -910,12 +939,11 @@ typedef enum
  *
  */
 + (void)setLevel:(NSString *)level
-           score:(NSNumber *)score;
+           score:(NSNumber *)score __deprecated;
 
 // -------------------------------------------------------------------------
 // Private APIs: Do not use.
 // -------------------------------------------------------------------------
 + (void)setMode:(unsigned long long)mode;
-+ (unsigned long long)mode;
 
 @end

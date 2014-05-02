@@ -166,6 +166,8 @@
 
 "Profile" = "プロフィール";
 
+"Kamcord Profile" = "Kamcordプロフィール";
+
 "By clicking Create Profile you are indicating that you have read and agree to the Privacy Policy and Terms of Service." = "「プロフィールを作成する」ボタンをクリックした後は、プライバシー・ポリシーとサービス規約を読み、それらに同意したものとみなされます";
 
 "Create Profile" = "プロフィールを作成する";
@@ -258,15 +260,23 @@
 
 "Enter the username or email address of your Kamcord profile." = "Kamcordプロフィールのユーザー名かメールアドレスを入力してください。";
 
-"Close" = "閉じる";"The page is taking a long time to load. Check your Internet connection and try again." = "The page is taking a long time to load. Check your Internet connection and try again.";
+"Close" = "閉じる";
+
+"The page is taking a long time to load. Check your Internet connection and try again." = "ページの読み込みに時間がかかりすぎています。インターネットの接続状態を確認してもう一度試して下さい。";
+
+"Enable Voice Overlay" = "音声合成を有効にする";
+
+"Retry" = "もう一度試す";
+
+"The server is not responding. Try again at a later time." = "サーバーが応答していません。後でもう一度試して下さい。";
+
+"Cannot Connect to Server" = "サーバーに接続できません";
+
+"Please reconnect and try again." = "再接続してもう一度試して下さい。";
+
+"Slow Internet Connection" = "インターネット接続が遅くなっています";
 
 "You must install the LINE App before you can share to LINE." = "You must install the LINE App before you can share to LINE.";
-
-"Enable Voice Overlay" = "Enable Voice Overlay";
-
-"Retry" = "Retry";
-
-"The server is not responding. Try again at a later time." = "The server is not responding. Try again at a later time.";
 
 "You must install the WeChat App before you can share to WeChat." = "You must install the WeChat App before you can share to WeChat.";
 
@@ -274,11 +284,6 @@
 
 "gameplay" = "gameplay";
 
-"Cannot Connect to Server" = "Cannot Connect to Server";
-
 "WeChat App Not Found" = "WeChat App Not Found";
 
-"Please reconnect and try again." = "Please reconnect and try again.";
-
-"Slow Internet Connection" = "Slow Internet Connection";
-
+"Featured Playlist" = "優先プレイリスト";

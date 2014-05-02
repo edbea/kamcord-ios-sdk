@@ -188,6 +188,8 @@
 
 "Profile" = "프로필";
 
+"Kamcord Profile" = "Kamcord 프로필";
+
 "By clicking Create Profile you are indicating that you have read and agree to the Privacy Policy and Terms of Service." = "프로필 만들기를 클릭하면 개인정보보호 정책과 서비스 약관을 읽고 동의하는 것입니다";
 
 "Create Profile" = "프로필 만들기";
@@ -256,15 +258,23 @@
 
 "Working ..." = "작업 중...";
 
-"The page is taking a long time to load. Check your Internet connection and try again." = "The page is taking a long time to load. Check your Internet connection and try again.";
+"The page is taking a long time to load. Check your Internet connection and try again." = "이 페이지가 로딩되기까지 많은 시간이 걸립니다. 인터넷 연결을 확인하시고 다시 시도해 주세요.";
+
+"Enable Voice Overlay" = "목소리 오버레이 활성화";
+
+"Retry" = "재시도";
+
+"The server is not responding. Try again at a later time." = "서버가 응답하지 않습니다. 나중에 다시 시도해 주세요.";
+
+"Cannot Connect to Server" = "서버에 연결할 수 없습니다";
+
+"Please reconnect and try again." = "다시 연결하고 다시 시도해 주세요.";
+
+"Slow Internet Connection" = "느린 인터넷 연결";
+
+"WeChat App Not Found" = "WeChat App Not Found";
 
 "You must install the LINE App before you can share to LINE." = "You must install the LINE App before you can share to LINE.";
-
-"Enable Voice Overlay" = "Enable Voice Overlay";
-
-"Retry" = "Retry";
-
-"The server is not responding. Try again at a later time." = "The server is not responding. Try again at a later time.";
 
 "You must install the WeChat App before you can share to WeChat." = "You must install the WeChat App before you can share to WeChat.";
 
@@ -272,11 +282,6 @@
 
 "gameplay" = "gameplay";
 
-"Cannot Connect to Server" = "Cannot Connect to Server";
+"Featured Playlist" = "특집 재생목록";
 
-"WeChat App Not Found" = "WeChat App Not Found";
-
-"Please reconnect and try again." = "Please reconnect and try again.";
-
-"Slow Internet Connection" = "Slow Internet Connection";
-
+"Watch Video" = "";

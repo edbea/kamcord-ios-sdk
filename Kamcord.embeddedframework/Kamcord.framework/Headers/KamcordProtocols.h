@@ -155,4 +155,13 @@ wasSharedToFacebook:(BOOL)success;
 - (void)     video:(NSString *)videoID
 wasSharedToTwitter:(BOOL)success;
 
+/*
+ *
+ * Called when the video WILL be shared to YouTube by the Kamcord servers.
+ *
+ * @param       videoID             The Kamcord video ID.
+ *
+ */
+- (void)videoWillBeSharedToYouTube:(NSString *)videoID;
+
 @end
