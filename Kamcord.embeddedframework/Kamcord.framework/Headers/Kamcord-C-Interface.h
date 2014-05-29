@@ -444,6 +444,17 @@ extern "C" {
     
     /*
      *
+     * Optional method that will log Kamcord out of the shared Facebook auth. If Facebook auth
+     * sharing is not enabled, this method does nothing. This method should typically be called
+     * when the user logs out of Facebook (outside of Kamcord) and if you want to also nullify
+     * Kamcord's shared Facebook auth. If not, then the user will still be able to share to Facebook
+     * via the shared Facebook auth.
+     *
+     */
+    void Kamcord_LogoutOfSharedFacebookAuth();
+    
+    /*
+     *
      * Sets the WeChat App ID so that you can set it as a share target in the share grid.
      *
      * @param       weChatAppId   The WeChat App ID.

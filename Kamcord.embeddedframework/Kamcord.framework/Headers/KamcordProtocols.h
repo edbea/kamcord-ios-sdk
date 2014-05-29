@@ -164,4 +164,11 @@ wasSharedToTwitter:(BOOL)success;
  */
 - (void)videoWillBeSharedToYouTube:(NSString *)videoID;
 
+/*
+ *
+ * Called when this app install is attributed from a click inside the Kamcord mobile app.
+ *
+ */
+- (void)attributeKamcordInstall;
+
 @end

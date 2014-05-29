@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.7.4 (2014-05-02)
+ * Current version is 1.7.5 (2014-05-??)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -289,11 +289,14 @@ typedef enum
  * Show the Kamcord watch view inside the given UIViewController.
  *
  * @param       parentViewController    The UIViewController that will show the Kamcord watch view.
- *
- * @param       initialTab              The initial tab that will be open. Can either be the watch tab, the profile tab, or the cross promotion tab if you have the cross promotion feature enabled for your game. The default screen is the watch screen.
+ * @param       initialTab              The initial tab that will be open. Can either be the watch tab,
+ *                                      the profile tab, or the cross promotion tab if you have the cross
+ *                                      promotion feature enabled for your game. The default screen is
+ *                                      the watch screen.
  *
  */
-+ (void)showWatchViewInViewController:(UIViewController *)parentViewController initialTab:(KC_UI_INITIAL_TAB)initialTab;
++ (void)showWatchViewInViewController:(UIViewController *)parentViewController
+                           initialTab:(KC_UI_INITIAL_TAB)initialTab;
 
 /*
  *
@@ -309,7 +312,7 @@ typedef enum
  * Receive callbacks about the life of a recorded video. Please note that this
  * object is *NOT* retained by Kamcord.
  *
- * The KamcordDelegate protocol is defined in Common/Core/KamcordProtocols.h
+ * The KamcordDelegate protocol is defined in <Kamcord/KamcordProtocols.h>.
  *
  * @param       delegate        The delegate to receive Kamcord callbacks.
  *
@@ -516,7 +519,7 @@ typedef enum
  * exactly four valid distinct KC_SHARE_TARGET enums, else nothing will be changed. The order
  * of these parameters will affect how the share options are laid out in the UI.
  *
- * The possible values are defined in Kamcord-C-Interface.h.
+ * The possible values are defined in <Kamcord/Kamcord-C-Interface.h>.
  *
  * Note: If you select KC_SHARE_TARGET_WECHAT as an option, you *MUST* call
  *       [Kamcord setWeChatAppID:...] with a valid WeChat App ID, else your
@@ -649,6 +652,17 @@ typedef enum
  *
  */
 + (BOOL)handleOpenURL:(NSURL *)url;
+
+/*
+ *
+ * Optional method that will log Kamcord out of the shared Facebook auth. If Facebook auth
+ * sharing is not enabled, this method does nothing. This method should typically be called
+ * when the user logs out of Facebook (outside of Kamcord) and if you want to also nullify
+ * Kamcord's shared Facebook auth. If not, then the user will still be able to share to Facebook
+ * via the shared Facebook auth.
+ *
+ */
++ (void)logoutOfSharedFacebookAuth;
 
 /*
  *
