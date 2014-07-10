@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "kamcord-ios-sdk"
+  s.name         = "Kamcord"
   s.version      = "1.7.6"
   s.summary      = "The Kamcord iOS framework for native iOS engines and cocos2d/cocos2d-x"
 
