@@ -65,7 +65,7 @@ permit your employees, contractors, beta testers and End Users to create and sha
 
   s.platform     = :ios
 
-  s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :commit => "ef27274abfa2da4dacb439cfa88d7b4f43774186" }
+  s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :tag => '1.7.6' } 
   s.source_files  = "Kamcord.embeddedframework/Kamcord.framework/Headers/*.h"
   s.resources = "Kamcord.embeddedframework/Resources/*"
 
