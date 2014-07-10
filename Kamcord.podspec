@@ -1,11 +1,3 @@
-#
-#  Be sure to run `pod spec lint kamcord-ios-sdk.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see http://docs.cocoapods.org/specification.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
-
 Pod::Spec.new do |s|
   s.name         = "Kamcord"
   s.version      = "1.7.6"
@@ -72,21 +64,11 @@ permit your employees, contractors, beta testers and End Users to create and sha
   s.author             = "support@kamcord.com"
 
   s.platform     = :ios
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
 
   s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :commit => "ef27274abfa2da4dacb439cfa88d7b4f43774186" }
   s.source_files  = "Kamcord.embeddedframework/Kamcord.framework/Headers/*.h"
   s.resources = "Kamcord.embeddedframework/Resources/*"
 
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
   s.requires_arc = true
   s.xcconfig = { :FRAMEWORK_SEARCH_PATHS => "$(inherited)" }
 end
