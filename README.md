@@ -1,7 +1,10 @@
 Kamcord iOS Framework
 ======================
+[![Pod Version](http://img.shields.io/cocoapods/v/Kamcord.svg?style=flat)](http://cocoadocs.org/docsets/Kamcord/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/Kamcord.svg?style=flat)](http://cocoadocs.org/docsets/Kamcord/)
+[![Pod License](http://img.shields.io/cocoapods/l/Kamcord.svg?style=flat)](http://kamcord.com/developers/terms)
 
-The documentation can be found at the <a href="https://github.com/kamcord/kamcord-ios-sdk/wiki">wiki</a>.
+**The documentation can be found at the <a href="https://github.com/kamcord/kamcord-ios-sdk/wiki">wiki</a>.**
 
 ## Installation via CocoaPods
 The recommended way to integrate Kamcord is CocoaPods. This makes the
