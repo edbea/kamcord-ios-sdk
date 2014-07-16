@@ -1,7 +1,6 @@
 Kamcord iOS Framework
 ======================
 
-## Documentation
 The documentation can be found at the <a href="https://github.com/kamcord/kamcord-ios-sdk/wiki">wiki</a>.
 
 ## Installation via CocoaPods
