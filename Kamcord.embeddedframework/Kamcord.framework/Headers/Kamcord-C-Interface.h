@@ -563,6 +563,34 @@ extern "C" {
      */
     unsigned int Kamcord_MaximumVideoLength();
     
+    /*
+     *
+     * Should we pause/unpause the game engine when the Kamcord UI appears/disappears?
+     * By default, set to true. Works for cocos2d(-x), GLKit, SpriteKit, and Unity.
+     *
+     * @param   shouldPause     Should we pause the game engine when the Kamcord UI appears?
+     *
+     */
+    void Kamcord_SetShouldPauseGameEngine(bool shouldPause);
+    bool Kamcord_ShouldPauseGameEngine();
+    
+    /*
+     *
+     * Requires users to verify they are old enough before allowing them to turn on voice overlay.
+     *
+     * @param       restricted  Require age check before allowing the user to enable voice overlay?
+     *
+     */
+    void Kamcord_SetAgeRestrictionEnabled(bool restricted);
+    
+    /*
+     *
+     * Returns a boolean indicating whether or not the user is required to be of age in order
+     * to use turn on voice overlay.
+     *
+     */
+    bool Kamcord_IsAgeRestrictionEnabled();
+    
     /*******************************************************************
      *
      * Gameplay of the week

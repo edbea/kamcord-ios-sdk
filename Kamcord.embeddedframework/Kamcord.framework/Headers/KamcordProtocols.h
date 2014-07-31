@@ -48,6 +48,14 @@
 
 /*
  *
+ * Called when the interstitial player apppears and disappears.
+ *
+ */
+- (void)interstitialPlayerDidAppear;
+- (void)interstitialPlayerDidDisappear;
+
+/*
+ *
  * Called when a thumbnail image for the video is ready.
  *
  * @param       thumbnail       The CGImageRef of the thumbnail for the latest recorded video.
@@ -169,6 +177,6 @@ wasSharedToTwitter:(BOOL)success;
  * Called when this app install is attributed from a click inside the Kamcord mobile app.
  *
  */
-- (void)attributeKamcordInstall;
+- (void)attributedKamcordInstall;
 
 @end
