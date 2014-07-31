@@ -9,7 +9,7 @@
 
 /*
  *
- * Convenience definition for deprecated methods
+ * Convenient definition for deprecated methods.
  *
  */
 #define __deprecated    __attribute__((deprecated))
@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.7.6 (2014-06-20)
+ * Current version is 1.7.7 (2014-07-30)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -840,6 +840,34 @@ typedef enum
  */
 + (void)enableCrossPromotionWithImageName:(NSString *)imageName;
 
+/*
+ *
+ * Should we pause/unpause the game engine when the Kamcord UI appears/disappears?
+ * By default, set to true. Works for cocos2d(-x), GLKit, SpriteKit, and Unity.
+ *
+ * @param   shouldPause     Should we pause the game engine when the Kamcord UI appears?
+ *
+ */
++ (void)setShouldPauseGameEngine:(BOOL)shouldPause;
++ (BOOL)shouldPauseGameEngine;
+
+/*
+ *
+ * Requires users to verify they are old enough before allowing them to turn on voice overlay.
+ *
+ * @param       restricted  Require age check before allowing the user to enable voice overlay?
+ *
+ */
++ (void)setAgeRestrictionEnabled:(BOOL)restricted;
+
+/*
+ *
+ * Returns a boolean indicating whether or not the user is required to be of age in order
+ * to use turn on voice overlay.
+ *
+ */
++ (BOOL)isAgeRestrictionEnabled;
+
 // -------------------------------------------------------------------------
 // OpenGL Commands
 // -------------------------------------------------------------------------
@@ -878,19 +906,6 @@ typedef enum
  */
 + (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage * image, NSURL * imageURL))handler
                                      saveToURL:(NSURL *)destinationURL;
-
-
-// -------------------------------------------------------------------------
-// Audio Overlay
-// -------------------------------------------------------------------------
-
-/*
- *
- * These methods allow you to add one background audio track to the recorded video.
- *
- */
-+ (void)overlayBackgroundTrack:(NSString *)filename;
-+ (void)overlayBackgroundTrackAtURL:(NSURL *)fileURL;
 
 // -------------------------------------------------------------------------
 // Deprecated methods
@@ -954,6 +969,14 @@ typedef enum
  */
 + (void)setLevel:(NSString *)level
            score:(NSNumber *)score __deprecated;
+
+/*
+ *
+ * These methods allow you to add one background audio track to the recorded video.
+ *
+ */
++ (void)overlayBackgroundTrack:(NSString *)filename __deprecated;
++ (void)overlayBackgroundTrackAtURL:(NSURL *)fileURL __deprecated;
 
 // -------------------------------------------------------------------------
 // Private APIs: Do not use.

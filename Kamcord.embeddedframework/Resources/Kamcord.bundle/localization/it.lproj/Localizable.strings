@@ -2,7 +2,7 @@
 
 "Please enter a valid username" = "Inserire un nome utente valido";
 
-"Username must less than 16 characters" = "Il nome utente non può superare 16 caratteri";
+"Username must be less than 16 characters" = "Il nome utente non può superare 16 caratteri";
 
 "Connection error" = "Errore di connessione";
 

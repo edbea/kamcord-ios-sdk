@@ -2,7 +2,7 @@
 
 "Please enter a valid username" = "Введи действительное имя пользователя";
 
-"Username must less than 16 characters" = "Имя пользователя должно быть менее 16 символов";
+"Username must be less than 16 characters" = "Имя пользователя должно быть менее 16 символов";
 
 "Connection error" = "Ошибка подключения";
 

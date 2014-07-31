@@ -2,7 +2,7 @@
 
 "Please enter a valid username" = "유효한 사용자 이름을 입력하세요";
 
-"Username must less than 16 characters" = "사용자 이름은 16자 이하입니다";
+"Username must be less than 16 characters" = "사용자 이름은 16자 이하입니다";
 
 "Connection error" = "연결 오류";
 

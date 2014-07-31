@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Kamcord"
-  s.version      = "1.7.6"
+  s.version      = "1.7.7"
   s.summary      = "The Kamcord iOS framework for native iOS engines and cocos2d/cocos2d-x"
 
   s.description  = <<-DESC
@@ -65,7 +65,7 @@ permit your employees, contractors, beta testers and End Users to create and sha
 
   s.platform     = :ios
 
-  s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :tag => '1.7.6' } 
+  s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :tag => '1.7.7' } 
   s.source_files  = "Kamcord.embeddedframework/Kamcord.framework/Headers/*.h"
   s.resources = "Kamcord.embeddedframework/Resources/*"
 

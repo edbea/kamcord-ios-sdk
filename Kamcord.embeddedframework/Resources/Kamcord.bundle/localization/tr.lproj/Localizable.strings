@@ -2,7 +2,7 @@
 
 "Please enter a valid username" = "Lütfen geçerli bir kullanıcı adı gir";
 
-"Username must less than 16 characters" = "Kullanıcı adı 16 karakterden kısa olmalıdır";
+"Username must be less than 16 characters" = "Kullanıcı adı 16 karakterden kısa olmalıdır";
 
 "Connection error" = "Bağlantı hatası";
 

@@ -2,7 +2,7 @@
 
 "Please enter a valid username" = "请输入一个有效的用户名";
 
-"Username must less than 16 characters" = "用户名必须少于16个字符";
+"Username must be less than 16 characters" = "用户名必须少于16个字符";
 
 "Connection error" = "连接错误";
 
