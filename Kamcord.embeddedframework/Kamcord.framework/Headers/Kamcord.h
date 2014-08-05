@@ -37,7 +37,7 @@
 
 /*
  *
- * Current version is 1.7.7 (2014-07-30)
+ * Current version is 1.7.8 (2014-08-04)
  *
  */
 FOUNDATION_EXPORT NSString * const KamcordVersion;
@@ -794,13 +794,6 @@ typedef enum
  */
 + (NSString *)defaultEmailBody;
 
-/*
- * This method will allow you to upload a video to Facebook with the given parameters
- */
-+ (void)uploadVideoToFacebookWithAccessToken:(NSString *)accessToken
-                                       title:(NSString *)title
-                                 description:(NSString *)description;
-
 // -------------------------------------------------------------------------
 // Advanced Settings
 // -------------------------------------------------------------------------
@@ -982,5 +975,10 @@ typedef enum
 // Private APIs: Do not use.
 // -------------------------------------------------------------------------
 + (void)setMode:(unsigned long long)mode;
+
++ (void)uploadVideoToFacebookWithAccessToken:(NSString *)accessToken
+                                       title:(NSString *)title
+                                 description:(NSString *)description;
+
 
 @end
