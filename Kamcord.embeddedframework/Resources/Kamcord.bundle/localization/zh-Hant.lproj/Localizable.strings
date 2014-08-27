@@ -1,280 +1,280 @@
-"Current password" = "目前的密码";
+"Current password" = "目前的密碼";
 
-"Please enter a valid username" = "请输入一个有效的用户名";
+"Please enter a valid username" = "請輸入一個有效的用戶名";
 
-"Username must be less than 16 characters" = "用户名必须少于16个字符";
+"Username must be less than 16 characters" = "用戶名必須少於16個字符";
 
-"Connection error" = "连接错误";
+"Connection error" = "連接錯誤";
 
-"Please allow Twitter access to share" = "请允许Twitter访问共享";
+"Please allow Twitter access to share" = "請允許Twitter訪問共享";
 
-"Please log in to Twitter in iOS Settings" = "请在iOS设置中登录Twitter";
+"Please log in to Twitter in iOS Settings" = "請在iOS設置中登錄Twitter";
 
-"Unclaimed Videos" = "无人认领的视频";
+"Unclaimed Videos" = "無人認領的視頻";
 
-"Please sign-in again and authorize posting to share to Facebook." = "请重新登录并授权Facebook发布分享";
+"Please sign-in again and authorize posting to share to Facebook." = "請重新登錄並授權Facebook發布分享";
 
 "YouTube" = "YouTube";
 
 "Disable" = "禁用";
 
-"Sign in" = "登录";
+"Sign in" = "登錄";
 
-"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "请在设置中启用至少一个账户->Twitter并授权此应用程序。";
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "請在設置中啟用至少一個賬戶->Twitter並授權此應用程序。";
 
-"Invalid email" = "无效电子邮件";
+"Invalid email" = "無效電子郵件";
 
-"Reset" = "重新设置";
+"Reset" = "重新設置";
 
-"On" = "开";
+"On" = "開";
 
-"Ok" = "确定";
+"Ok" = "確定";
 
-"Voice overlay is disabled on this device." = "当前设备禁用声音叠加";
+"Voice overlay is disabled on this device." = "當前設備禁用聲音疊加";
 
-"Voice Overlay Disabled" = "禁用声音叠加";
+"Voice Overlay Disabled" = "禁用聲音疊加";
 
-"Please sign-in in Settings > Facebook and grant this application permission." = "请在设置>Facebook登录并允许该应用程序。";
+"Please sign-in in Settings > Facebook and grant this application permission." = "請在設置>Facebook登錄並允許該應用程序。";
 
-"Send a password reset email" = "发送密码重置邮件";
+"Send a password reset email" = "發送密碼重置郵件";
 
-"OK" = "确定";
+"OK" = "確定";
 
-"Confirm Facebook Sign Out" = "确认退出 Facebook";
+"Confirm Facebook Sign Out" = "確認退出Facebook";
 
 "Share" = "分享";
 
-"Watch Replays" = "观看视频";
+"Watch Replays" = "觀看視頻";
 
-"Create" = "创建";
+"Create" = "創建";
 
-"Kamcord requires an internet connection" = "Kamcord需要网络连接";
+"Kamcord requires an internet connection" = "Kamcord需要網絡連接";
 
-"Voice Overlay" = "声音叠加";
+"Voice Overlay" = "聲音疊加";
 
 "Save" = "保存";
 
-"You must enter an email" = "您必须输入一个邮件地址";
+"You must enter an email" = "您必須輸入一個郵件地址";
 
-"Email" = "电子邮件";
+"Email" = "電子郵件";
 
-"Enable" = "启用";
+"Enable" = "啟用";
 
-"No Internet" = "没有联网";
+"No Internet" = "沒有聯網";
 
-"Please try again later." = "请稍后再试。";
+"Please try again later." = "請稍後再試。";
 
-"Connected" = "连接";
+"Connected" = "連接";
 
-"Upload failed" = "上传失败";
+"Upload failed" = "上傳失敗";
 
-"Confirm Twitter Sign Out" = "确认退出Twitter";
+"Confirm Twitter Sign Out" = "確認退出Twitter";
 
-"Email Not Sent" = "电子邮件未发送";
+"Email Not Sent" = "電子郵件未發送";
 
-"We've emailed you a link to reset your password!" = "我们已经通过电子邮件发送给您一个链接来重置您的密码！";
+"We've emailed you a link to reset your password!" = "我們已經通過電子郵件發送給您一個鏈接來重置您的密碼！";
 
-"Terms of Service" = "服务条款";
+"Terms of Service" = "服務條款";
 
-"Don't have a profile yet?" = "还没有个人资料吗？";
+"Don't have a profile yet?" = "還沒有個人資料嗎？";
 
-"Powered by Kamcord" = "Kamcord提供技术支持";
+"Powered by Kamcord" = "Kamcord提供技術支持";
 
-"New password" = "新密码";
+"New password" = "新密碼";
 
-"Sign In" = "登录";
+"Sign In" = "登錄";
 
-"Confirm Kamcord Sign Out" = "确认退出Kamcord";
+"Confirm Kamcord Sign Out" = "確認退出Kamcord";
 
-"Change Password" = "修改密码";
+"Change Password" = "修改密碼";
 
 "Back" = "返回";
 
-"Privacy Policy" = "隐私策略";
+"Privacy Policy" = "隱私策略";
 
-"Another password reset request is already pending." = "另一个密码重置请求已在等待中。";
+"Another password reset request is already pending." = "另一個密碼重置請求已在等待中。";
 
-"Confirm YouTube Sign Out" = "确认退出YouTube";
+"Confirm YouTube Sign Out" = "確認退出YouTube";
 
-"Videos Saved" = "视频已保存";
+"Videos Saved" = "視頻已保存";
 
-"Not Now" = "以后";
+"Not Now" = "以後";
 
 "Yes" = "是";
 
-"Username must be at least 5 characters" = "用户名必须至少5个字符";
+"Username must be at least 5 characters" = "用戶名必須至少5個字符";
 
-"No Email Accounts" = "没有电子邮件帐户";
+"No Email Accounts" = "沒有電子郵件帳戶";
 
 "No" = "否";
 
-"Watch" = "观看";
+"Watch" = "觀看";
 
-"Forgot your password?" = "忘记了您的密码？";
+"Forgot your password?" = "忘記了您的密碼？";
 
-"Is your email correct?" = "您的电子邮件正确吗？";
+"Is your email correct?" = "您的電子郵件正確嗎？";
 
-"Are you sure you want to sign out?" = "您确定要退出吗？";
+"Are you sure you want to sign out?" = "您確定要退出嗎？";
 
-"New password (again)" = "新密码（重复）";
+"New password (again)" = "新密碼（重複）";
 
-"Not authorized" = "未经授权";
+"Not authorized" = "未經授權";
 
-"Sorry, we could not find any matching accounts." = "对不起,我们找不到任何匹配的账户。";
+"Sorry, we could not find any matching accounts." = "對不起,我們找不到任何匹配的賬戶。";
 
 "Facebook" = "Facebook";
 
-"Other Games" = "其他游戏";
+"Other Games" = "其他遊戲";
 
-"Please check Twitter settings" = "请检查Twitter设置";
+"Please check Twitter settings" = "請檢查Twitter設置";
 
-"Must enter a username and password" = "必须输入一个用户名和密码";
+"Must enter a username and password" = "必須輸入一個用戶名和密碼";
 
-"Not Authorized" = "未经授权";
+"Not Authorized" = "未經授權";
 
-"Already have a profile?" = "已经有个人资料了？";
+"Already have a profile?" = "已經有個人資料了？";
 
 "Twitter" = "Twitter";
 
-"The videos on this device are now associated with your profile" = "这个设备上的视频已经和您的个人资料关联";
+"The videos on this device are now associated with your profile" = "這個設備上的視頻已經和您的個人資料關聯";
 
 "Kamcord" = "Kamcord";
 
-"Edit Profile" = "编辑个人资料";
+"Edit Profile" = "編輯個人資料";
 
 "Done" = "完成";
 
 "Cancel" = "取消";
 
-"Password must be at least 6 characters" = "密码必须至少6个字符";
+"Password must be at least 6 characters" = "密碼必須至少6個字符";
 
-"Any unclaimed videos will be associated with your profile." = "任何无人认领的视频将和您的个人资料关联";
+"Any unclaimed videos will be associated with your profile." = "任何無人認領的視頻將和您的個人資料關聯";
 
 "Search" = "搜索";
 
-"Please sign-in in Settings > Twitter and grant this application permission." = "请在设置>Twitter登录并允许该应用程序。";
+"Please sign-in in Settings > Twitter and grant this application permission." = "請在設置>Twitter登錄並允許該應用程序。";
 
-"No Account Found" = "没有发现账户";
+"No Account Found" = "沒有發現賬戶";
 
-"Profile Creation Error" = "简介创建错误";
+"Profile Creation Error" = "簡介創建錯誤";
 
-"Profile creation did not work, please try again later" = "无法创建个人资料，请稍后再试";
+"Profile creation did not work, please try again later" = "無法創建個人資料，請稍後再試";
 
-"The email you entered is %@" = "您输入的电子邮件是%@";
+"The email you entered is %@" = "您輸入的電子郵件是%@";
 
-"Profile" = "个人资料";
+"Profile" = "個人資料";
 
-"Kamcord Profile" = "Kamcord 个人资料";
+"Kamcord Profile" = "Kamcord 個人資料";
 
-"By clicking Create Profile you are indicating that you have read and agree to the Privacy Policy and Terms of Service." = "点击创建个人资料表示您已经阅读并同意隐私策略和服务条款。";
+"By clicking Create Profile you are indicating that you have read and agree to the Privacy Policy and Terms of Service." = "點擊創建個人資料表示您已經閱讀並同意隱私策略和服務條款。";
 
-"Create Profile" = "创建个人资料";
+"Create Profile" = "創建個人資料";
 
 "Sign Out" = "退出";
 
-"No Internet Connection" = "无互联网连接";
+"No Internet Connection" = "無互聯網連接";
 
-"Illegal characters in username" = "用户名中有非法字符";
+"Illegal characters in username" = "用戶名中有非法字符";
 
-"Email Sent" = "已发送电子邮件";
+"Email Sent" = "已發送電子郵件";
 
-"New passwords do not match" = "新密码不匹配";
+"New passwords do not match" = "新密碼不匹配";
 
-"You must enter a password" = "您必须输入一个密码";
+"You must enter a password" = "您必須輸入一個密碼";
 
-"Off" = "关";
+"Off" = "關";
 
-"Connect account" = "连接帐户";
+"Connect account" = "連接帳戶";
 
-"Write a title..." = "写一个标题...";
+"Write a title..." = "寫一個標題...";
 
-"Please enter your current password" = "请输入您的当前密码";
+"Please enter your current password" = "請輸入您的當前密碼";
 
 "Trim" = "裁剪";
 
-"Share Replay" = "分享视频";
+"Share Replay" = "分享視頻";
 
-"My Videos" = "我的视频";
+"My Videos" = "我的視頻";
 
-"Password must less than 31 characters" = "密码必须少于 31 个字符";
+"Password must be less than 31 characters" = "密碼必須少於31 個字符";
 
-"Please setup an email account in Settings > Mail." = "请在设置中设置电子邮件帐户";
+"Please setup an email account in Settings > Mail." = "請在設置中設置電子郵件帳戶";
 
-"Select Twitter account to use" = "选择要使用的Twitter帐户";
+"Select Twitter account to use" = "選擇要使用的Twitter帳戶";
 
-"Watch the new Gameplay of the Week!" = "观看本周的精选视频!";
+"Watch the new Gameplay of the Week!" = "觀看本週的精選視頻!";
 
-"Watch Video" = "观看视频";
+"Watch Video" = "觀看視頻";
 
-"Password" = "密码";
+"Password" = "密碼";
 
-"Username" = "用户名";
+"Username" = "用戶名";
 
 "Trimming..." = "裁剪中...";
 
-"Release to refresh..." = "放开可刷新...";
+"Release to refresh..." = "放開可刷新...";
 
-"Settings" = "设置";
+"Settings" = "設置";
 
-"Uploading" = "上传中";
+"Uploading" = "上傳中";
 
-"Refreshing page..." = "页面刷新中...";
+"Refreshing page..." = "頁面刷新中...";
 
-"Reset Password" = "重设密码";
+"Reset Password" = "重設密碼";
 
-"Upload Failed" = "上传失败";
+"Upload Failed" = "上傳失敗";
 
-"Working..." = "处理中...";
+"Working..." = "處理中...";
 
-"Upload Done!" = "上传完毕!";
+"Upload Done!" = "上傳完畢!";
 
-"Gameplay of the Week" = "本周的精选视频";
+"Gameplay of the Week" = "本週的精選視頻";
 
 "Pull down to refresh..." = "拉下可刷新...";
 
-"Enter your Kamcord username or the email address associated with your account." = "请输入您的Kamcord用户名或相关的电子邮箱地址。";
+"Enter your Kamcord username or the email address associated with your account." = "請輸入您的Kamcord用戶名或相關的電子郵箱地址。";
 
-"Username or Email" = "用户名或电子邮箱地址";
+"Username or Email" = "用戶名或電子郵箱地址";
 
-"Enable Voice Overlay?" = "使用声音叠加?";
+"Enable Voice Overlay?" = "使用聲音疊加?";
 
-"Uploading Failed" = "上传失败";
+"Uploading Failed" = "上傳失敗";
 
-"Upload Finished!" = "上传完毕!";
+"Upload Finished!" = "上傳完畢!";
 
-"You can enable voice overlay by going to Profile => Settings or pressing Enable below." = "您可以在个人资料＝>设置或以下的启用按钮来启用声音叠加。";
+"You can enable voice overlay by going to Profile => Settings or pressing Enable below." = "您可以在個人資料＝>設置或以下的啟用按鈕來啟用聲音疊加。";
 
-"No account linked" = "没有相关的帐号";
+"No account linked" = "沒有相關的帳號";
 
-"Voice Overlay will be enabled for future videos." = "将后的视频会使用声音叠加.";
+"Voice Overlay will be enabled for future videos." = "將後的視頻會使用聲音疊加.";
 
-"Enter the username or email address of your Kamcord profile." = "请输入您的Kamcord用户名或相关的电子邮箱地址。";
+"Enter the username or email address of your Kamcord profile." = "請輸入您的Kamcord用戶名或相關的電子郵箱地址。";
 
-"Close" = "关闭";
+"Close" = "關閉";
 
-"Uploading..." = "上传中 ...";
+"Uploading..." = "上傳中 ...";
 
-"Voice Overlay Enabled!" = "使用声音叠加!";
+"Voice Overlay Enabled!" = "使用聲音疊加!";
 
-"No Voice in Simulator" = "模拟器没有声音叠加功能";
+"No Voice in Simulator" = "模擬器沒有聲音疊加功能";
 
-"I'm Ready!" = "准备完毕!";
+"I'm Ready!" = "準備完畢!";
 
-"Working ..." = "处理中 ...";
+"Working ..." = "處理中 ...";
 
-"The page is taking a long time to load. Check your Internet connection and try again." = "页面加载时间过长。请检查您的网络连接并重试。";
+"The page is taking a long time to load. Check your Internet connection and try again." = "頁面加載時間過長。請檢查您的網絡連接並重試。";
 
-"Enable Voice Overlay" = "启用声音叠加";
+"Enable Voice Overlay" = "啟用聲音疊加";
 
-"Retry" = "重试";
+"Retry" = "重試";
 
-"The server is not responding. Try again at a later time." = "服务器未响应。请稍后重试。";
+"The server is not responding. Try again at a later time." = "服務器未響應。請稍後重試。";
 
-"Cannot Connect to Server" = "无法连接服务器";
+"Cannot Connect to Server" = "無法連接服務器";
 
-"Please reconnect and try again." = "请重新连接并重试。";
+"Please reconnect and try again." = "請重新連接並重試。";
 
-"Slow Internet Connection" = "网络连接迟缓";
+"Slow Internet Connection" = "網絡連接遲緩";
 
 "You must install the LINE App before you can share to LINE." = "You must install the LINE App before you can share to LINE.";
 
@@ -295,45 +295,32 @@
 
 "WeChat" = "微信";
 
-"Cannot Write Comment" = "Cannot Write Comment";
+"Change Email" = "更改電子郵件";
 
-"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
+"New email" = "新電子郵件";
 
-"Day" = "Day";
+"New email (again)" = "新電子郵件（再次輸入）";
 
-"Facebook Credentials Changed" = "Facebook Credentials Changed";
+"No Video Available" = "無可用視頻";
 
-"Change Birthday" = "Change Birthday";
+"Email must be less than 65 characters" = "電子郵件地址必須少於65 個字符";
 
-"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
+"Email or username does not exist" = "電子郵件或用戶名不存在";
 
-"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
+"Invalid password" = "密碼無效";
 
-"Month" = "Month";
+"New emails do not match" = "新電子郵件不匹配";
 
-"Invalid Birthday" = "Invalid Birthday";
+"Your preferred email was successfully changed." = "您的首選電子郵件已成功更改。";
 
-"You have been signed out" = "You have been signed out";
+"Your password was successfully changed." = "您的密碼已成功更改。";
 
-"Save Birthday" = "Save Birthday";
+"Success!" = "成功！";
 
-"You're not old enough" = "You're not old enough";
+"Username is already in use" = "用戶名已被使用";
 
-"Cannot Verify Profile" = "Cannot Verify Profile";
+"Email is already in use" = "電子郵件已被使用";
 
-"You cannot sign in" = "You cannot sign in";
+"Sign In Error" = "登錄錯誤";
 
-"We're sorry, you're not old enough to create a profile." = "We're sorry, you're not old enough to create a profile.";
-
-"You need an internet connection to create a profile." = "You need an internet connection to create a profile.";
-
-"We're sorry. You're not old enough to use voice overlay." = "We're sorry. You're not old enough to use voice overlay.";
-
-"Cannote Create Profile" = "Cannote Create Profile";
-
-"We're sorry, you're not old enough to write a comment." = "We're sorry, you're not old enough to write a comment.";
-
-"You cannot sign in to Kamcord due to your age." = "You cannot sign in to Kamcord due to your age.";
-
-"Year" = "Year";
-
+"Really Delete" = "確認刪除";

@@ -222,7 +222,7 @@
 
 "Username or Email" = "Nome utente o indirizzo e-mail";
 
-"Password must less than 31 characters" = "La password non può superare 31 caratteri";
+"Password must be less than 31 characters" = "La password non può superare 31 caratteri";
 
 "Please setup an email account in Settings > Mail." = "Specifica un account di posta in 'Impostazioni -> E-mail'.";
 
@@ -252,45 +252,32 @@
 
 "WeChat" = "WeChat";
 
-"Cannot Write Comment" = "Cannot Write Comment";
+"Change Email" = "Modifica email";
 
-"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
+"New email" = "Nuova email";
 
-"Day" = "Day";
+"New email (again)" = "Nuova email (ancora)";
 
-"Facebook Credentials Changed" = "Facebook Credentials Changed";
+"No Video Available" = "Nessun video disponibile";
 
-"Change Birthday" = "Change Birthday";
+"Email must be less than 65 characters" = "L'email deve contenere al massimo 65 caratteri";
 
-"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
+"Email or username does not exist" = "L'email o lo username non esistono";
 
-"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
+"Invalid password" = "Password non valida";
 
-"Month" = "Month";
+"New emails do not match" = "Le nuove email non coincidono";
 
-"Invalid Birthday" = "Invalid Birthday";
+"Your preferred email was successfully changed." = "La tua email preferita è stata modificata con successo.";
 
-"You have been signed out" = "You have been signed out";
+"Your password was successfully changed." = "La tua password è stata modificata con successo.";
 
-"Save Birthday" = "Save Birthday";
+"Success!" = "Successo!";
 
-"You're not old enough" = "You're not old enough";
+"Username is already in use" = "Username già in uso";
 
-"Cannot Verify Profile" = "Cannot Verify Profile";
+"Email is already in use" = "Email già in uso";
 
-"You cannot sign in" = "You cannot sign in";
+"Sign In Error" = "Errore nell'iscrizione";
 
-"We're sorry, you're not old enough to create a profile." = "We're sorry, you're not old enough to create a profile.";
-
-"You need an internet connection to create a profile." = "You need an internet connection to create a profile.";
-
-"We're sorry. You're not old enough to use voice overlay." = "We're sorry. You're not old enough to use voice overlay.";
-
-"Cannote Create Profile" = "Cannote Create Profile";
-
-"We're sorry, you're not old enough to write a comment." = "We're sorry, you're not old enough to write a comment.";
-
-"You cannot sign in to Kamcord due to your age." = "You cannot sign in to Kamcord due to your age.";
-
-"Year" = "Year";
-
+"Really Delete" = "Elimina sul serio";
