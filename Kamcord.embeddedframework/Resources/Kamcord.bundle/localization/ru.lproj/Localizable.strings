@@ -222,7 +222,7 @@
 
 "Username or Email" = "Имя пользователя или эл. почта";
 
-"Password must less than 31 characters" = "Пароль должен содержать не более 31 символа";
+"Password must be less than 31 characters" = "Пароль должен содержать не более 31 символа";
 
 "Please setup an email account in Settings > Mail." = "Настрой аккаунт эл. почты в разделе 'Настройки -> Почта'.";
 
@@ -252,45 +252,32 @@
 
 "WeChat" = "WeChat";
 
-"Cannot Write Comment" = "Cannot Write Comment";
+"Change Email" = "Изменить Эл. почту";
 
-"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
+"New email" = "Новый адрес Эл. почты";
 
-"Day" = "Day";
+"New email (again)" = "Новый адрес Эл. почты (еще раз)";
 
-"Facebook Credentials Changed" = "Facebook Credentials Changed";
+"No Video Available" = "Видео недоступно";
 
-"Change Birthday" = "Change Birthday";
+"Email must be less than 65 characters" = "Эл. почта не должна превышать 65 символов ";
 
-"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
+"Email or username does not exist" = "Эл. почта или имя пользователя не существует ";
 
-"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
+"Invalid password" = "Неверный пароль";
 
-"Month" = "Month";
+"New emails do not match" = "Адреса Эл. почты не совпадают";
 
-"Invalid Birthday" = "Invalid Birthday";
+"Your preferred email was successfully changed." = "Ваш предпочитаемый адрес Эл. почты был успешно изменен.";
 
-"You have been signed out" = "You have been signed out";
+"Your password was successfully changed." = "Ваш пароль был успешно изменен.";
 
-"Save Birthday" = "Save Birthday";
+"Success!" = "Готово!";
 
-"You're not old enough" = "You're not old enough";
+"Username is already in use" = "Имя пользователя уже используется";
 
-"Cannot Verify Profile" = "Cannot Verify Profile";
+"Email is already in use" = "Адрес Эл. почты уже используется";
 
-"You cannot sign in" = "You cannot sign in";
+"Sign In Error" = "Ошибка при входе";
 
-"We're sorry, you're not old enough to create a profile." = "We're sorry, you're not old enough to create a profile.";
-
-"You need an internet connection to create a profile." = "You need an internet connection to create a profile.";
-
-"We're sorry. You're not old enough to use voice overlay." = "We're sorry. You're not old enough to use voice overlay.";
-
-"Cannote Create Profile" = "Cannote Create Profile";
-
-"We're sorry, you're not old enough to write a comment." = "We're sorry, you're not old enough to write a comment.";
-
-"You cannot sign in to Kamcord due to your age." = "You cannot sign in to Kamcord due to your age.";
-
-"Year" = "Year";
-
+"Really Delete" = "Правда удалить";
