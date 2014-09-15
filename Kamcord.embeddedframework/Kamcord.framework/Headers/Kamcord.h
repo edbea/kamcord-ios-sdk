@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.8.1 (2014-08-27)
+ * Current version is 1.8.2 (2014-09-12)
  *
  */
 extern NSString *const KamcordVersion;

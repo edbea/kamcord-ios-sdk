@@ -332,3 +332,31 @@
 
 "We're Sorry!" = "We're Sorry!";
 
+"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
+
+"Day" = "Day";
+
+"Cannot Write Comment" = "Cannot Write Comment";
+
+"Facebook Credentials Changed" = "Facebook Credentials Changed";
+
+"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
+
+"Month" = "Month";
+
+"Invalid Birthday" = "Invalid Birthday";
+
+"You have been signed out" = "You have been signed out";
+
+"Save Birthday" = "Save Birthday";
+
+"Cannot Verify Profile" = "Cannot Verify Profile";
+
+"You need an internet connection to create a profile." = "You need an internet connection to create a profile.";
+
+"We're sorry, you're not old enough to write a comment." = "We're sorry, you're not old enough to write a comment.";
+
+"Year" = "Year";
+

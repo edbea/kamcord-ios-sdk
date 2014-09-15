@@ -222,7 +222,7 @@
 
 "Username or Email" = "Benutzername oder Email";
 
-"Password must be less than 31 characters" = "Passwort darf nicht mehr als 31 Zeichen lang sein";
+"Password must less than 31 characters" = "Passwort darf nicht mehr als 31 Zeichen lang sein";
 
 "Please setup an email account in Settings > Mail." = "Bitte erstelle in 'Einstellungen -> Mail' ein Email-Konto.";
 
@@ -251,32 +251,57 @@
 
 "WeChat" = "WeChat";
 
-"Change Email" = "E-Mail ändern";
+"Cannot Write Comment" = "Cannot Write Comment";
 
-"New email" = "Neue E-Mail";
+"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
 
-"New email (again)" = "Neue E-Mail (wiederholen)";
+"Day" = "Day";
 
-"No Video Available" = "Kein Video verfügbar";
+"Facebook Credentials Changed" = "Facebook Credentials Changed";
 
-"Email must be less than 65 characters" = "E-Mail muss weniger als 65 Zeichen haben";
+"Change Birthday" = "Change Birthday";
 
-"Email or username does not exist" = "E-Mail oder Benutzername existiert nicht";
+"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
 
-"Invalid password" = "Ungültiges Passwort";
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
 
-"New emails do not match" = "Die neuen E-Mails stimmen nicht überein";
+"Month" = "Month";
 
-"Your preferred email was successfully changed." = "Ihre bevorzugte E-Mail wurde erfolgreich geändert.";
+"Invalid Birthday" = "Invalid Birthday";
 
-"Your password was successfully changed." = "Ihr Passwort wurde erfolgreich geändert.";
+"You have been signed out" = "You have been signed out";
 
-"Success!" = "Erfolg!";
+"Save Birthday" = "Save Birthday";
 
-"Username is already in use" = "Der Benutzername wird bereits verwendet";
+"You're not old enough" = "You're not old enough";
 
-"Email is already in use" = "Die E-Mail wird bereits verwendet";
+"Cannot Verify Profile" = "Cannot Verify Profile";
 
-"Sign In Error" = "Fehler bei der Anmeldung";
+"You cannot sign in" = "You cannot sign in";
 
-"Really Delete" = "Wirklich löschen";
+"We're sorry, you're not old enough to create a profile." = "We're sorry, you're not old enough to create a profile.";
+
+"You need an internet connection to create a profile." = "You need an internet connection to create a profile.";
+
+"We're sorry. You're not old enough to use voice overlay." = "We're sorry. You're not old enough to use voice overlay.";
+
+"Cannote Create Profile" = "Cannote Create Profile";
+
+"We're sorry, you're not old enough to write a comment." = "We're sorry, you're not old enough to write a comment.";
+
+"You cannot sign in to Kamcord due to your age." = "You cannot sign in to Kamcord due to your age.";
+
+"Year" = "Year";
+
+"You're not able to sign in to this game right now. Please try again later." = "You're not able to sign in to this game right now. Please try again later.";
+
+"You're not able to use voice overlay in this game right now. Please try again later." = "You're not able to use voice overlay in this game right now. Please try again later.";
+
+"We're sorry!" = "We're sorry!";
+
+"You're not able to create a profile in this game right now. Please try again later." = "You're not able to create a profile in this game right now. Please try again later.";
+
+"We're Sorry!" = "We're Sorry!";
+
+"Password must be less than 31 characters" = "Password must be less than 31 characters";
+

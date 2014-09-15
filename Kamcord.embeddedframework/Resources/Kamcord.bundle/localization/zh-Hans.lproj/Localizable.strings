@@ -196,7 +196,7 @@
 
 "My Videos" = "我的视频";
 
-"Password must be less than 31 characters" = "密码必须少于 31 个字符";
+"Password must less than 31 characters" = "密码必须少于 31 个字符";
 
 "Please setup an email account in Settings > Mail." = "请在设置中设置电子邮件帐户";
 
@@ -295,32 +295,57 @@
 
 "WeChat" = "微信";
 
-"Change Email" = "更改电子邮件";
+"Cannot Write Comment" = "Cannot Write Comment";
 
-"New email" = "新电子邮件";
+"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
 
-"New email (again)" = "新电子邮件（再次输入）";
+"Day" = "Day";
 
-"No Video Available" = "无可用视频";
+"Facebook Credentials Changed" = "Facebook Credentials Changed";
 
-"Email must be less than 65 characters" = "电子邮件地址必须少于 65 个字符";
+"Change Birthday" = "Change Birthday";
 
-"Email or username does not exist" = "电子邮件或用户名不存在";
+"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
 
-"Invalid password" = "密码无效";
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
 
-"New emails do not match" = "新电子邮件不匹配";
+"Month" = "Month";
 
-"Your preferred email was successfully changed." = "您的首选电子邮件已成功更改。";
+"Invalid Birthday" = "Invalid Birthday";
 
-"Your password was successfully changed." = "您的密码已成功更改。";
+"You have been signed out" = "You have been signed out";
 
-"Success!" = "成功！";
+"Save Birthday" = "Save Birthday";
 
-"Username is already in use" = "用户名已被使用";
+"You're not old enough" = "You're not old enough";
 
-"Email is already in use" = "电子邮件已被使用";
+"Cannot Verify Profile" = "Cannot Verify Profile";
 
-"Sign In Error" = "登录错误";
+"You cannot sign in" = "You cannot sign in";
 
-"Really Delete" = "确认删除";
+"We're sorry, you're not old enough to create a profile." = "We're sorry, you're not old enough to create a profile.";
+
+"You need an internet connection to create a profile." = "You need an internet connection to create a profile.";
+
+"We're sorry. You're not old enough to use voice overlay." = "We're sorry. You're not old enough to use voice overlay.";
+
+"Cannote Create Profile" = "Cannote Create Profile";
+
+"We're sorry, you're not old enough to write a comment." = "We're sorry, you're not old enough to write a comment.";
+
+"You cannot sign in to Kamcord due to your age." = "You cannot sign in to Kamcord due to your age.";
+
+"Year" = "Year";
+
+"You're not able to sign in to this game right now. Please try again later." = "You're not able to sign in to this game right now. Please try again later.";
+
+"You're not able to use voice overlay in this game right now. Please try again later." = "You're not able to use voice overlay in this game right now. Please try again later.";
+
+"We're sorry!" = "We're sorry!";
+
+"You're not able to create a profile in this game right now. Please try again later." = "You're not able to create a profile in this game right now. Please try again later.";
+
+"We're Sorry!" = "We're Sorry!";
+
+"Password must be less than 31 characters" = "Password must be less than 31 characters";
+
