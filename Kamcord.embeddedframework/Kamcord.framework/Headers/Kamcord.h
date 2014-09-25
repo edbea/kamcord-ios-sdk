@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.8.2 (2014-09-12)
+ * Current version is 1.8.3 (2014-09-24)
  *
  */
 extern NSString *const KamcordVersion;
@@ -43,12 +43,16 @@ extern NSString *const KamcordVersion;
 typedef NS_ENUM(NSUInteger, KCDeviceType) {
     KCDeviceTypeiPod4G          = 1 << 0,
     KCDeviceTypeiPod5G          = 1 << 1,
+    
     KCDeviceTypeiPhone3GS       = 1 << 2,
     KCDeviceTypeiPhone4         = 1 << 3,
     KCDeviceTypeiPhone4S        = 1 << 4,
     KCDeviceTypeiPhone5         = 1 << 5,
     KCDeviceTypeiPhone5C        = 1 << 6,
     KCDeviceTypeiPhone5S        = 1 << 7,
+    KCDeviceTypeiPhone6         = 1 << 15,
+    KCDevicetypeiPhone6Plus     = 1 << 16,
+    
     KCDeviceTypeiPad1           = 1 << 8,
     KCDeviceTypeiPad2           = 1 << 9,
     KCDeviceTypeiPadMini        = 1 << 10,

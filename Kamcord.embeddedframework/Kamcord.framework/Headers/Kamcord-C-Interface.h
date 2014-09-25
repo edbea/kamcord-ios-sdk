@@ -92,6 +92,25 @@ extern "C" {
                                     bool disableiPadAir);
     
     /*
+    void Kamcord_SetDeviceBlacklist(bool disableiPod4G,
+                                    bool disableiPod5G,
+                                    bool disableiPhone3GS,
+                                    bool disableiPhone4,
+                                    bool disableiPhone4S,
+                                    bool disableiPhone5,
+                                    bool disableiPhone5C,
+                                    bool disableiPhone5S,
+                                    bool disableiPhone6,
+                                    bool disableiPhone6Plus,
+                                    bool disableiPad1,
+                                    bool disableiPad2,
+                                    bool disableiPadMini,
+                                    bool disableiPad3,
+                                    bool disableiPad4,
+                                    bool disableiPadAir);
+     */
+    
+    /*
      *
      * Kamcord initialization. Must be called before you can start recording.
      *
