@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Kamcord"
-  s.version      = "1.8.3"
+  s.version      = "1.8.4"
   s.summary      = "The Kamcord iOS framework for native iOS engines and cocos2d/cocos2d-x"
 
   s.description  = <<-DESC
