@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.8.5 (2014-10-17)
+ * Current version is 1.8.6 (2014-10-24)
  *
  */
 extern NSString *const KamcordVersion;
@@ -111,6 +111,14 @@ __deprecated typedef enum {
     KC_CROSS_PROMO_TAB,
     KC_SHARE_TAB,
 } KC_UI_INITIAL_TAB;
+
+typedef NS_ENUM(NSUInteger, KCAgeGateStatus) {
+    KCAgeGateStatusUnknown,
+    KCAgeGateStatusRestricted,
+    KCAgeGateStatusUnrestricted,
+};
+
+typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 
 /*
  *
@@ -885,17 +893,37 @@ __deprecated typedef enum {
  * them to turn on voice overlay.
  *
  * @param       restricted  Require age check before allowing the user to enable voice overlay?
- *
  */
 + (void)setAgeRestrictionEnabled:(BOOL)restricted;
 
 /*
  *
+ * Requires users to verify they are at least thirteen years old prior to allowing
+ * them to turn on voice overlay.
+ *
+ * @param       restricted  Require age check before allowing the user to enable voice overlay?
+ * @param       block       A block that will be executed when the user's age gate status is updated
+ */
++ (void)setAgeRestrictionEnabled:(BOOL)restricted
+          withStatusUpdatedBlock:(KCAgeGateStatusUpdatedBlock)block;
+
+/*
+ * DEPRECATED:
+ * Please use the status updated block instead of this accessor!
+ *
  * Returns a boolean indicating whether or not the user is required to be of age in order
  * to use turn on voice overlay. Reflects the above setting.
  *
  */
-+ (BOOL)isAgeRestrictionEnabled;
++ (BOOL)isAgeRestrictionEnabled __deprecated;
+
+/*
+ * This will return the current status of the age gate. You may also use the optional block when setting 
+ * age restriction enabled.
+ *
+ * @returns     The current status of the age gate for the user.
+ */
++ (KCAgeGateStatus)ageGateStatus;
 
 // -------------------------------------------------------------------------
 // OpenGL Commands
