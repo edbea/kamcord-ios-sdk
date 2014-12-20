@@ -7,13 +7,35 @@
 //
 
 #import "KamcordRecorder.h"
+
 #ifdef __arm64__
 #import <Metal/Metal.h>
 #import <QuartzCore/CAMetalLayer.h>
-#endif
 
 @interface KamcordRecorder ()
-+ (void)configureLayer:(CAMetalLayer *)layer fromDevice:(id<MTLDevice>)device;
-+ (void)setCurrentDrawable:(id<CAMetalDrawable>)drawable;
-+ (void)addMetalCommands:(id<MTLCommandBuffer>)commandBuffer;
+
+/*
+ *
+ * Call once when the layer and device are created.
+ *
+ */
++ (void)configureLayer:(CAMetalLayer *)layer
+            fromDevice:(id <MTLDevice>)device;
+
+/*
+ *
+ * Call every frame once you get the new drawable.
+ *
+ */
++ (void)setCurrentDrawable:(id <CAMetalDrawable>)drawable;
+
+/*
+ *
+ * Call every frame after setCurrentDrawable to record that frame.
+ *
+ */
++ (void)addMetalCommands:(id <MTLCommandBuffer>)commandBuffer;
+
 @end
+
+#endif
