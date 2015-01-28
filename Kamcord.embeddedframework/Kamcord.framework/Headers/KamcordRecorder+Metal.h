@@ -11,6 +11,7 @@
 #ifdef __arm64__
 #import <Metal/Metal.h>
 #import <QuartzCore/CAMetalLayer.h>
+#endif
 
 @interface KamcordRecorder ()
 
@@ -37,5 +38,3 @@
 + (void)addMetalCommands:(id <MTLCommandBuffer>)commandBuffer;
 
 @end
-
-#endif

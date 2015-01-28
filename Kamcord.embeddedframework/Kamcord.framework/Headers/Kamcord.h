@@ -30,7 +30,7 @@
 
 /*
  *
- * Current version is 1.8.9 (2014-12-17)
+ * Current version is 1.9.0 (2014-01-23)
  *
  */
 extern NSString *const KamcordVersion;
@@ -655,6 +655,47 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)youtubeDescription;
 + (NSString *)youtubeTags;
+
+/*
+ *
+ * Set the NicoNico description of the shared video.
+ *
+ * @param       clientID        The NicoNico client id for this video.
+ * @param       clientSecret    The NicoNico client secret for this video.
+ *
+ */
++ (void)setNicoNicoClientID:(NSString *)clientID
+                  andSecret:(NSString *)clientSecret;
+
+/*
+ *
+ * Set the NicoNico description of the shared video.
+ *
+ * @param       description     The NicoNico description for this video.
+ *
+ */
++ (void)setNicoNicoDescription:(NSString *)description;
+
+/*
+ *
+ * Returns the previously set NicoNico client id.
+ *
+ */
++ (NSString *)niconicoClientID;
+
+/*
+ *
+ * Returns the previously set NicoNico client secret.
+ *
+ */
++ (NSString *)niconicoClientSecret;
+
+/*
+ *
+ * Returns the previously set NicoNico description.
+ *
+ */
++ (NSString *)niconicoDescription;
 
 /*
  *

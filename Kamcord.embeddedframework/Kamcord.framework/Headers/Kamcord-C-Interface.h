@@ -21,6 +21,7 @@ extern "C" {
         KCShareDestinationFacebook = 0,
         KCShareDestinationTwitter,
         KCShareDestinationYouTube,
+        KCShareDestinationNicoNico,
         KCShareDestinationEmail,
         KCShareDestinationWeChat,
         KCShareDestinationLine,
@@ -35,6 +36,7 @@ extern "C" {
         KC_SHARE_TARGET_FACEBOOK = 0,
         KC_SHARE_TARGET_TWITTER,
         KC_SHARE_TARGET_YOUTUBE,
+        KC_SHARE_TARGET_NICONICO,
         KC_SHARE_TARGET_EMAIL,
         KC_SHARE_TARGET_WECHAT,
         KC_SHARE_TARGET_LINE,
@@ -532,7 +534,27 @@ extern "C" {
      */
     void Kamcord_SetYouTubeSettings(const char * description,
                                     const char * tags);
+    
+    /*
+     *
+     * Set the client ID, Secret, and description for NicoNico.
+     *
+     * @param   clientID        The clientID you registered with for NicoNico.
+     * @param   clientSecret    The clientSecret you registered with for NicoNico.
+     *
+     */
+    void Kamcord_SetNicoNicoSettings(const char * clientID,
+                                     const char * clientSecret);
 
+    /*
+     *
+     * Set the client ID, Secret, and description for NicoNico.
+     *
+     * @param   description        The video's description when it's shared on NicoNico.
+     *
+     */
+    void Kamcord_SetNicoNicoDescription(const char * description);
+    
     /*
      *
      * Set the default tweet.
