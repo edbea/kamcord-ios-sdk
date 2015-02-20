@@ -106,6 +106,7 @@
                         shareToFacebook:(BOOL)facebook
                          shareToTwitter:(BOOL)twitter
                          shareToYouTube:(BOOL)youtube
+                        shareToNicoNico:(BOOL)niconico
                          shareWithEmail:(BOOL)email;
 
 
@@ -174,6 +175,15 @@ wasSharedToTwitter:(BOOL)success;
  *
  */
 - (void)videoWillBeSharedToYouTube:(NSString *)videoID;
+
+/*
+ *
+ * Called when the video WILL be shared to NicoNico by the Kamcord servers.
+ *
+ * @param       videoID             The Kamcord video ID.
+ *
+ */
+- (void)videoWillBeSharedToNicoNico:(NSString *)videoID;
 
 /*
  *

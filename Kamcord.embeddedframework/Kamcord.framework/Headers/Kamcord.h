@@ -28,14 +28,14 @@
  */
 #import "KamcordRecorder.h"
 
-/*
+/**
  *
- * Current version is 1.8.9 (2014-12-17)
+ * Current version is 1.9.1 (2014-02-19)
  *
  */
 extern NSString *const KamcordVersion;
 
-/*
+/**
  *
  * The Kamcord device blacklist options.
  *
@@ -64,12 +64,12 @@ typedef NS_ENUM(NSUInteger, KCDeviceType) {
     KCDeviceTypeSingleCore      = (KCDeviceTypeiPod4G | KCDeviceTypeiPhone3GS | KCDeviceTypeiPhone4 | KCDeviceTypeiPad1)
 };
 
-/*
+/**
  *
- * Previous enum, present here and deprecated for compatibility
- *
+ * @warning This is now deprecated.
+ * @see KCDeviceType
  */
-__deprecated typedef enum {
+__deprecated typedef NS_ENUM(NSUInteger, KC_DEVICE_TYPE) {
     KC_DEVICE_TYPE_IPOD_4G          = 1 << 0,
     KC_DEVICE_TYPE_IPOD_5G          = 1 << 1,
     KC_DEVICE_TYPE_IPHONE_3GS       = 1 << 2,
@@ -86,52 +86,72 @@ __deprecated typedef enum {
     KC_DEVICE_TYPE_IPAD_AIR         = 1 << 13,
     // Equivalent to (KC_DEVICE_TYPE_IPOD_4G | KC_DEVICE_TYPE_IPHONE_3GS | KC_DEVICE_TYPE_IPHONE_4 | KC_DEVICE_TYPE_IPAD_1)
     KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 8)
-} KC_DEVICE_TYPE;
+};
 
 
-/*
+/**
  * 
- * The various screens of the Kamcord UI.
+ * The various tabs in the Kamcord UI.
  *
  */
 typedef NS_ENUM(NSUInteger, KCUITab) {
+/// The watch tab - Allows a user to watch other videos from this game.
     KCUITabWatch = 0,
+/// The profile tab - Shown for a specific user's profile.
     KCUITabProfile,
+/// The promotional
     KCUITabPromo,
+/// The share tab - Shown when a recorded video is ready to be shared.
     KCUITabShare,
 };
 
-/*
- *  Previous enum, present here and deprecated for compatibility
- *
+/**
+ *  @warning this is now deprecated.
+ *  @see KCUITab
  */
-__deprecated typedef enum {
+__deprecated typedef NS_ENUM(NSUInteger, KC_UI_INITIAL_TAB) {
     KC_WATCH_TAB = 0,
     KC_PROFILE_TAB,
     KC_CROSS_PROMO_TAB,
     KC_SHARE_TAB,
-} KC_UI_INITIAL_TAB;
+};
 
+/**
+ *  Describes the current state of age gating. 
+ *
+ */
 typedef NS_ENUM(NSUInteger, KCAgeGateStatus) {
+/**
+ The user has not encountered the age gate.
+ */
     KCAgeGateStatusUnknown,
+/**
+ The user is under age and their activites have been restricted
+ */
     KCAgeGateStatusRestricted,
+/**
+ The user is of appropriate age and their activities will not be restricted
+ */
     KCAgeGateStatusUnrestricted,
 };
 
+/**
+ This block will be called when the age gate status has been changed
+ */
 typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 
-/*
+/**
  *
  * The Kamcord API
  *
  */
 @interface Kamcord : NSObject
 
-// -------------------------------------------------------------------------
-// Kamcord Configuration
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Configuration
+/// -------------------------------------------------------------------------
 
-/*
+/**
  *
  * The current version of the Kamcord SDK in the format X.Y.Z.
  *
@@ -140,27 +160,24 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)SDKVersion;
 
-/*
+/** Gracefully disable Kamcord on certain devices.
  *
- * Gracefully disable Kamcord on certain devices. If you use this method,
- * make sure it's the first Kamcord call you make.
+ * @param   blacklist       An integer bitmap of KC_DEVICE_TYPE describing the devices to disable Kamcord for.
+ * @warning If you use this method, make sure it's the first Kamcord call you make.
  *
- * @param   blacklist       An integer bitmap of KC_DEVICE_TYPE describing the
- *                          devices to disable Kamcord for.
- *
- * e.g. [Kamcord setDeviceBlacklist:(KC_DEVICE_TYPE_IPOD_4G | KC_DEVICE_TYPE_IPHONE_3GS | KC_DEVICE_TYPE_IPAD_1)];
+ * `[Kamcord setDeviceBlacklist:(KCDeviceTypeiPod4G | KCDeviceTypeiPhone3GS | KCDeviceTypeiPad1)];`
  *
  */
-+ (void)setDeviceBlacklist:(NSUInteger)blacklist;
++ (void)setDeviceBlacklist:(KCDeviceType)blacklist;
 
-/*
+/**
  *
  * Kamcord initialization. Set your developer key, secret, app name,
  * and the UIViewController that will present the Kamcord UI when 
- * you call [Kamcord showView].
+ * you call `[Kamcord showView]`.
  *
- * @param   developerKey            Your Kamcord developer key.
- * @param   developerSecret         Your Kamcord developer secret.
+ * @param   key                     Your Kamcord developer key.
+ * @param   secret                  Your Kamcord developer secret.
  * @param   appName                 The name of your application.
  * @param   parentViewController    The UIViewController that will present the Kamcord UI.
  *
@@ -170,40 +187,50 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
                 appName:(NSString *)appName
    parentViewController:(UIViewController *)parentViewController;
 
-/*
+/**
  *
- * Returns the developer key, secret, app name, and parent view controller.
+ * @return The previously set developer key
  *
  */
 + (NSString *)developerKey;
+
+/**
+ * @return The previously set developer secret.
+ */
 + (NSString *)developerSecret;
+
+/**
+ * @return The previously set application name
+ */
 + (NSString *)appName;
+
+/**
+ * @return The previously set parent view controller, from which the Kamcord UI will be presented.
+ */
 + (UIViewController *)parentViewController;
 
-/*
+/**
  *
- * Set the UIViewController that will later present
- * the Kamcord UI when you call [Kamcord showView].
- *
- * This should initially be set by setDeveloperKey:developerSecret:appName:parentViewController:
- * but can still be used if your app's parent view controller changes.
+ * Set the UIViewController that will later present the Kamcord UI when you call `[Kamcord showView]`.
  *
  * @param       viewController      The view controller that will present the Kamcord UI.
  *
+ * This should initially be set by `setDeveloperKey:developerSecret:appName:parentViewController:`
+ * but can still be used if your app's parent view controller changes.
  */
 + (void)setParentViewController:(UIViewController *)viewController;
 
-/*
+/**
  *
  * Returns YES if and only if the device is running iOS 5+ and
- * has not been blacklisted via setDeviceBlacklist.
+ * has not been blacklisted via `setDeviceBlacklist:`.
  *
- * @returns     Whether or not Kamcord is enabled on the current device.
+ * @returns Whether or not Kamcord is enabled on the current device.
  *
  */
 + (BOOL)isEnabled;
 
-/*
+/**
  *
  * Returns the current interface orientation.
  *
@@ -212,19 +239,19 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (UIInterfaceOrientation)interfaceOrientation;
 
-/*
+/**
  *
  * Turns on and off Kamcord video push notifications.
  *
- * Today, we schedule 4 "Gameplay of the Week" notifications for each of the
- * next 4 weeks.
  *
  * @param       enabled     Whether or not to enable video push notifications.
  *
+ * Today, we schedule 4 "Gameplay of the Week" notifications for each of the
+ * next 4 weeks.
  */
 + (void)setNotificationsEnabled:(BOOL)enabled;
 
-/*
+/**
  *
  * Returns whether or not video push notifications are enabled.
  *
@@ -233,10 +260,10 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (BOOL)notificationsEnabled;
 
-/*
+/**
  *
- * Pass Kamcord the local notifications from didReceiveLocalNotification: and
- * didFinishLaunchingWithOptions: if the notification data has the "Kamcord" key.
+ * Pass Kamcord the local notifications from `didReceiveLocalNotification:` and
+ * `didFinishLaunchingWithOptions:` if the notification data has the "Kamcord" key.
  * You can also pass us all your local notifications and we will handle the ones
  * relevant to Kamcord and ignore the rest.
  *
@@ -245,7 +272,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)handleKamcordNotification:(UILocalNotification *)notification;
 
-/*
+/**
  *
  * Fires a test notification - makes it possible to experience the behavior
  * in an app without waiting for Kamcord's servers to fire a weekly notification.
@@ -254,67 +281,69 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)fireTestNotification;
 
-// -------------------------------------------------------------------------
-// Video Recording
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Recording
+/// -------------------------------------------------------------------------
 
-/*
- *
- * Simple API to start/stop/pause/resume video recording.
- *
- */
+/// Start recording a new video
 + (void)startRecording;
+
+/// Stop recording the current video
 + (void)stopRecording;
+
+/// Resume a paused recording
 + (void)resume;
+
+/// Pause a recording in progress
 + (void)pause;
 
-/*
+/**
  *
  * Is a video currently being recorded?
  *
  * @returns     Whether or not a video is currently recording.
- *              The only time this video returns YES is when frames are
+ *              The only time this video returns `YES` is when frames are
  *              in the process of being written to a video.
- *              Note that this will return NO if the video is paused.
+ *              Note that this will return `NO` if the video is paused.
  *
  */
 + (BOOL)isRecording;
 
-/*
+/**
  *
  * Is the current recording paused?
  *
- * @returns     Whether or not the current video recording has been paused."
+ * @returns     Whether or not the current video recording has been paused.
  *
  */
 + (BOOL)isPaused;
 
-/*
+/**
  *
- * Show the Kamcord share view and watch view inside the previously set parentViewController;
- * This is identical to [Kamcord showViewInViewController:[Kamcord parentViewController]].
+ * Show the Kamcord share view and watch view inside the previously set `parentViewController`;
+ * This is identical to `[Kamcord showViewInViewController:[Kamcord parentViewController]]`.
  *
  */
 + (void)showView;
 
-/*
+/**
  *
- * Show the Kamcord view inside the given UIViewController.
+ * Show the Kamcord view inside the given `UIViewController`.
  *
- * @param       parentViewController    The UIViewController that will show the Kamcord UI.
+ * @param       parentViewController    The `UIViewController` that will show the Kamcord UI.
  *
  */
 + (void)showViewInViewController:(UIViewController *)parentViewController;
 
-/*
+/**
  *
- * Show the Kamcord watch view inside the previously set parentViewController.
- * This is identical to [Kamcord showWatchViewInViewController:[Kamcord parentViewController] initialTab:KC_WATCH_TAB].
+ * Show the Kamcord watch view inside the previously set `parentViewController`.
+ * This is identical to `[Kamcord showWatchViewInViewController:[Kamcord parentViewController] initialTab:KC_WATCH_TAB]`.
  *
  */
 + (void)showWatchView;
 
-/*
+/**
  *
  * Show the Kamcord watch view inside the given UIViewController.
  *
@@ -323,7 +352,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)showWatchViewInViewController:(UIViewController *)parentViewController;
 
-/*
+/**
  *
  * Show the Kamcord watch view inside the given UIViewController.
  *
@@ -337,7 +366,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)showWatchViewInViewController:(UIViewController *)parentViewController
                            initialTab:(KCUITab)initialTab;
 
-/*
+/**
  *
  * Is a Kamcord view showing?
  *
@@ -346,7 +375,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (BOOL)isViewShowing;
 
-/*
+/**
  *
  * Receive callbacks about the life of a recorded video. Please note that this
  * object is *NOT* retained by Kamcord.
@@ -354,11 +383,11 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  * The KamcordDelegate protocol is defined in <Kamcord/KamcordProtocols.h>.
  *
  * @param       delegate        The delegate to receive Kamcord callbacks.
- *
+ * @see KamcordDelegate
  */
 + (void)setDelegate:(id <KamcordDelegate>)delegate;
 
-/*
+/**
  *
  * Returns the current Kamcord delegate.
  *
@@ -367,17 +396,17 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (id <KamcordDelegate>)delegate;
 
-/*
+/**
  *
  * Set the quality of the recorded video. The default setting
- * is KCVideoQualityStandard;
+ * is `KCVideoQualityStandard`;
  *
  * @param   quality     The desired recorded video quality.
  *
  */
 + (void)setVideoQuality:(KCVideoQuality)quality;
 
-/*
+/**
  *
  * Returns the quality of the recorded videos.
  *
@@ -386,7 +415,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (KCVideoQuality)videoQuality;
 
-/*
+/**
  *
  * Set the maximum length of a recorded video in seconds. If the gameplay lasts longer
  * than that, only the last N seconds will get recorded in the final video.
@@ -396,7 +425,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setMaximumVideoLength:(NSUInteger)seconds;
 
-/*
+/**
  *
  * Returns the maximum possible recorded video length.
  *
@@ -405,17 +434,17 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSUInteger)maximumVideoLength;
 
-/*
+/**
  *
- * Is there a valid video such that [Kamcord showView] would show the Kamcord UI?
- * Note that [Kamcord showView] is always safe to call, even if there is no video.
+ * Is there a valid video such that `[Kamcord showView]` would show the Kamcord UI?
+ * Note that `[Kamcord showView]` is always safe to call, even if there is no video.
  *
  * @returns     Whether or not there's a valid video that [Kamcord showView] could present.
  *
  */
 + (BOOL)hasValidVideo;
 
-/*
+/**
  * Returns true if there is at least one video matching the constraints
  *
  * @param      constraints              A dictionary of (NSString *) metadataDisplayKey ->
@@ -424,7 +453,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (BOOL)videoExistsForMetadataConstraints:(NSDictionary *)constraints;
 
-/*
+/**
  * Shows a Kamcord Video player playing a video with all metadata conforming to the constraints
  * given
  *
@@ -437,7 +466,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)showVideoWithMetadataConstraints:(NSDictionary *)constraints
                                withTitle:(NSString *)title;
 
-/*
+/**
  *
  * Shows a Kamcord Video player playing the video corresponding to the Id
  *
@@ -449,11 +478,11 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)showVideoWithVideoID:(NSString *)videoID
                    withTitle:(NSString *)title;
 
-// -------------------------------------------------------------------------
-// Audio Recording
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Audio
+/// -------------------------------------------------------------------------
 
-/*
+/**
  *
  * Note: This method is only to be used for non-OpenAL/Unity game engines.
  *       For cocos2d/cocos2d-x/Unity (and other OpenAL-based sound engines),
@@ -469,7 +498,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setASBD:(AudioStreamBasicDescription)asbd;
 
-/*
+/**
  *
  * Write the live audio bytes to the recorded video. This is ONLY for custom audio engines.
  * If you use OpenAL or Unity's game engine, there is no need for this method.
@@ -483,27 +512,30 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
              numSamples:(UInt32)numSamples;
 
 
-// -------------------------------------------------------------------------
-// Voice Recording
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Voice
+/// -------------------------------------------------------------------------
 
-/*
+/**
  *
- * This enables or disables voice recording so that either:
+ * This enables or disables voice recording.
  *
  *      1. Your user can activate (i.e. turn on microphone voice recording) 
  *          in the Kamcord Settings UI
  *      2. You can activate it on behalf of the user by calling 
- *          [Kamcord activateVoiceOverlay:YES] (defined below).
+ *          `[Kamcord activateVoiceOverlay:YES]`.
  *
  * The main reason this method exists is to disable voice overlay in your games
  * so that your users cannot enable voice overlay via the Kamcord Settings UI.
- *
+ * @param enabled Whether or not voice overlay is enabled for this game
+ * @see activateVoiceOverlay:
  */
 + (void)setVoiceOverlayEnabled:(BOOL)enabled;
+
+/// @returns Whether or not voice overlay has been enabled for this game
 + (BOOL)voiceOverlayEnabled;
 
-/*
+/**
  *
  * Once voice overlay is enabled, the user must activate it by going to the
  * Kamcord Settings UI and enabling it there. You can also programatically 
@@ -511,16 +543,19 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  *
  * Please note that voice overlay *MUST* first be enabled before trying to
  * activate it.
- *
+ * @param activate Whether or not you want to programmatically activate voice overlay
+ * @see setVoiceOverlayEnabled:
  */
 + (void)activateVoiceOverlay:(BOOL)activate;
+
+/// @returns Whether or not the user has activated voice overlay
 + (BOOL)voiceOverlayActivated;
 
-// -------------------------------------------------------------------------
-// Video Metadata and Social Media Settings
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Video Metadata and Social Media Settings
+/// -------------------------------------------------------------------------
 
-/*
+/**
  *
  * Sets the WeChat App ID so you can set it as a share target in the share grid.
  *
@@ -532,16 +567,16 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setWeChatAppId:(NSString *)weChatAppId;
 
-/*
+/**
  *
  * Returns whether or not WeChat sharing is enabled. In order to enable WeChat
  * sharing, you *MUST* do the following:
  *
  *      1. Link you app against libWeChatSDK.a.
  *      2. Add "-ObjC" to Build Settings => Other Linker Flags.
- *      3. [Kamcord setWeChatAppID:...] with a valid WeChat app ID.
+ *      3. `[Kamcord setWeChatAppID:]` with a valid WeChat app ID.
  *
- * ATTENTION: As of 2014-04-14, the latest available WeChat static lib (libWeChatSDK.a)
+ * @warning **ATTENTION**: As of 2014-04-14, the latest available WeChat static lib (libWeChatSDK.a)
  * only contains slices for armv7, armv7s, and i386. This means that if you
  * want WeChat to work on arm64 devices like the iPhone 5S, iPad Air, and
  * iPad Mini Retina, you *MUST* build your app to target the armv7 and armv7s
@@ -554,7 +589,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (BOOL)isWeChatEnabled;
 
-/*
+/**
  *
  * Set the ways users can share their videos. You can use this method to choose which 
  * forms of social media users will have access to when they go to share a replay. By default
@@ -582,42 +617,61 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
                            target3:(KCShareDestination)target3
                            target4:(KCShareDestination)target4;
 
-/*
+/**
  *
  * Set a piece of metadata for the recorded video
  * All metadata is cleared with the start of a recorded video
  *
- * @param       metadataType       The type of metaData (see the enum KCMetadataType for more info)
+ * @param       metadataType       The type of metaData (see the enum `KCMetadataType` for more info)
  * @param       displayKey         Describe what the metadata is
  * @param       displayValue       A string representation of the value for this metadata
- * @param       numericValue       A numeric representation of the value for this metadata
- *
+ * @see KCMetadataType
  */
 + (void)setDeveloperMetadata:(KCMetadataType)metadataType
                   displayKey:(NSString *)displayKey
                 displayValue:(NSString *)displayValue;
 
+/**
+ *
+ * Set a piece of metadata for the recorded video
+ * All metadata is cleared with the start of a recorded video
+ *
+ * @param       metadataType       The type of metaData (see the enum `KCMetadataType` for more info)
+ * @param       displayKey         Describe what the metadata is
+ * @param       displayValue       A string representation of the value for this metadata
+ * @param       numericValue       A numeric representation of the value for this metadata
+ * @see KCMetadataType
+ */
 + (void)setDeveloperMetadata:(KCMetadataType)metadataType
                   displayKey:(NSString *)displayKey
                 displayValue:(NSString *)displayValue
                 numericValue:(NSNumber *)numericValue;
 
-/*
+/**
  *
- * Return the level and score of the last video (after it's been set).
+ * Return the level of the last video (after it's been set).
  *
  */
 + (NSString *)level;
+
+/**
+ *
+ * Return the score of the last video (after it's been set).
+ *
+ */
 + (NSNumber *)score;
 
-/*
+/**
  *
  * Returns the developer metadata pieces currently set
  *
  */
 + (NSDictionary *)developerMetadata;
 
-/*
+/// ---------------------------------------------------
+/// @name Social Networks & Sharing
+/// ---------------------------------------------------
+/**
  *
  * Set title of the video on Kamcord watch pages and on YouTube.
  * If the user enters their own title in the Kamcord Share UI,
@@ -628,7 +682,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setVideoTitle:(NSString *)title;
 
-/*
+/**
  *
  * Returns the previously set video tite.
  *
@@ -637,7 +691,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)videoTitle;
 
-/*
+/**
  *
  * Set the YouTube description and tags of the shared video.
  *
@@ -648,13 +702,60 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)setYouTubeDescription:(NSString *)description
                          tags:(NSString *)tags;
 
-/*
+/**
  *
- * Returns the previously set YouTube description and tags.
+ * Returns the previously set YouTube description.
  *
  */
 + (NSString *)youtubeDescription;
+
+/**
+ *
+ * Returns the previously set YouTube tags.
+ *
+ */
 + (NSString *)youtubeTags;
+
+/**
+ *
+ * Set the NicoNico description of the shared video.
+ *
+ * @param       clientID        The NicoNico client id for this video.
+ * @param       clientSecret    The NicoNico client secret for this video.
+ *
+ */
++ (void)setNicoNicoClientID:(NSString *)clientID
+                  andSecret:(NSString *)clientSecret;
+
+/*
+ *
+ * Set the NicoNico description of the shared video.
+ *
+ * @param       description     The NicoNico description for this video.
+ *
+ */
++ (void)setNicoNicoDescription:(NSString *)description;
+
+/*
+ *
+ * Returns the previously set NicoNico client id.
+ *
+ */
++ (NSString *)niconicoClientID;
+
+/*
+ *
+ * Returns the previously set NicoNico client secret.
+ *
+ */
++ (NSString *)niconicoClientSecret;
+
+/*
+ *
+ * Returns the previously set NicoNico description.
+ *
+ */
++ (NSString *)niconicoDescription;
 
 /*
  *
@@ -667,36 +768,54 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  * in your game, you can set sharedAuth to NO and we'll take care of things using the
  * Kamcord Facebook appID.
  *
- * @param       facebookAppId   The Facebook App ID.
+ * @param       facebookAppID   The Facebook App ID.
  * @param       sharedAuth      Whether Facebook auth should be shared between the app and Kamcord.
  *
  */
 + (void)setFacebookAppID:(NSString *)facebookAppID
               sharedAuth:(BOOL)sharedAuth;
 
-/*
+/**
  *
- * If you use Facebook shared auth and want to use SSO, you must call this method when
- * Facebook calls back into your app. This is typically done in your application delegate like so:
+ * By default, all shares to Facebook will be done via the Kamcord Facebook appID.
+ * However, for iOS 6+, if you have a Facebook app you'd like to share from, you can set its
+ * Facebook App ID here for native iOS 6+ sharing.
  *
- * - (BOOL)application:(UIApplication *)application
- *             openURL:(NSURL *)url
- *   sourceApplication:(NSString *)sourceApplication
- *          annotation:(id)annotation
- * {
- *     // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
- *     BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication] &&
- *                       [Kamcord handleOpenURL:url];
+ * @param       facebookAppID   The Facebook App ID.
  *
- *     return wasHandled;
- * }
+ */
++ (void)setFacebookAppID:(NSString *)facebookAppID;
+
+/**
  *
- * @param       url         The URL that was passed to your app from the Facebook app callback.
+ * Returns the previously set Facebook App ID.
  *
+ * @returns     The previously set Facebook App ID.
+ *
+ */
++ (NSString *)facebookAppID;
+
+/** If you use Facebook shared auth and want to use SSO, you must call this method when
+    Facebook calls back into your app. This is typically done in your application delegate like so:
+
+            - (BOOL)application:(UIApplication *)application
+                        openURL:(NSURL *)url
+             sourceApplication:(NSString *)sourceApplication
+                    annotation:(id)annotation
+           {
+               // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
+               BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication] &&
+                                 [Kamcord handleOpenURL:url];
+         
+               return wasHandled;
+           }
+ 
+   @param       url         The URL that was passed to your app from the Facebook app callback.
+ 
  */
 + (BOOL)handleOpenURL:(NSURL *)url;
 
-/*
+/**
  *
  * Optional method that will log Kamcord out of the shared Facebook auth. If Facebook auth
  * sharing is not enabled, this method does nothing. This method should typically be called
@@ -707,27 +826,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)logoutOfSharedFacebookAuth;
 
-/*
- *
- * By default, all shares to Facebook will be done via the Kamcord Facebook appID.
- * However, for iOS 6+, if you have a Facebook app you'd like to share from, you can set its
- * Facebook App ID here for native iOS 6+ sharing.
- *
- * @param       facebookAppId   The Facebook App ID.
- *
- */
-+ (void)setFacebookAppID:(NSString *)facebookAppID;
-
-/*
- *
- * Returns the previously set Facebook App ID.
- *
- * @returns     The previously set Facebook App ID.
- *
- */
-+ (NSString *)facebookAppID;
-
-/*
+/**
  *
  * Returns whether Facebook authentication is shared between the app and Kamcord.
  *
@@ -736,7 +835,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (BOOL)facebookAuthShared;
 
-/*
+/**
  *
  * Set the Facebook description for Facebook shares.
  *
@@ -745,7 +844,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setFacebookDescription:(NSString *)description;
 
-/*
+/**
  *
  * Returns the previously set Facebook description for shared videos.
  *
@@ -754,7 +853,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)facebookDescription;
 
-/*
+/**
  *
  * Sets the default tweet, which is used if the user doesn't enter a message when
  * they share a video.
@@ -764,7 +863,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setDefaultTweet:(NSString *)tweet;
 
-/*
+/**
  *
  * Returns the previously set default tweet.
  *
@@ -773,7 +872,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)defaultTweet;
 
-/*
+/**
  *
  * Videos that are shared to Twitter are embedded via a Twitter card.
  * You can set the description in that Twitter card with this method.
@@ -783,7 +882,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setTwitterDescription:(NSString *)description;
 
-/*
+/**
  *
  * Returns the previously set Twitter description.
  *
@@ -792,7 +891,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)twitterDescription;
 
-/*
+/**
  *
  * Returns the previously set WeChat App ID.
  *
@@ -801,7 +900,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)weChatAppId;
 
-/*
+/**
  *
  * Set the default email subject if the user shares a video via email.
  *
@@ -810,7 +909,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setDefaultEmailSubject:(NSString *)subject;
 
-/*
+/**
  *
  * Returns the previously default email subject.
  *
@@ -819,7 +918,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)defaultEmailSubject;
 
-/*
+/**
  *
  * Set the default email body if the user shares a video via email.
  *
@@ -828,7 +927,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setDefaultEmailBody:(NSString *)body;
 
-/*
+/**
  *
  * Returns the previously set default email body.
  *
@@ -837,11 +936,11 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)defaultEmailBody;
 
-// -------------------------------------------------------------------------
-// Advanced Settings
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Advanced Settings
+/// -------------------------------------------------------------------------
 
-/*
+/**
  *
  * Controls the target frames-per-second of the recorded video.
  * By default, most of our games run at 60 FPS while the recorded video is at 30 FPS.
@@ -853,7 +952,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setVideoFPS:(NSUInteger)videoFPS;
 
-/*
+/**
  *
  * Returns the target recording FPS.
  *
@@ -862,7 +961,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSUInteger)videoFPS;
 
-/*
+/**
  *
  * If doing cross promo between your games, you can set the icon for
  * the extra cross promo watch tab.
@@ -876,7 +975,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)enableCrossPromotionWithImageName:(NSString *)imageName;
 
-/*
+/**
  *
  * Should we pause/unpause the game engine when the Kamcord UI appears/disappears?
  * By default, set to true. Works for cocos2d(-x), GLKit, SpriteKit, and Unity.
@@ -885,9 +984,16 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  *
  */
 + (void)setShouldPauseGameEngine:(BOOL)shouldPause;
+
+/**
+ * @return The previously set value, indicating whether the game engine should be paused when the Kamcord UI appears
+ */
 + (BOOL)shouldPauseGameEngine;
 
-/*
+/// ------------------------------------------------------------------
+/// @name Age Restriction
+/// ------------------------------------------------------------------
+/**
  *
  * Requires users to verify they are at least thirteen years old prior to allowing 
  * them to turn on voice overlay.
@@ -896,7 +1002,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setAgeRestrictionEnabled:(BOOL)restricted;
 
-/*
+/**
  *
  * Requires users to verify they are at least thirteen years old prior to allowing
  * them to turn on voice overlay.
@@ -907,17 +1013,16 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)setAgeRestrictionEnabled:(BOOL)restricted
           withStatusUpdatedBlock:(KCAgeGateStatusUpdatedBlock)block;
 
-/*
- * DEPRECATED:
- * Please use the status updated block instead of this accessor!
+/**
  *
  * Returns a boolean indicating whether or not the user is required to be of age in order
  * to use turn on voice overlay. Reflects the above setting.
- *
+ * @warning This is now deprecated.
+ * @see setAgeRestrictionEnabled:withStatusUpdatedBlock:
  */
 + (BOOL)isAgeRestrictionEnabled __deprecated;
 
-/*
+/**
  * This will return the current status of the age gate. You may also use the optional block when setting 
  * age restriction enabled.
  *
@@ -925,11 +1030,11 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (KCAgeGateStatus)ageGateStatus;
 
-// -------------------------------------------------------------------------
-// OpenGL Commands
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name OpenGL Commands
+/// -------------------------------------------------------------------------
 
-/*
+/**
  *
  * Call this method to save the current state of the rendered frame out to video.
  * This is useful if you have HUD layer and would like to capture a video
@@ -939,7 +1044,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)captureFrame;
 
-/*
+/**
  *
  * Returns a snapshot of the currently rendered frame. If the frame is only partially
  * rendered, this will return a snapshot of that. If you'd like to get a snapshot
@@ -948,7 +1053,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (UIImage *)snapshot;
 
-/*
+/**
  *
  * Takes a snapshot of the next frame and calls back when the frame is captured.
  *
@@ -964,29 +1069,32 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (BOOL)snapshotNextFrameWithCompletionHandler:(void(^)(UIImage * image, NSURL * imageURL))handler
                                      saveToURL:(NSURL *)destinationURL;
 
-// -------------------------------------------------------------------------
-// Deprecated methods
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Deprecated methods
+/// -------------------------------------------------------------------------
+
 
 /*
- * *DEPRECATED*
+ *
+ *
  * Attach arbitrary key/value metadata to the last recorded video
  * that you can retrieve later from the Kamcord servers.
  *
  * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
- *
+ * @warning This is now deprecated.
  */
 + (void)setVideoMetadata:(NSDictionary *)metadata __deprecated;
 
 /*
- * *DEPRECATED*
- * Returns the previously set video metadata.
  *
+ * Returns the previously set video metadata.
+ * @warning This is now deprecated.
  */
 + (NSDictionary *)videoMetadata __deprecated;
 
 /*
- * *DEPRECATED*
+ *
+ *
  * This method will query the Kamcord servers for metadata you've previously
  * associated with an uploaded video via the setVideoMetadata API call.
  * When the server request returns, the original metadata you had set
@@ -1003,16 +1111,14 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  *
  * @param       kamcordVideoID      The unique Kamcord ID for a previously shared video.
  * @param       completionHandler   A block that handles the returned metadata from the server.
- *
+ * @warning This is now deprecated.
  */
 + (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
                  withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler __deprecated;
 
 /*
- * *DEPRECATED*
- * As of 1.7.3, this has been deprecated in favor of setDeveloperMetadata:...
  *
- * The metadata documentation can be found here: 
+ * The metadata documentation can be found here:
  *      https://github.com/kamcord/kamcord-ios-sdk/wiki/Kamcord-Settings-and-Features#general-video-metadata
  *
  * Set the level and score of the last recorded video. This information may be used
@@ -1024,23 +1130,34 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  * @param       level       The level of the last recorded video.
  * @param       score       The score of the last recorded video.
  *
+ *
+ * @see setDeveloperMetadata:displayKey:displayValue:
+ * @see setDeveloperMetadata:displayKey:displayValue:numericValue:
+ * @warning This is now deprecated.
  */
 + (void)setLevel:(NSString *)level
            score:(NSNumber *)score __deprecated;
 
 /*
- * *DEPRECATED*
- * These methods allow you to add one background audio track to the recorded video.
  *
+ * This method allows you to add one background audio track to the recorded video.
+ * @param filename The string path to the audio file you would like to mux with the video.
+ * @warning This is now deprecated.
  */
 + (void)overlayBackgroundTrack:(NSString *)filename __deprecated;
+
+/*
+ *
+ * This method allows you to add one background audio track to the recorded video.
+ * @param fileURL The URL to the audio file you would like to mux with the video.
+ * @warning This is now deprecated.
+ */
 + (void)overlayBackgroundTrackAtURL:(NSURL *)fileURL __deprecated;
 
-// -------------------------------------------------------------------------
-// Private APIs: Do not use.
-// -------------------------------------------------------------------------
+/// -------------------------------------------------------------------------
+/// @name Private APIs - Do not use
+/// -------------------------------------------------------------------------
 + (void)setMode:(unsigned long long)mode;
-
 + (void)uploadVideoToFacebookWithAccessToken:(NSString *)accessToken
                                        title:(NSString *)title
                                  description:(NSString *)description;
