@@ -1,13 +1,23 @@
 Pod::Spec.new do |s|
   s.name         = "Kamcord"
-  s.version      = "1.9.2"
-  s.summary      = "The Kamcord iOS framework for native iOS engines and cocos2d/cocos2d-x"
+  s.version      = "1.9.1b"
+  s.social_media_url = "https://twitter.com/kamcord"
+  s.homepage     = "http://kamcord.com/about"
+  s.author             = "support@kamcord.com"
 
+  s.platform     = :ios
+  s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :tag => s.version.to_s } 
+
+  s.resources = "Kamcord.embeddedframework/Resources/*"
+  s.vendored_frameworks = "Kamcord.embeddedframework/Kamcord.framework"
+  s.frameworks = 'AdSupport', 'AudioToolbox', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreText', 'CoreVideo', 'MediaPlayer', 'MessageUI', 'OpenGLES', 'QuartzCore', 'Security', 'SystemConfiguration'
+  s.weak_frameworks = 'Accounts', 'CoreImage', 'Foundation', 'Social', 'Twitter', 'UIKit'
+  
+  s.summary      = "The Kamcord iOS framework for native iOS engines and cocos2d/cocos2d-x"
   s.description  = <<-DESC
                    Add video recording to your native iOS game effortlessly. Integration is a cinch with the Kamcord iOS SDK.
                    DESC
 
-  s.homepage     = "http://kamcord.com/about"
   s.license      = { :type => "Copyright", :text => "These Kamcord Software Terms of Use (this 'Agreement') is a legal agreement between you and, if applicable, the company or other legal entity you represent (collectively, 'you') and Kamcord, Inc. ('Kamcord').
 
 BY REGISTERING WITH KAMCORD, OR BY OTHERWISE USING THE SOFTWARE (AS DEFINED BELOW) IN ANY WAY, YOU (A) AGREE TO BE BOUND BY THIS AGREEMENT, AND (B) HEREBY REPRESENT AND WARRANT THAT YOU ARE LAWFULLY ABLE TO ENTER INTO CONTRACTS (E.G., YOU ARE NOT A MINOR OR INCAPACITATED). IN ADDITION, IF THIS AGREEMENT IS BEING AGREED TO BY A COMPANY OR OTHER LEGAL ENTITY, THEN THE PERSON AGREEING TO THIS AGREEMENT ON BEHALF OF THAT ENTITY HEREBY REPRESENTS AND WARRANTS THAT HE OR SHE IS AUTHORIZED AND LAWFULLY ABLE TO BIND THAT ENTITY TO THIS AGREEMENT. IF YOU DO NOT HAVE SUCH AUTHORITY, OR IF YOU DO NOT AGREE WITH THE TERMS AND CONDITIONS OF THIS AGREEMENT, YOU MAY NOT USE THE SOFTWARE.
@@ -61,14 +71,4 @@ permit your employees, contractors, beta testers and End Users to create and sha
 6. DISPUTES. Any dispute relating in any way to the Software or this Agreement will be adjudicated in any state or federal court in Santa Clara County, California, and you hereby consent to exclusive jurisdiction and venue in those courts. The laws of the State of California, without regard to principles of conflicts of laws, will govern this Agreement and any dispute of any sort that might arise between you and Kamcord. The parties expressly exclude the application of the United Nations Convention on Contracts for the International Sale of Goods to this Agreement. Notwithstanding anything to the contrary in this Agreement, Kamcord may seek injunctive or other relief in any state, federal, or national court of competent jurisdiction in connection with any actual or threatened breach of any representation, warranty or other term or condition of this Agreement by you. KAMCORD WILL NOT BE LIABLE TO YOU FOR ANY LOST PROFITS OR OTHER CONSEQUENTIAL, SPECIAL, INDIRECT, PUNITIVE OR INCIDENTAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE SOFTWARE, EVEN IF KAMCORD HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. KAMCORD'S AGGREGATE LIABILITY ARISING OUT OF THIS AGREEMENT OR THE SOFTWARE WILL NOT EXCEED THE GREATER OF ONE HUNDRED DOLLARS ($100) OR ANY AMOUNTS YOU HAVE PAID KAMCORD IN THE PAST TWELVE MONTHS (IF ANY). APPLICABLE LAW MAY NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY OR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU. IN SUCH CASES, KAMCORD'S LIABILITY WILL BE LIMITED TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW.
 
 7. MISCELLANEOUS. You may not assign this Agreement, by operation of law or otherwise, without our prior written approval. Subject to that restriction, this Agreement will be binding on, inure to the benefit of, and be enforceable against the parties and their respective successors and assigns. Kamcord's failure to enforce performance of any provision of this Agreement will not constitute a waiver of Kamcord's right to subsequently enforce that provision or any other provision of this Agreement. Notices under this Agreement to Kamcord must be sent by first class mail or overnight courier to the following address: Kamcord Inc., 301 Howard Street, Suite 910, San Francisco, CA, USA, Attn: Product Manager. Notices to you may be sent to the email address or mailing address that you provide as part of your registration with Kamcord. This Agreement constitutes the entire agreement between you and Kamcord regarding the subject matter hereof and supersedes any prior or contemporaneous agreements, communications, or understandings between you and Kamcord, whether written or oral, regarding such subject matter. You agree that Kamcord may refer to you on its website and in any of its other marketing materials, and may describe your games, applications and/or business. Whenever used in this Agreement, the term 'including' means 'including without limitation'." }
-  s.author             = "support@kamcord.com"
-
-  s.platform     = :ios
-
-  s.source       = { :git => "https://github.com/kamcord/kamcord-ios-sdk.git", :tag => s.version.to_s } 
-  s.source_files  = "Kamcord.embeddedframework/Kamcord.framework/Headers/*.h"
-  s.resources = "Kamcord.embeddedframework/Resources/*"
-
-  s.requires_arc = true
-  s.xcconfig = { :FRAMEWORK_SEARCH_PATHS => "$(inherited)" }
 end
