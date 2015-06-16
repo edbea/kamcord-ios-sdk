@@ -67,6 +67,25 @@ public:
     // If you want to save the video ID, you *must* strdup(...) it.
     virtual void videoFinishedUploading(const char * videoID, bool success) = 0;
     
+    // When the video upload finishes and we will ask the Kamcord server
+    // to share the video post to Facebook.
+    // If you want to save the video ID, you *must* strdup(...) it.
+    virtual void videoWillBeSharedToFacebook(const char * videoID) = 0;
+    
+    // When the video was shared to twitter.
+    // If you want to save the video ID, you *must* strdup(...) it.
+    virtual void videoWasSharedToTwitter(const char * videoID, bool success) = 0;
+    
+    // When the video upload finishes and we will ask the Kamcord server
+    // to upload the video to YouTube.
+    // If you want to save the video ID, you *must* strdup(...) it.
+    virtual void videoWillBeSharedToYouTube(const char * videoID) = 0;
+    
+    // When the video upload finishes and we will ask the Kamcord server
+    // to share the video post to NicoNico.
+    // If you want to save the video ID, you *must* strdup(...) it.
+    virtual void videoWillBeSharedToNicoNico(const char * videoID) = 0;
+    
     // This app install was attributed to Kamcord
     virtual void attributedKamcordInstall() = 0;
 };

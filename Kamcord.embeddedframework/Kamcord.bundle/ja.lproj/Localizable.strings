@@ -1,0 +1,408 @@
+"WeChat Sharing Disabled" = "WeChatの共有無効";
+
+"Most Liked" = "いいね！の数順";
+
+"Request Failed" = "リクエストに失敗しました";
+
+"Please sign-in again and authorize posting to share to Facebook." = "再ログインし、Facebookにシェアする投稿を承認してください。";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "年齢制限のためKamcordからログアウトされました。";
+
+"Sign in" = "ログイン";
+
+"Facebook" = "Facebook";
+
+"Day" = "日";
+
+"Kamcord Policy" = "Kamcordポリシー";
+
+"Featured" = "オススメ";
+
+"OK" = "OK";
+
+"Likers" = "いいねするユーザー";
+
+"No videos match your search." = "検索条件に一致する動画はありません。";
+
+"You must install the LINE App before you can share to LINE." = "LINEに共有するには、LINEアプリを事前にインストールする必要があります。";
+
+"Uh oh" = "おっと";
+
+"Error retrieving videos." = "動画を取得中にエラーが発生。";
+
+"Private" = "プライベート";
+
+"Some of the data you've entered is invalid!" = "入力されたデータの一部は無効です！";
+
+"Followers" = "フォロワー";
+
+"Save" = "保存する";
+
+"Sent" = "送信済み";
+
+"Error retrieving users." = "ユーザーを取得中にエラー。";
+
+"Facebook Credentials Changed" = "Facebookの資格情報が変更されました";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "iOSの設定 > Twitterで少なくとも一つのアカウントを有効にして、このアプリケーションに許可を与えてください。";
+
+"Upload failed" = "アップロードに失敗しました";
+
+"Video" = "動画";
+
+"Line" = "ライン";
+
+"Please set your correct birthday. You are missing: %@" = "正しい生年月日を設定してください。以下が入力されていません: %@";
+
+"Be the first to comment!" = "最初のコメントを入力しましょう！";
+
+"Settings" = "設定";
+
+"Uploading" = "アップロード中";
+
+"You must install the WeChat App before you can share to WeChat." = "WeChatでシェアするには、WeChatアプリを事前にインストールする必要があります。";
+
+"Voice Overlay Activated!" = "実況が有効になりました！";
+
+"You have unsaved changes. Are you sure you want to go back?" = "保存されていない変更があります。保存せずに戻りますか？";
+
+"LINE App Not Found" = "LINEアプリが見つかりません";
+
+"Could not load users.\nPull down to try again." = "ユーザーデータをロードできませんでした。\nプルダウンして再ロードを試してください。";
+
+"You have been signed out" = "ログアウトされました";
+
+"gameplay" = "ゲームプレイ";
+
+"Not Authorized" = "非承認";
+
+"Videos" = "動画";
+
+"Reset Password" = "パスワードをリセット";
+
+"Month" = "月";
+
+"WeChat App Not Found" = "WeChatアプリが見つかりません";
+
+"Before you can record your voice,\nplease enter your birth date." = "自分の声を録音するためには、\n生年月日を入力する必要があります。";
+
+"Invalid Birthday" = "無効な生年月日";
+
+"Yes" = "はい";
+
+"Unsaved Changes" = "未保存の変更";
+
+"No Email Accounts" = "メールアカウントなし";
+
+"No" = "いいえ";
+
+"Most Popular" = "人気順";
+
+"Save Birthday" = "生年月日を保存";
+
+"Trending Now" = "トレンド順";
+
+"Video Shared!" = "動画が共有されました！";
+
+"Tags" = "タグ";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Facebookの資格情報が変更されました。iOSの設定からFacebookへ行き、ログアウト後、再ログインを行い、変更を反映させる必要があります。";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "メールアカウントが設定されていません。フィードバックを送信するためには、メールアカウントを追加する必要があります。";
+
+"Voice Overlay will be enabled for future videos." = "実況は以降録画される動画で有効になります。";
+
+"Report For Offensive Conduct" = "不快な行為を報告";
+
+"Not authorized" = "非承認";
+
+"Success" = "成功";
+
+"Error" = "エラー";
+
+"Following" = "フォロー";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "iOSの設定 > Twitterから、このアプリケーションに許可を与えてください。";
+
+"Feedback" = "フィードバック";
+
+"Edit Info" = "情報を編集";
+
+"Follow" = "フォロー";
+
+"Sign Up" = "登録";
+
+"Sign In" = "ログイン";
+
+"Twitter" = "Twitter";
+
+"Follower" = "フォロワー";
+
+"Done" = "完了";
+
+"Cancel" = "キャンセル";
+
+"Close" = "閉じる";
+
+"No account connected" = "有効なアカウントと連携していません";
+
+"You cannot share to WeChat on this device." = "このデバイス上でWeChatに共有することはできません。";
+
+"Failed to change password" = "パスワードの変更に失敗しました";
+
+"NicoNico" = "ニコニコ動画";
+
+"Are you sure you want to sign out?" = "解除しますか？";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "動画がKamcordにシェアされました！続けて別のSNSを選択してシェアすることもできます。";
+
+"Voice Overlay will be activated for future videos." = "実況は以降録画される動画で有効になります。";
+
+"Please reconnect and try again." = "再度接続して、もう一度やり直してください。";
+
+"Tagline failed to save" = "タグラインの保存に失敗しました";
+
+"Profile" = "プロフィール";
+
+"Please try again later." = "後ほどお試しください。";
+
+"Sign Out" = "解除";
+
+"No Internet Connection" = "インターネットに接続していません";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "iOSの設定 > Facebookからログインして、このアプリケーションのアクセスを許可してください。";
+
+"Password" = "パスワード";
+
+"Voice Overlay Enabled!" = "実況が有効になりました！";
+
+"Log Out" = "ログアウト";
+
+"WeChat" = "WeChat";
+
+"Try Again" = "再試行";
+
+"Upload Failed!" = "アップロードに失敗しました！";
+
+"Microphone Permission Disabled!" = "マイクの許可が無効になりました！";
+
+"Share Replay" = "動画をシェア";
+
+"Delete Video" = "動画を削除";
+
+"Please setup an email account in Settings > Mail." = "iOSの設定 > メールからメールアカウントを設定してください。";
+
+"Year" = "年";
+
+"Select Twitter account to use" = "使用するTwitterアカウントを選択";
+
+"Email too long." = "メールアドレスが長すぎます。";
+
+"Email taken." = "メールアドレスは既に登録済みです。";
+
+"Invalid email" = "無効なメールアドレス";
+
+"Password too short." = "パスワードが短すぎます。";
+
+"Password too long." = "パスワードが長すぎます。";
+
+"Invalid password." = "無効なパスワード。";
+
+"Username too short." = "ユーザー名が短すぎます。";
+
+"Username too long." = "ユーザー名が長すぎます。";
+
+"Invalid characters in username." = "ユーザー名に無効な文字が含まれています。";
+
+"Username taken." = "ユーザ名は既に使用されています。";
+
+"Social" = "ソーシャル";
+
+"Support" = "サポート";
+
+"Account" = "アカウント";
+
+"Terms of Service" = "利用規約";
+
+"Privacy Policy" = "個人情報保護方針";
+
+"Send Feedback about Kamcord" = "Kamcordについてフィードバックを送信";
+
+"Voice Overlay" = "実況";
+
+"Change Password" = "パスワードを変更する";
+
+"Confirm Facebook Sign Out" = "Facebookとの連携の解除";
+
+"Confirm YouTube Sign Out" = "YouTubeとの連携の解除";
+
+"Confirm Twitter Sign Out" = "Twitterとの連携の解除";
+
+"Confirm niconico Sign Out" = "ニコニコ動画との連携の解除";
+
+"Write a title..." = "タイトルを書いてください...";
+
+"Write a description..." = "説明を書いてください...";
+
+"Liked" = "いいね！";
+
+"Like" = "いいね！";
+
+"Make Private" = "非公開";
+
+"Make Public" = "公開";
+
+"Report Video" = "報告する";
+
+/* Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; */
+"Create a Profile" = "プロフィールの作成";
+
+/* Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; */
+"Log In" = "ログイン";
+
+"Report Offensive Content" = "不快な内容を含んだ動画";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "以下の\"プロフィールの作成\"をタップすることにより、Kamcordの利用規約および個人情報保護方針に同意したことになります。";
+
+"Loading YouTube sign-in..." = "YouTubeのログインの実行中...";
+
+/* Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; */
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "コメントしたり、他のプレイヤーをフォローしたり、自分の動画をもっと見てもらうために、Kamcord プロフィールを作成しましょう！";
+
+"There are no popular videos at the moment!" = "人気のある動画が存在しません！";
+"Your likes feed is empty because you haven't liked any videos :(" = "「いいね！」をしていないので表示する動画がありません。";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "誰もフォローしていないのでフィードが存在していません。フォローを増やしてフィードを作りましょう！";
+
+/* Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; */
+"Become part of the community!" = "コミュニティの一員になりましょう！";
+
+/* Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; */
+"Voice Overlay" = "実況";
+
+/* Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; */
+"Connected" = "接続済み";
+
+/* Past Deictic Expression */
+"ago" = "前";
+
+/* Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) */
+"day" = "日";
+
+/* Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) */
+"days" = "日";
+
+/* Deictic Expression Format (#{Time} #{Ago/From Now} */
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/* Hour Unit (Singular) */
+"hour" = "時間";
+
+/* Hour Unit (Plural) */
+"hours" = "時間";
+
+/* Hour Unit (Singular, Abbreviated) */
+"hr" = "時間";
+
+/* Hour Unit (Plural, Abbreviated) */
+"hrs" = "時間";
+
+/* Present Deictic Expression */
+"just now" = "たった今";
+
+/* No comment provided by engineer. */
+"last month" = "先月";
+
+/* No comment provided by engineer. */
+"last week" = "先週";
+
+/* No comment provided by engineer. */
+"last year" = "去年";
+
+/* Minute Unit (Singular, Abbreviated) */
+"min" = "分";
+
+/* Minute Unit (Plural, Abbreviated) */
+"mins" = "分";
+
+/* Minute Unit (Singular) */
+"minute" = "分";
+
+/* Minute Unit (Plural) */
+"minutes" = "分";
+
+/* Month Unit (Singular, Abbreviated) */
+"mo" = "ヵ月";
+
+/* Month Unit (Singular) */
+"month" = "ヵ月";
+
+/* Month Unit (Plural) */
+"months" = "ヵ月";
+
+/* Month Unit (Plural, Abbreviated) */
+"mos" = "ヵ月";
+
+/* Second Unit (Singular) */
+"second" = "秒";
+
+/* Second Unit (Plural) */
+"seconds" = "秒";
+
+/* Week Unit (Singular) */
+"week" = "週間";
+
+/* Week Unit (Plural) */
+"weeks" = "週間";
+
+/* Week Unit (Singular, Abbreviated) */
+"wk" = "週間";
+
+/* Week Unit (Plural, Abbreviated) */
+"wks" = "週間";
+
+/* Year Unit (Singular) */
+"year" = "年";
+
+/* Year Unit (Plural) */
+"years" = "年";
+
+/* No comment provided by engineer. */
+"yesterday" = "昨日";
+
+/* Year Unit (Singular, Abbreviated) */
+"yr" = "年";
+
+/* Year Unit (Plural, Abbreviated) */
+"yrs" = "年";
+
+"By" = "";
+"Guest Player" = "ゲストプレーヤー";
+"Report" = "レポート";
+"Likes" = "いいね！";
+"Connect" = "連携する";
+"Disconnect" = "解除する";
+"Sort" = "ソート";
+"Filter Search" = "絞り込み検索";
+"Something went wrong. Please try again" = "失敗しました。もう一度お試しください";
+"Password must be at least 6 characters" = "パスワードは 6 文字以上である必要があります";
+"Password cannot be over 30 characters" = "パスワードは 30 文字を超えることはできません";
+"Current password incorrect" = "パスワードが不適切です";
+"Password reset attempts exceeded" = "パスワードのリセット回数が制限を超えました";
+"Password cannot be blank" = "パスワードを指定する必要があります";
+"Email is not valid" = "メールアドレスが無効です";
+"Email cannot be over 64 characters" = "メールアドレスは 64 文字を超えることはできません";
+"Email already exists" = "指定したメールアドレスは既に使用されています";
+"Email cannot be blank" = "メールアドレスを指定する必要があります";
+"Username cannot be blank" = "ユーザー名を指定する必要があります";
+"Username already exists" = "指定されたユーザー名は既に使用されています";
+"Username must be at least 3 characters" = "ユーザー名は 3 文字以上である必要があります";
+"Username cannot be over 15 characters" = "ユーザー名は 15 文字を超えることはできません";
+"Username can only contain letters and numbers" = "ユーザー名に使える文字は英数字のみです";
+"Username / password is not valid" = "ユーザー名またはパスワードが無効です";
+"A Social Network For Gamers" = "ゲーマーのためのソーシャルネットワーク";
+"Gamers" = "ゲーマー";
+"Sign up for a profile so people\ncan follow you" = "ログインして他のユーザーが\nあなたをフォローできるようにしましょう";

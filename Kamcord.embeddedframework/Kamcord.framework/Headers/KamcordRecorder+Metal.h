@@ -47,6 +47,11 @@
  */
 + (void)addMetalCommands:(id <MTLCommandBuffer>)commandBuffer;
 
+/**
+ * Call at the end of every frame. Performs some bookkeeping.
+ */
++ (void)endMetalFrame;
+
 @end
 
 #endif

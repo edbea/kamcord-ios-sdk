@@ -1,0 +1,454 @@
+"WeChat Sharing Disabled" = "WeChat Sharing Disabled";
+
+"Most Liked" = "Most Liked";
+
+"Request Failed" = "Request Failed";
+
+"Please sign-in again and authorize posting to share to Facebook." = "Please sign-in again and authorize posting to share to Facebook.";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "You have been signed out of Kamcord due to your age.";
+
+"Sign in" = "Sign in";
+
+"Facebook" = "Facebook";
+
+"Day" = "Day";
+
+"Kamcord Policy" = "Kamcord Policy";
+
+"Featured" = "Featured";
+
+"OK" = "OK";
+
+"Likers" = "Likers";
+
+"No videos match your search." = "No videos match your search.";
+
+"You must install the LINE App before you can share to LINE." = "You must install the LINE App before you can share to LINE.";
+
+"Uh oh" = "Uh oh";
+
+"Error retrieving videos." = "Error retrieving videos.";
+
+"Private" = "Private";
+
+"Some of the data you've entered is invalid!" = "Some of the data you've entered is invalid!";
+
+"Followers" = "Followers";
+
+"Save" = "Save";
+
+"Sent" = "Sent";
+
+"Error retrieving users." = "Error retrieving users.";
+
+"Facebook Credentials Changed" = "Facebook Credentials Changed";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "Please enable at least one account in Settings -> Twitter and grant this application permissions.";
+
+"Upload failed" = "Upload failed";
+
+"Video" = "Video";
+
+"Line" = "Line";
+
+"Please set your correct birthday. You are missing: %@" = "Please set your correct birthday. You are missing: %@";
+
+"Be the first to comment!" = "Be the first to comment!";
+
+"Settings" = "Settings";
+
+"Uploading" = "Uploading";
+
+"You must install the WeChat App before you can share to WeChat." = "You must install the WeChat App before you can share to WeChat.";
+
+"Voice Overlay Activated!" = "Voice Overlay Activated!";
+
+"You have unsaved changes. Are you sure you want to go back?" = "You have unsaved changes. Are you sure you want to go back?";
+
+"LINE App Not Found" = "LINE App Not Found";
+
+"Could not load users.\nPull down to try again." = "Could not load users.\nPull down to try again.";
+
+"You have been signed out" = "You have been signed out";
+
+"gameplay" = "gameplay";
+
+"Not Authorized" = "Not Authorized";
+
+"Videos" = "Videos";
+
+"Reset Password" = "Reset Password";
+
+"Month" = "Month";
+
+"WeChat App Not Found" = "WeChat App Not Found";
+
+"Before you can record your voice,\nplease enter your birth date." = "Before you can record your voice,\nplease enter your birth date.";
+
+"Invalid Birthday" = "Invalid Birthday";
+
+"Yes" = "Yes";
+
+"Unsaved Changes" = "Unsaved Changes";
+
+"No Email Accounts" = "No Email Accounts";
+
+"No" = "No";
+
+"Most Popular" = "Most Popular";
+
+"Save Birthday" = "Save Birthday";
+
+"Trending Now" = "Trending Now";
+
+"Video Shared!" = "Video Shared!";
+
+"Tags" = "Tags";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login.";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "No email account is setup on this device. Please add an email account to send us feedback!";
+
+"Voice Overlay will be enabled for future videos." = "Voice Overlay will be enabled for future videos.";
+
+"Report For Offensive Conduct" = "Report For Offensive Conduct";
+
+"Not authorized" = "Not authorized";
+
+"Success" = "Success";
+
+"Error" = "Error";
+
+"Following" = "Following";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "Please sign-in in Settings > Twitter and grant this application permission.";
+
+"Feedback" = "Feedback";
+
+"Edit Info" = "Edit Info";
+
+"Follow" = "Follow";
+
+"Sign Up" = "Sign Up";
+
+"Sign In" = "Sign In";
+
+"Twitter" = "Twitter";
+
+"Follower" = "Follower";
+
+"Done" = "Done";
+
+"Cancel" = "Cancel";
+
+"Close" = "Close";
+
+"No account connected" = "No account connected";
+
+"You cannot share to WeChat on this device." = "You cannot share to WeChat on this device.";
+
+"Failed to change password" = "Failed to change password";
+
+"NicoNico" = "NicoNico";
+
+"Are you sure you want to sign out?" = "Are you sure you want to sign out?";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again.";
+
+"Voice Overlay will be activated for future videos." = "Voice Overlay will be activated for future videos.";
+
+"Please reconnect and try again." = "Please reconnect and try again.;
+
+"Tagline failed to save" = "Tagline failed to save";
+
+"Profile" = "Profile";
+
+"Please try again later." = "Please try again later.";
+
+"Sign Out" = "Sign Out";
+
+"No Internet Connection" = "No Internet Connection";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "Please sign-in in Settings > Facebook and grant this application permission.";
+
+"Password" = "Password";
+
+"Voice Overlay Enabled!" = "Voice Overlay Enabled!";
+
+"Log Out" = "Log Out";
+
+"WeChat" = "WeChat";
+
+"Try Again" = "Try Again";
+
+"Upload Failed!" = "Upload Failed!";
+
+"Microphone Permission Disabled!" = "Microphone Permission Disabled!";
+
+"Share Replay" = "Share Replay";
+
+"Delete Video" = "Delete Video";
+
+"Please setup an email account in Settings > Mail." = "Please setup an email account in Settings > Mail.";
+
+"Year" = "Year";
+
+"Select Twitter account to use" = "Select Twitter account to use";
+
+"Email too long." = "Email too long.";
+
+"Email taken." = "Email taken.";
+
+"Invalid email" = "Invalid email";
+
+"Password too short." = "Password too short.";
+
+"Password too long." = "Password too long.";
+
+"Invalid password." = "Invalid password.";
+
+"Username too short." = "Username too short.";
+
+"Username too long." = "Username too long.";
+
+"Invalid characters in username." = "Invalid characters in username.";
+
+"Username taken." = "Username taken.";
+
+"Social" = "Social";
+
+"Support" = "Support";
+
+"Account" = "Account";
+
+"Terms of Service" = "Terms of Service";
+
+"Privacy Policy" = "Privacy Policy";
+
+"Send Feedback about Kamcord" = "Send Feedback about Kamcord";
+
+"Voice Overlay" = "Voice Overlay";
+
+"Change Password" = "Change Password";
+
+"Confirm Facebook Sign Out" = "Confirm Facebook Sign Out";
+
+"Confirm YouTube Sign Out" = "Confirm YouTube Sign Out";
+
+"Confirm Twitter Sign Out" = "Confirm Twitter Sign Out";
+
+"Confirm niconico Sign Out" = "Confirm niconico Sign Out";
+
+"Write a title..." = "Write a title...";
+
+"Write a description..." = "Write a description...";
+
+"Liked" = "Liked";
+
+"Like" = "Like";
+
+"Make Private" = "Make Private";
+
+"Make Public" = "Make Public";
+
+"Report Video" = "Report Video";
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "Create a Profile";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "Log In";
+
+"Report Offensive Content" = "Report Offensive Content";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy.";
+
+"Loading YouTube sign-in..." = "Loading YouTube sign-in...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "Create a Kamcord profile to comment, follow players, and get more views on your videos!";
+
+"There are no popular videos at the moment!" = "There are no popular videos at the moment!";
+
+"Your likes feed is empty because you haven't liked any videos :(" = "Your likes feed is empty because you haven't liked any videos :(";
+
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "Become part of the community!";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "Voice Overlay";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "Connected";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "ago";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "day";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "days";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%2$@%1$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "hour";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "hours";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "hr";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "hrs";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "just now";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "last month";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "last week";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "last year";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "min";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "mins";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "minute";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "minutes";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "mo";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "month";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "months";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "mos";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "second";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "seconds";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "week";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "weeks";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "wk";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "wks";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "year";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "years";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "yesterday";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "yr";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "yrs";
+
+"By" = "By";
+
+"Guest Player" = "Guest Player";
+
+"Report" = "Report";
+
+"Likes" = "Likes";
+
+"Connect" = "Connect";
+
+"Disconnect" = "Disconnect";
+
+"Sort" = "Sort";
+
+"Filter Search" = "Filter Search";
+
+"Something went wrong. Please try again" = "Something went wrong. Please try again";
+
+"Password must be at least 6 characters" = "Password must be at least 6 characters";
+
+"Password cannot be over 30 characters" = "Password cannot be over 30 characters";
+
+"Current password incorrect" = "Current password incorrect";
+
+"Password reset attempts exceeded" = "Password reset attempts exceeded";
+
+"Password cannot be blank" = "Password cannot be blank";
+
+"Email is not valid" = "Email is not valid";
+
+"Email cannot be over 64 characters" = "Email cannot be over 64 characters";
+
+"Email already exists" = "Email already exists";
+
+"Email cannot be blank" = "Email cannot be blank";
+
+"Username cannot be blank" = "Username cannot be blank";
+
+"Username already exists" = "Username already exists";
+
+"Username must be at least 3 characters" = "Username must be at least 3 characters";
+
+"Username cannot be over 15 characters" = "Username cannot be over 15 characters";
+
+"Username can only contain letters and numbers" = "Username can only contain letters and numbers";
+
+"Username / password is not valid" = "Username / password is not valid";
+
+"A Social Network For Gamers" = "A Social Network For Gamers";
+
+"Gamers" = "Gamers";
+
+"Sign up for a profile so people\ncan follow you" = "Sign up for a profile so people\ncan follow you";
+
+"Could not load notifications. Pull down to try again." = "Could not load notifications. Pull down to try again.";
+
+"You have no notifications." = "You have no notifications.";
+
+"Error retrieving notifications." = "Error retrieving notifications.";
+
+"Notifications" = "Notifications";
+
+"Could not load users.\nPull down to try again." = "Could not load users.\nPull down to try again.";
+
+"There are no users." = "There are no users.";
+
+"Videos you share will show up here. Pull down to refresh." = "Videos you share will show up here. Pull down to refresh.";
+
+"Failed to load notification. Tap to retry." = "Failed to load notification. Tap to retry.";
+
+"Nobody has liked this video." = "Nobody has liked this video.";

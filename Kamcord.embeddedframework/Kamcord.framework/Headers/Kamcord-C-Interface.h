@@ -70,30 +70,19 @@ extern "C" {
      * @param   disableiPhone5          Disable Kamcord on iPhone 5.
      * @param   disableiPhone5C         Disable Kamcord on iPhone 5C.
      * @param   disableiPhone5S         Disable Kamcord on iPhone 5S.
+     * @param   disableiPhone6          Disable Kamcord on iPhone 6.
+     * @param   disableiPhone6Plus      Disable Kamcord on iPhone 6+.
      * @param   disableiPad1            Disable Kamcord on iPad 1.
      * @param   disableiPad2            Disable Kamcord on iPad 2.
      * @param   disableiPadMini         Disable Kamcord on iPad Mini.
+     * @param   disableiPadMini2        Disable Kamcord on iPad Mini 2.
+     * @param   disableiPadMini3        Disable Kamcord on iPad Mini 3.
      * @param   disableiPad3            Disable Kamcord on iPad 3.
      * @param   disableiPad4            Disable Kamcord on iPad 4.
      * @param   disableiPadAir          Disable Kamcord on iPad Air.
+     * @param   disableiPadAir          Disable Kamcord on iPad Air 2.
      *
      */
-    void Kamcord_SetDeviceBlacklist(bool disableiPod4G,
-                                    bool disableiPod5G,
-                                    bool disableiPhone3GS,
-                                    bool disableiPhone4,
-                                    bool disableiPhone4S,
-                                    bool disableiPhone5,
-                                    bool disableiPhone5C,
-                                    bool disableiPhone5S,
-                                    bool disableiPad1,
-                                    bool disableiPad2,
-                                    bool disableiPadMini,
-                                    bool disableiPad3,
-                                    bool disableiPad4,
-                                    bool disableiPadAir);
-    
-    /*
     void Kamcord_SetDeviceBlacklist(bool disableiPod4G,
                                     bool disableiPod5G,
                                     bool disableiPhone3GS,
@@ -107,10 +96,12 @@ extern "C" {
                                     bool disableiPad1,
                                     bool disableiPad2,
                                     bool disableiPadMini,
+                                    bool disableiPadMini2,
+                                    bool disableiPadMini3,
                                     bool disableiPad3,
                                     bool disableiPad4,
-                                    bool disableiPadAir);
-     */
+                                    bool disableiPadAir,
+                                    bool disableiPadAir2);
     
     /*
      *
@@ -242,23 +233,21 @@ extern "C" {
     void Kamcord_SetVideoTitle(const char * title);
     
     typedef enum {
-        KCMetadataTypeLevel = 0,       // For a level played in the video.
-        KCMetadataTypeScore,           // For a score for the video.
-        KCMetadataTypeList,            // For a ',' delimited list of values, numerical value if given will apply to all.
-        KCMetadataTypeOther = 1000,    // For arbitrary key to value metadata.
-    } KCMetadataType;
+        KCMetadataValueTypeString = 0,      // The value is a string
+        KCMetadataValueTypeDouble,          // The value is a float
+        KCMetadataValueTypeInteger,         // The value is an integer
+    } KCMetadataValueType;
     
-    /*
-     *
-     * Previous enum, present here and deprecated for compatibility
-     *
-     */
-    __deprecated typedef enum {
-        KC_LEVEL = 0,       // For a level played in the video.
-        KC_SCORE,           // For a score for the video.
-        KC_LIST,            // For a ',' delimited list of values to apply to a key, numerical value if given will apply to all.
-        KC_OTHER = 1000,    // For arbitrary key to value metadata.
-    } KC_METADATA_TYPE;
+    typedef enum {
+        KCMetadataCompareNone = 0,
+        KCMetadataCompareLess,
+        KCMetadataCompareLessEquals,
+        KCMetadataCompareEquals,
+        KCMetadataCompareGreater,
+        KCMetadataCompareGreaterEquals,
+        KCMetadataCompareNotEquals,
+    } KCMetadataCompareType;
+    
     /*
      *
      * Set the ways users can share their videos. You can use this method to choose which
@@ -281,48 +270,6 @@ extern "C" {
                                  KCShareDestination target2,
                                  KCShareDestination target3,
                                  KCShareDestination target4);
-    
-    /*
-     *
-     * Set a piece of metadata for the recorded video
-     * All metadata is cleared with the start of a recorded video
-     *
-     * @param       metadataType       The type of metaData (see KC_METADATA_TYPE for more info)
-     * @param       displayKey         Describe what the metadata is
-     * @param       displayValue       A string representation of the value for this metadata
-     * @param       numericValue       A numeric representation of the value for this metadata
-     *
-     */
-    void Kamcord_SetDeveloperMetadata(KCMetadataType metadataType,
-                                      const char * displayKey,
-                                      const char * displayValue);
-    
-    void Kamcord_SetDeveloperMetadataWithNumericValue(KCMetadataType metadataType,
-                                                      const char * displayKey,
-                                                      const char * displayValue,
-                                                      double numericValue);
-    
-    /*
-     * Returns true if there is at least one video matching the constraints
-     *
-     * @param      jsonDictionary           A json serialized dictionary of metadataDisplayKey ->
-     *                                      value. A value is either a displayValue or a numericValue
-     *                                      see Kamcord_SetDeveloperMetadata* for info
-     *
-     */
-    bool Kamcord_VideoExistsWithMetadataConstraints(const char * jsonDictionary);
-    
-    
-    /*
-     * Used to play a video that conforms to the given constraints
-     *
-     * @param       jsonDictionary        see Kamcord_VideoExistsWithMetadataConstraints for explanation
-     * @param     title                  An optional title to be displayed for the video.
-     *                                   If NULL is passed in, the title that was shared with the
-     *                                   video will be used.
-     *
-     */
-    void Kamcord_ShowVideoWithMetadataConstraints(const char * jsonDictionary, const char * title);
     
     /*
      * Used to play the video with id 'videoID'
@@ -701,26 +648,6 @@ extern "C" {
      *
      */
     int KamcordRecorder_ActiveFramebuffer();
-    
-    /*******************************************************************
-     *
-     * Deprecated methods
-     *
-     */
-    
-    /*
-     * As of 1.7.3, this has been deprecated in favor of setDeveloperMetadata:...
-     *
-     * The metadata documentation can be found here: https://github.com/kamcord/kamcord-ios-sdk/wiki/Kamcord-Settings-and-Features#general-video-metadata
-     *
-     * Set the level and score for the recorded video.
-     * This metadata is used to rank videos in the watch view.
-     *
-     * @param   level   The level for the last recorded video.
-     * @param   score   The score the user just achieved on the given level.
-     *
-     */
-    void Kamcord_SetLevelAndScore(const char * level, double score) __deprecated;
     
     /*******************************************************************
      *

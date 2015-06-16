@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Kamcord"
-  s.version      = "1.9.1b"
+  s.version      = "2.0.0"
   s.social_media_url = "https://twitter.com/kamcord"
   s.homepage     = "http://kamcord.com/about"
   s.author             = "support@kamcord.com"

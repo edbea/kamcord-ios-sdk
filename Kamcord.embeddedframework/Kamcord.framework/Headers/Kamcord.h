@@ -28,9 +28,16 @@
  */
 #import "KamcordRecorder.h"
 
+/*
+ *
+ * Video Metadata
+ *
+ */
+#import "KCMetadata.h"
+
 /**
  *
- * Current version is 1.9.2 (2014-03-03)
+ * Current version is 2.0.0 (2015-06-15)
  *
  */
 extern NSString *const KamcordVersion;
@@ -59,34 +66,14 @@ typedef NS_ENUM(NSUInteger, KCDeviceType) {
     KCDeviceTypeiPad3           = 1 << 11,
     KCDeviceTypeiPad4           = 1 << 12,
     KCDeviceTypeiPadAir         = 1 << 13,
-    KCDeviceTypeiPadMiniRetina  = 1 << 14,
+    KCDeviceTypeiPadMiniRetina  = 1 << 14,  // Deprecated, same as iPadMini2
+    KCDeviceTypeiPadMini2       = 1 << 14,
+    KCDeviceTypeiPadMini3       = 1 << 15,
+    KCDeviceTypeiPadAir2        = 1 << 16,
     
     KCDeviceTypeSingleCore      = (KCDeviceTypeiPod4G | KCDeviceTypeiPhone3GS | KCDeviceTypeiPhone4 | KCDeviceTypeiPad1)
 };
 
-/**
- *
- * @warning This is now deprecated.
- * @see KCDeviceType
- */
-__deprecated typedef NS_ENUM(NSUInteger, KC_DEVICE_TYPE) {
-    KC_DEVICE_TYPE_IPOD_4G          = 1 << 0,
-    KC_DEVICE_TYPE_IPOD_5G          = 1 << 1,
-    KC_DEVICE_TYPE_IPHONE_3GS       = 1 << 2,
-    KC_DEVICE_TYPE_IPHONE_4         = 1 << 3,
-    KC_DEVICE_TYPE_IPHONE_4S        = 1 << 4,
-    KC_DEVICE_TYPE_IPHONE_5         = 1 << 5,
-    KC_DEVICE_TYPE_IPHONE_5C        = 1 << 6,
-    KC_DEVICE_TYPE_IPHONE_5S        = 1 << 7,
-    KC_DEVICE_TYPE_IPAD_1           = 1 << 8,
-    KC_DEVICE_TYPE_IPAD_2           = 1 << 9,
-    KC_DEVICE_TYPE_IPAD_MINI        = 1 << 10,
-    KC_DEVICE_TYPE_IPAD_3           = 1 << 11,
-    KC_DEVICE_TYPE_IPAD_4           = 1 << 12,
-    KC_DEVICE_TYPE_IPAD_AIR         = 1 << 13,
-    // Equivalent to (KC_DEVICE_TYPE_IPOD_4G | KC_DEVICE_TYPE_IPHONE_3GS | KC_DEVICE_TYPE_IPHONE_4 | KC_DEVICE_TYPE_IPAD_1)
-    KC_DEVICE_TYPE_SINGLE_CORE      = (1 << 0 | 1 << 2 | 1 << 3 | 1 << 8)
-};
 
 
 /**
@@ -170,9 +157,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (void)setDeviceBlacklist:(KCDeviceType)blacklist;
 
-/**
- *
- * Kamcord initialization. Set your developer key, secret, app name,
+/** Kamcord initialization. Set your developer key, secret, app name,
  * and the UIViewController that will present the Kamcord UI when 
  * you call `[Kamcord showView]`.
  *
@@ -385,7 +370,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  * @param       delegate        The delegate to receive Kamcord callbacks.
  * @see KamcordDelegate
  */
-+ (void)setDelegate:(id <KamcordDelegate>)delegate;
++ (void)setDelegate:(id<KamcordDelegate>)delegate;
 
 /**
  *
@@ -445,26 +430,21 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (BOOL)hasValidVideo;
 
 /**
- * Returns true if there is at least one video matching the constraints
+ * Shows a Kamcord Video feed containing videos that match the array of constraints
  *
- * @param      constraints              A dictionary of (NSString *) metadataDisplayKey ->
- *                                      (NSObject *) value. NSString and NSNumber are supported for value.
+ * @param      constraints              An array of (KCMetadata *) objects
+ * @param      title                    The desired title to be displayed in navigation bar
+ *                                      If nil is passed in, there is no title
  *
  */
-+ (BOOL)videoExistsForMetadataConstraints:(NSDictionary *)constraints;
++ (void)showFeedWithMetadataConstraints:(NSArray *)constraints
+                               andTitle:(NSString *)title;
 
-/**
- * Shows a Kamcord Video player playing a video with all metadata conforming to the constraints
- * given
- *
- * @param      constraints              A dictionary of (NSString *) metadataDisplayKey ->
- *                                      (ID *) value. NSString and NSNumber are supported for
- * @param      title                    The desired title to be displayed in the shown player.
- *                                      If nil is passed in, it uses the title the video was shared with.
- *
- */
-+ (void)showVideoWithMetadataConstraints:(NSDictionary *)constraints
-                               withTitle:(NSString *)title;
++ (void)addMetadataToVideo:(KCMetadata *)metadata;
+
++ (void)addTagToVideo:(NSString *)tag;
+
++ (void)addKeywordToVideo:(NSString *)keyword;
 
 /**
  *
@@ -617,57 +597,6 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
                            target3:(KCShareDestination)target3
                            target4:(KCShareDestination)target4;
 
-/**
- *
- * Set a piece of metadata for the recorded video
- * All metadata is cleared with the start of a recorded video
- *
- * @param       metadataType       The type of metaData (see the enum `KCMetadataType` for more info)
- * @param       displayKey         Describe what the metadata is
- * @param       displayValue       A string representation of the value for this metadata
- * @see KCMetadataType
- */
-+ (void)setDeveloperMetadata:(KCMetadataType)metadataType
-                  displayKey:(NSString *)displayKey
-                displayValue:(NSString *)displayValue;
-
-/**
- *
- * Set a piece of metadata for the recorded video
- * All metadata is cleared with the start of a recorded video
- *
- * @param       metadataType       The type of metaData (see the enum `KCMetadataType` for more info)
- * @param       displayKey         Describe what the metadata is
- * @param       displayValue       A string representation of the value for this metadata
- * @param       numericValue       A numeric representation of the value for this metadata
- * @see KCMetadataType
- */
-+ (void)setDeveloperMetadata:(KCMetadataType)metadataType
-                  displayKey:(NSString *)displayKey
-                displayValue:(NSString *)displayValue
-                numericValue:(NSNumber *)numericValue;
-
-/**
- *
- * Return the level of the last video (after it's been set).
- *
- */
-+ (NSString *)level;
-
-/**
- *
- * Return the score of the last video (after it's been set).
- *
- */
-+ (NSNumber *)score;
-
-/**
- *
- * Returns the developer metadata pieces currently set
- *
- */
-+ (NSDictionary *)developerMetadata;
-
 /// ---------------------------------------------------
 /// @name Social Networks & Sharing
 /// ---------------------------------------------------
@@ -727,7 +656,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)setNicoNicoClientID:(NSString *)clientID
                   andSecret:(NSString *)clientSecret;
 
-/*
+/**
  *
  * Set the NicoNico description of the shared video.
  *
@@ -743,14 +672,14 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  */
 + (NSString *)niconicoClientID;
 
-/*
+/**
  *
  * Returns the previously set NicoNico client secret.
  *
  */
 + (NSString *)niconicoClientSecret;
 
-/*
+/**
  *
  * Returns the previously set NicoNico description.
  *
@@ -1073,72 +1002,9 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 /// @name Deprecated methods
 /// -------------------------------------------------------------------------
 
-
-/*
- *
- *
- * Attach arbitrary key/value metadata to the last recorded video
- * that you can retrieve later from the Kamcord servers.
- *
- * @param       metadata        The dictionary of key-value pairs to attach to the previously recorded video.
- * @warning This is now deprecated.
- */
-+ (void)setVideoMetadata:(NSDictionary *)metadata __deprecated;
-
-/*
- *
- * Returns the previously set video metadata.
- * @warning This is now deprecated.
- */
-+ (NSDictionary *)videoMetadata __deprecated;
-
-/*
- *
- *
- * This method will query the Kamcord servers for metadata you've previously
- * associated with an uploaded video via the setVideoMetadata API call.
- * When the server request returns, the original metadata you had set
- * will be returned to you as the first argument of the block.
- * There is also NSError argument in the block that will indicate if the
- * request was successful (for example, if the connection failed due to
- * a poor internet connection). The returned NSDictionary is valid if and only if
- * the NSError object is nil.
- *
- * You can get the Kamcord Video ID to pass to this method by implementing the
- * KamcordDelegate protocol defined in Common/Core/KamcordProtocols.h.
- * Implement the videoFinishedUploadingWithSuccess:kamcordVideoID: callback
- * to get the Kamcord Video ID.
- *
- * @param       kamcordVideoID      The unique Kamcord ID for a previously shared video.
- * @param       completionHandler   A block that handles the returned metadata from the server.
- * @warning This is now deprecated.
- */
-+ (void)retrieveMetadataForVideoWithID:(NSString *)kamcordVideoID
-                 withCompletionHandler:(void (^)(NSMutableDictionary *, NSError *))completionHandler __deprecated;
-
-/*
- *
- * The metadata documentation can be found here:
- *      https://github.com/kamcord/kamcord-ios-sdk/wiki/Kamcord-Settings-and-Features#general-video-metadata
- *
- * Set the level and score of the last recorded video. This information may be used
- * in the Kamcord Watch View, so we recommend that, if appropriate for your game, you
- * set it after every [Kamcord stopRecording] and before [Kamcord showView].
- * Set the level and score of the last recorded video.
- * Note: Older API, bias towards setDeveloperMetadata
- *
- * @param       level       The level of the last recorded video.
- * @param       score       The score of the last recorded video.
- *
- *
- * @see setDeveloperMetadata:displayKey:displayValue:
- * @see setDeveloperMetadata:displayKey:displayValue:numericValue:
- * @warning This is now deprecated.
- */
-+ (void)setLevel:(NSString *)level
-           score:(NSNumber *)score __deprecated;
-
-/*
+/**
+ * *DEPRECATED*
+ * These methods allow you to add one background audio track to the recorded video.
  *
  * This method allows you to add one background audio track to the recorded video.
  * @param filename The string path to the audio file you would like to mux with the video.
@@ -1158,6 +1024,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 /// @name Private APIs - Do not use
 /// -------------------------------------------------------------------------
 + (void)setMode:(unsigned long long)mode;
+
 + (void)uploadVideoToFacebookWithAccessToken:(NSString *)accessToken
                                        title:(NSString *)title
                                  description:(NSString *)description;
