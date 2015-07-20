@@ -1,0 +1,418 @@
+"WeChat Sharing Disabled" = "微信分享已禁用";
+
+"Most Liked" = "最多获“赞”";
+
+"Request Failed" = "请求失败";
+
+"Please sign-in again and authorize posting to share to Facebook." = "请再次登录授权发布以分享到 Facebook。";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "由于年龄问题，您已从 Kamcord 注销";
+
+"Sign in" = "登录";
+
+"Facebook" = "Facebook";
+
+"Day" = "天";
+
+"Kamcord Policy" = "Kamcord 政策";
+
+"Featured" = "精选";
+
+"OK" = "好";
+
+"Likers" = "打“赞”者";
+
+"No videos match your search." = "没有匹配您搜索的视频。";
+
+"You must install the LINE App before you can share to LINE." = "在您分享到 LINE 前，您必须安装 LINE 应用。";
+
+"Uh oh" = "啊哦";
+
+"Error retrieving videos." = "检索视频时出错。";
+
+"Private" = "私密";
+
+"Some of the data you've entered is invalid!" = "您输入的部分数据无效！";
+
+"Followers" = "粉丝";
+
+"Save" = "保存";
+
+"Sent" = "已发送";
+
+"Error retrieving users." = "检索用户时出错。";
+
+"Facebook Credentials Changed" = "Facebook 凭据已更改";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "请在“设置” -> “Twitter” 中至少启用一个帐户，并为此应用授予权限。";
+
+"Upload failed" = "上传失败";
+
+"Video" = "视频";
+
+"Line" = "线路";
+
+"Please set your correct birthday. You are missing: %@" = "请正确设置您的生日。您缺少：%@";
+
+"Be the first to comment!" = "成为发表评论第一人！";
+
+"Settings" = "设置";
+
+"Uploading" = "正在上传";
+
+"You must install the WeChat App before you can share to WeChat." = "在您分享到微信前，您必须安装微信应用。";
+
+"Voice Overlay Activated!" = "语音叠加已激活！";
+
+"You have unsaved changes. Are you sure you want to go back?" = "您有未保存的更改。您确认要返回吗？";
+
+"LINE App Not Found" = "未找到 LINE 应用";
+
+"Could not load users.\nPull down to try again." = "无法载入用户。\n下拉来重试。";
+
+"You have been signed out" = "您已注销";
+
+"gameplay" = "游戏玩法";
+
+"Not Authorized" = "未授权";
+
+"Videos" = "视频";
+
+"Reset Password" = "重置密码";
+
+"Month" = "月";
+
+"WeChat App Not Found" = "未找到微信应用";
+
+"Before you can record your voice,\nplease enter your birth date." = "在录制您的声音前，\n请输入您的生日。";
+
+"Invalid Birthday" = "生日无效";
+
+"Yes" = "是";
+
+"Unsaved Changes" = "未保存的更改";
+
+"No Email Accounts" = "没有电子邮件帐户";
+
+"No" = "否";
+
+"Most Popular" = "最受欢迎";
+
+"Save Birthday" = "保存生日";
+
+"Trending Now" = "当下流行";
+
+"Video Shared!" = "视频已分享！";
+
+"Tags" = "标签";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "您的 Facebook 凭据已更改。请打开 iOS “设置”应用，前往 Facebook，注销并重新登录来刷新您的登录状态。";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "此设备上未设置电子邮件帐户。请添加电子邮件帐户向我们发送反馈！";
+
+"Voice Overlay will be enabled for future videos." = "语音叠加将在后续视频中启用。";
+
+"Report For Offensive Conduct" = "攻击性行为报告";
+
+"Not authorized" = "未授权";
+
+"Success" = "成功";
+
+"Error" = "错误";
+
+"Following" = "正在关注";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "请在“设置” -> “Twitter” 中登录并为此应用授予权限。";
+
+"Feedback" = "反馈";
+
+"Edit Info" = "编辑信息";
+
+"Follow" = "关注";
+
+"Sign Up" = "注册";
+
+"Sign In" = "登录";
+
+"Twitter" = "Twitter";
+
+"Follower" = "粉丝";
+
+"Done" = "完成";
+
+"Cancel" = "取消";
+
+"Close" = "关闭";
+
+"No account connected" = "没有已连接的帐户";
+
+"You cannot share to WeChat on this device." = "您无法在此设备上分享到微信。";
+
+"Failed to change password" = "更改密码失败";
+
+"NicoNico" = "NicoNico";
+
+"Are you sure you want to sign out?" = "您确认要注销吗？";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "您的视频已共享到 Kamcord！您仍可通过选择视频并再次分享，来分享到其他网络。";
+
+"Voice Overlay will be activated for future videos." = "语音叠加将在后续视频中激活。";
+
+"Please reconnect and try again." = "请重新连接并重试。";
+
+"Tagline failed to save" = "标语保存失败";
+
+"Profile" = "档案";
+
+"Please try again later." = "请稍后重试。";
+
+"Sign Out" = "注销";
+
+"No Internet Connection" = "未连接到互联网";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "请在“设置” -> “Facebook” 中登录并为此应用授予权限。";
+
+"Password" = "密码";
+
+"Voice Overlay Enabled!" = "语音叠加已启用！";
+
+"Log Out" = "注销";
+
+"WeChat" = "微信";
+
+"Try Again" = "重试";
+
+"Upload Failed!" = "上传失败！";
+
+"Microphone Permission Disabled!" = "麦克风权限已禁用！";
+
+"Share Replay" = "共享重播";
+
+"Delete Video" = "删除视频";
+
+"Please setup an email account in Settings > Mail." = "请前往“设置” > “邮件”设置电子邮件帐户。";
+
+"Year" = "年";
+
+"Select Twitter account to use" = "选择要使用的 Twitter 帐户";
+
+"Email too long." = "电子邮件过长。";
+
+"Email taken." = "电子邮件已被占用。";
+
+"Invalid email" = "电子邮件无效。";
+
+"Password too short." = "密码过短。";
+
+"Password too long." = "密码过长。";
+
+"Invalid password." = "密码无效。";
+
+"Username too short." = "用户名过短。";
+
+"Username too long." = "用户名过长。";
+
+"Invalid characters in username." = "用户名中包含无效字符。";
+
+"Username taken." = "用户名已被占用。";
+
+"Social" = "社交";
+
+"Support" = "支持";
+
+"Account" = "帐户";
+
+"Terms of Service" = "服务条款";
+
+"Privacy Policy" = "隐私权政策";
+
+"Send Feedback about Kamcord" = "发送 Kamcord 的相关反馈";
+
+"Voice Overlay" = "语音叠加";
+
+"Change Password" = "更改密码";
+
+"Confirm Facebook Sign Out" = "确认 Facebook 注销";
+
+"Confirm YouTube Sign Out" = "确认 YouTube 注销";
+
+"Confirm Twitter Sign Out" = "确认 Twitter 注销";
+
+"Confirm niconico Sign Out" = "确认 niconico 注销";
+
+"Write a title..." = "写下标题...";
+
+"Write a description..." = "写下描述...";
+
+"Liked" = "已打“赞”";
+
+"Like" = "打“赞”";
+
+"Make Private" = "设为私密";
+
+"Make Public" = "设为公开";
+
+"Report Video" = "报告视频";
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "创建档案";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "登录";
+
+"Report Offensive Content" = "报告不良内容";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "点按下方的“创建档案”即代表您同意 Kamcord 的《服务条款》与《隐私权政策》。";
+
+"Loading YouTube sign-in..." = "正在载入 YouTube 登录...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "创建 Kamcord 档案即可发表评论、关注玩家并让更多人观看您的视频！";
+
+"There are no popular videos at the moment!" = "目前没有热门视频！";
+"Your likes feed is empty because you haven't liked any videos :(" = "您打“赞”的视频源订阅为空，因为您未对任何视频打“赞” :(";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "您关注的视频源订阅为空，因为您没有关注任何人 :(\n\n关注更多人来创建您自己的源订阅！";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "成为社区的一员！";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "语音叠加";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "已连接";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "以前";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "天";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "天";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "小时";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "小时";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "小时";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "小时";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "刚刚";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "上个月";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "上周";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "去年";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "分钟";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "分钟";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "分钟";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "分钟";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "个月";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "个月";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "个月";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "个月";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "秒";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "秒";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "周";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "周";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "周";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "周";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "年";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "昨天";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "年";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "年";
+
+"By" = "作者";
+"Guest Player" = "来宾玩家";
+"Report" = "报告";
+"Likes" = "打“赞”";
+"Connect" = "连接";
+"Disconnect" = "断开连接";
+"Sort" = "排序";
+"Filter Search" = "筛选器搜索";
+"Something went wrong. Please try again" = "出错了。请重试";
+"Password must be at least 6 characters" = "密码必须至少为 6 个字符";
+"Password cannot be over 30 characters" = "密码不能超过 30 个字符";
+"Current password incorrect" = "当前密码不正确";
+"Password reset attempts exceeded" = "已超过密码重置尝试次数";
+"Password cannot be blank" = "密码不能为空";
+"Email is not valid" = "电子邮件无效";
+"Email cannot be over 64 characters" = "电子邮件地址不能超过 64 个字符";
+"Email already exists" = "电子邮件已存在";
+"Email cannot be blank" = "电子邮件不能为空";
+"Username cannot be blank" = "用户名不能为空";
+"Username already exists" = "用户名已存在";
+"Username must be at least 3 characters" = "用户名必须至少为 3 个字符";
+"Username cannot be over 15 characters" = "用户名不能超过 15 个字符";
+"Username can only contain letters and numbers" = "用户名只能包含字母和数字";
+"Username / password is not valid" = "用户名 / 密码无效";
+"A Social Network For Gamers" = "游戏玩家专属社交网络";
+"Gamers" = "游戏玩家";
+"Sign up for a profile so people\ncan follow you" = "注册档案以获得\n他人关注";
+
+"Could not load notifications. Pull down to try again." = "无法载入通知。请下拉并重试。";
+"You have no notifications." = "您没有通知。";
+"Error retrieving notifications." = "检索通知时出错。";
+"Notifications" = "通知";
+"Could not load users.\nPull down to try again." = "无法载入用户。\n请下拉来重试。";
+"There are no users." = "没有用户。";
+"Videos you share will show up here. Pull down to refresh." = "您分享的视频将显示在这里。下拉来刷新。";
+"Failed to load notification. Tap to retry." = "载入通知失败。点按来重试。";
+"Nobody has liked this video." = "无人为此视频打“赞”。";

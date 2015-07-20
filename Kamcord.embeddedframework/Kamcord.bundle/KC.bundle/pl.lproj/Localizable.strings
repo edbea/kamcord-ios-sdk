@@ -1,0 +1,418 @@
+"WeChat Sharing Disabled" = "Udostępnianie WeChat wyłączone";
+
+"Most Liked" = "Najwięcej polubień";
+
+"Request Failed" = "Żądanie nie powiodło się";
+
+"Please sign-in again and authorize posting to share to Facebook." = "Zaloguj się ponownie i autoryzuj publikowanie, aby udostępniać na Facebooku.";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "Nastąpiło wylogowanie z Kamcord ze względu na nieodpowiedni wiek.";
+
+"Sign in" = "Zaloguj się";
+
+"Facebook" = "Facebook";
+
+"Day" = "Dzień";
+
+"Kamcord Policy" = "Polityka Kamcord";
+
+"Featured" = "Polecane";
+
+"OK" = "OK";
+
+"Likers" = "Lubiący";
+
+"No videos match your search." = "Żadne filmy nie spełniają Twoich kryteriów wyszukiwania.";
+
+"You must install the LINE App before you can share to LINE." = "Aby udostępniać treści w serwisie LINE, musisz zainstalować aplikację LINE.";
+
+"Uh oh" = "Ojej";
+
+"Error retrieving videos." = "Błąd podczas pobierania filmów wideo.";
+
+"Private" = "Prywatne";
+
+"Some of the data you've entered is invalid!" = "Część wprowadzonych danych jest nieprawidłowa!";
+
+"Followers" = "Obserwujący";
+
+"Save" = "Zapisz";
+
+"Sent" = "Wysłano";
+
+"Error retrieving users." = "Błąd podczas pobierania danych użytkowników.";
+
+"Facebook Credentials Changed" = "Zmiana danych uwierzytelniających serwisu Facebook";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "Aktywuj przynajmniej jedno konto w menu Ustawienia -> Twitter i udziel aplikacji pozwoleń.";
+
+"Upload failed" = "Przesyłanie nie powiodło się";
+
+"Video" = "Film wideo";
+
+"Line" = "Wiersz";
+
+"Please set your correct birthday. You are missing: %@" = "Ustaw prawidłową datę urodzenia. Brakuje: %@";
+
+"Be the first to comment!" = "Bądź pierwszą osobą, która to skomentuje!";
+
+"Settings" = "Ustawienia";
+
+"Uploading" = "Przesyłanie";
+
+"You must install the WeChat App before you can share to WeChat." = "Aby udostępniać treści w serwisie WeChat, musisz zainstalować aplikację WeChat.";
+
+"Voice Overlay Activated!" = "Aktywowano nagrywanie głosu!";
+
+"You have unsaved changes. Are you sure you want to go back?" = "Masz niezapisane zmiany. Czy na pewno chcesz wrócić?";
+
+"LINE App Not Found" = "Nie znaleziono aplikacji LINE";
+
+"Could not load users.\nPull down to try again." = "Nie można załadować danych użytkowników.\nPrzeciągnij w dół, aby spróbować ponownie.";
+
+"You have been signed out" = "Nastąpiło wylogowanie";
+
+"gameplay" = "gameplay";
+
+"Not Authorized" = "Brak autoryzacji";
+
+"Videos" = "Filmy wideo";
+
+"Reset Password" = "Resetuj hasło";
+
+"Month" = "Miesiąc";
+
+"WeChat App Not Found" = "Nie znaleziono aplikacji WeChat";
+
+"Before you can record your voice,\nplease enter your birth date." = "Aby nagrywać swój głos\nwprowadź datę urodzenia. ";
+
+"Invalid Birthday" = "Nieprawidłowa data urodzenia";
+
+"Yes" = "Tak";
+
+"Unsaved Changes" = "Niezapisane zmiany";
+
+"No Email Accounts" = "Brak kont e-mail";
+
+"No" = "Nie";
+
+"Most Popular" = "Najpopularniejsze";
+
+"Save Birthday" = "Zapisz datę urodzenia";
+
+"Trending Now" = "Aktualne trendy";
+
+"Video Shared!" = "Udostępniono film wideo!";
+
+"Tags" = "Tagi";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Twoje dane uwierzytelniające w serwisie Facebook zostały zmienione. Otwórz menu Ustawienia systemu iOS, przejdź do aplikacji Facebook, wyloguj się, a następnie zaloguj się ponownie, aby odświeżyć swoje dane logowania.";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "Na tym urządzeniu nie ma ustawionych żadnych kont e-mail. Dodaj konto e-mail, aby przesłać nam swoją opinię!";
+
+"Voice Overlay will be enabled for future videos." = "Nagrywanie głosu zostanie włączone w następnych filmach wideo.";
+
+"Report For Offensive Conduct" = "Zgłoś niewłaściwe zachowanie";
+
+"Not authorized" = "Brak autoryzacji";
+
+"Success" = "Udało się";
+
+"Error" = "Błąd";
+
+"Following" = "Obserwuje";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "Zaloguj się w menu Ustawienia > Twitter i udziel aplikacji pozwolenia.";
+
+"Feedback" = "Opinia";
+
+"Edit Info" = "Edytuj dane";
+
+"Follow" = "Obserwuj";
+
+"Sign Up" = "Zarejestruj się";
+
+"Sign In" = "Zaloguj się";
+
+"Twitter" = "Twitter";
+
+"Follower" = "Obserwujący";
+
+"Done" = "Gotowe";
+
+"Cancel" = "Anuluj";
+
+"Close" = "Zamknij";
+
+"No account connected" = "Brak połączonych kont";
+
+"You cannot share to WeChat on this device." = "Nie możesz udostępniać treści w serwisie WeChat na tym urządzeniu.";
+
+"Failed to change password" = "Zmiana hasła nie powiodła się";
+
+"NicoNico" = "NicoNico";
+
+"Are you sure you want to sign out?" = "Czy na pewno chcesz się wylogować?";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "Twój film wideo został udostępniony w Kamcord! Możesz udostępnić go także w innych serwisach, zaznaczając je i wysyłając ponownie.";
+
+"Voice Overlay will be activated for future videos." = "Nagrywanie głosu zostanie aktywowane w następnych filmach wideo.";
+
+"Please reconnect and try again." = "Połącz się jeszcze raz i spróbuj ponownie.";
+
+"Tagline failed to save" = "Nie zapisano opisu";
+
+"Profile" = "Profil";
+
+"Please try again later." = "Spróbuj ponownie później.";
+
+"Sign Out" = "Wyloguj się";
+
+"No Internet Connection" = "Brak połączenia z Internetem";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "Zaloguj się w menu Ustawienia > Facebook i udziel aplikacji pozwolenia.";
+
+"Password" = "Hasło";
+
+"Voice Overlay Enabled!" = "Włączono nagrywanie głosu!";
+
+"Log Out" = "Wyloguj się";
+
+"WeChat" = "WeChat";
+
+"Try Again" = "Spróbuj ponownie";
+
+"Upload Failed!" = "Przesyłanie nie powiodło się!";
+
+"Microphone Permission Disabled!" = "Nie udzielono pozwolenia dla mikrofonu!";
+
+"Share Replay" = "Udostępnij powtórkę";
+
+"Delete Video" = "Usuń film wideo";
+
+"Please setup an email account in Settings > Mail." = "Ustaw konto e-mail w menu Ustawienia > Poczta.";
+
+"Year" = "Rok";
+
+"Select Twitter account to use" = "Wybierz konto serwisu Twitter do zastosowania";
+
+"Email too long." = "E-mail jest za długi.";
+
+"Email taken." = "E-mail jest zajęty.";
+
+"Invalid email" = "Nieprawidłowy e-mail";
+
+"Password too short." = "Hasło jest za krótkie.";
+
+"Password too long." = "Hasło jest za długie.";
+
+"Invalid password." = "Nieprawidłowe hasło.";
+
+"Username too short." = "Nazwa użytkownika jest za krótka.";
+
+"Username too long." = "Nazwa użytkownika jest za długa.";
+
+"Invalid characters in username." = "Nazwa użytkownika zawiera niedozwolone znaki.";
+
+"Username taken." = "Nazwa użytkownika jest zajęta.";
+
+"Social" = "Społeczność";
+
+"Support" = "Wsparcie";
+
+"Account" = "Konto";
+
+"Terms of Service" = "Warunki korzystania z usług";
+
+"Privacy Policy" = "Polityka prywatności";
+
+"Send Feedback about Kamcord" = "Wyślij opinię o Kamcord";
+
+"Voice Overlay" = "Nagrywanie głosu";
+
+"Change Password" = "Zmień hasło";
+
+"Confirm Facebook Sign Out" = "Potwierdź wylogowanie z serwisu Facebook";
+
+"Confirm YouTube Sign Out" = "Potwierdź wylogowanie z serwisu YouTube";
+
+"Confirm Twitter Sign Out" = "Potwierdź wylogowanie z serwisu Twitter";
+
+"Confirm niconico Sign Out" = "Potwierdź wylogowanie z serwisu niconico";
+
+"Write a title..." = "Wprowadź tytuł...";
+
+"Write a description..." = "Wprowadź opis...";
+
+"Liked" = "Polubione";
+
+"Like" = "Polub";
+
+"Make Private" = "Ustaw jako prywatne";
+
+"Make Public" = "Ustaw jako publiczne";
+
+"Report Video" = "Zgłoś film wideo";
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "Utwórz profil";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "Zaloguj się";
+
+"Report Offensive Content" = "Zgłoś niewłaściwe treści";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "Stukając opcję Utwórz profil poniżej, wyrażasz zgodę na Warunki korzystania z usług oraz Politykę prywatności Kamcord.";
+
+"Loading YouTube sign-in..." = "Ładowanie danych logowania serwisu YouTube...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "Utwórz profil Kamcord, aby komentować, obserwować graczy i uzyskać więcej wyświetleń swoich filmów wideo!";
+
+"There are no popular videos at the moment!" = "Aktualnie brak popularnych filmów wideo!";
+"Your likes feed is empty because you haven't liked any videos :(" = "Twój strumień polubień jest pusty, ponieważ nie masz żadnych polubionych filmów wideo :(";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "Twój strumień obserwowanych jest pusty, ponieważ nikogo nie obserwujesz :(\n\nObserwuj więcej osób, aby utworzyć swój własny strumień!";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "Dołącz do społeczności!";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "Nagrywanie głosu";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "Połączono";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "temu";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "dzień";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "dni";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "godzina";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "godziny";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "godz.";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "godz.";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "przed chwilą";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "w zeszłym miesiącu";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "w zeszłym tygodniu";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "w zeszłym roku";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "min";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "min";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "minuta";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "minuty";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "mies.";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "miesiąc";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "miesiące";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "mies.";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "sekunda";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "sekundy";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "tydzień";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "tygodnie";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "tyg.";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "tyg.";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "rok";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "lata";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "wczoraj";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "r.";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "lat";
+
+"By" = "Przez";
+"Guest Player" = "Gracz występujący gościnnie";
+"Report" = "Zgłoś";
+"Likes" = "Polubienia";
+"Connect" = "Połącz";
+"Disconnect" = "Rozłącz";
+"Sort" = "Sortuj";
+"Filter Search" = "Filtruj wyniki wyszukiwania";
+"Something went wrong. Please try again" = "Coś poszło nie tak. Spróbuj ponownie";
+"Password must be at least 6 characters" = "Hasło musi zawierać co najmniej 6 znaków";
+"Password cannot be over 30 characters" = "Hasło nie może zawierać więcej niż 30 znaków";
+"Current password incorrect" = "Bieżące hasło jest nieprawidłowe";
+"Password reset attempts exceeded" = "Przekroczono liczbę prób zresetowania hasła";
+"Password cannot be blank" = "Pole hasła nie może być puste";
+"Email is not valid" = "Nieprawidłowy adres e-mail";
+"Email cannot be over 64 characters" = "Adres e-mail nie może zawierać więcej niż 64 znaki";
+"Email already exists" = "Adres e-mail już istnieje";
+"Email cannot be blank" = "Pole adresu e-mail nie może być puste";
+"Username cannot be blank" = "Pole nazwy użytkownika nie może być puste";
+"Username already exists" = "Nazwa użytkownika już istnieje";
+"Username must be at least 3 characters" = "Nazwa użytkownika musi zawierać co najmniej 3 znaki";
+"Username cannot be over 15 characters" = "Nazwa użytkownika nie może zawierać więcej niż 15 znaków";
+"Username can only contain letters and numbers" = "Nazwa użytkownika może zawierać tylko litery i cyfry";
+"Username / password is not valid" = "Nazwa użytkownika / hasło nieprawidłowe";
+"A Social Network For Gamers" = "Serwis społecznościowy dla graczy";
+"Gamers" = "Gracze";
+"Sign up for a profile so people\ncan follow you" = "Zarejestruj swój profil,\naby inni mogli Cię obserwować";
+
+"Could not load notifications. Pull down to try again." = "Nie można załadować powiadomień. Przeciągnij w dół, aby spróbować ponownie.";
+"You have no notifications." = "Nie masz żadnych powiadomień.";
+"Error retrieving notifications." = "Błąd podczas pobierania powiadomień.";
+"Notifications" = "Powiadomienia";
+"Could not load users.\nPull down to try again." = "Nie można załadować danych użytkowników.\nPrzeciągnij w dół, aby spróbować ponownie.";
+"There are no users." = "Brak użytkowników.";
+"Videos you share will show up here. Pull down to refresh." = "Tutaj pojawią się udostępnione przez Ciebie filmy wideo. Przeciągnij w dół, aby odświeżyć.";
+"Failed to load notification. Tap to retry." = "Ładowanie powiadomień nie powiodło się. Stuknij, aby ponowić.";
+"Nobody has liked this video." = "Nikt nie polubił tego filmu wideo.";

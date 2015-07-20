@@ -23,13 +23,6 @@
 
 /*
  *
- * Core Kamcord video recording.
- *
- */
-#import "KamcordRecorder.h"
-
-/*
- *
  * Video Metadata
  *
  */
@@ -37,7 +30,7 @@
 
 /**
  *
- * Current version is 2.0.0 (2015-06-10)
+ * Current version is 2.1.0 (2015-07-16)
  *
  */
 extern NSString *const KamcordVersion;
@@ -50,7 +43,7 @@ extern NSString *const KamcordVersion;
 typedef NS_ENUM(NSUInteger, KCDeviceType) {
     KCDeviceTypeiPod4G          = 1 << 0,
     KCDeviceTypeiPod5G          = 1 << 1,
-    
+
     KCDeviceTypeiPhone3GS       = 1 << 2,
     KCDeviceTypeiPhone4         = 1 << 3,
     KCDeviceTypeiPhone4S        = 1 << 4,
@@ -59,7 +52,7 @@ typedef NS_ENUM(NSUInteger, KCDeviceType) {
     KCDeviceTypeiPhone5S        = 1 << 7,
     KCDeviceTypeiPhone6         = 1 << 15,
     KCDevicetypeiPhone6Plus     = 1 << 16,
-    
+
     KCDeviceTypeiPad1           = 1 << 8,
     KCDeviceTypeiPad2           = 1 << 9,
     KCDeviceTypeiPadMini        = 1 << 10,
@@ -70,14 +63,14 @@ typedef NS_ENUM(NSUInteger, KCDeviceType) {
     KCDeviceTypeiPadMini2       = 1 << 14,
     KCDeviceTypeiPadMini3       = 1 << 15,
     KCDeviceTypeiPadAir2        = 1 << 16,
-    
+
     KCDeviceTypeSingleCore      = (KCDeviceTypeiPod4G | KCDeviceTypeiPhone3GS | KCDeviceTypeiPhone4 | KCDeviceTypeiPad1)
 };
 
 
 
 /**
- * 
+ *
  * The various tabs in the Kamcord UI.
  *
  */
@@ -104,7 +97,7 @@ __deprecated typedef NS_ENUM(NSUInteger, KC_UI_INITIAL_TAB) {
 };
 
 /**
- *  Describes the current state of age gating. 
+ *  Describes the current state of age gating.
  *
  */
 typedef NS_ENUM(NSUInteger, KCAgeGateStatus) {
@@ -158,7 +151,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (void)setDeviceBlacklist:(KCDeviceType)blacklist;
 
 /** Kamcord initialization. Set your developer key, secret, app name,
- * and the UIViewController that will present the Kamcord UI when 
+ * and the UIViewController that will present the Kamcord UI when
  * you call `[Kamcord showView]`.
  *
  * @param   key                     Your Kamcord developer key.
@@ -466,8 +459,8 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  *
  * Note: This method is only to be used for non-OpenAL/Unity game engines.
  *       For cocos2d/cocos2d-x/Unity (and other OpenAL-based sound engines),
- *       Kamcord will figure out the correct AudioStreamBasicDescription and 
- *       set it automatically. Using this method in those cases will most 
+ *       Kamcord will figure out the correct AudioStreamBasicDescription and
+ *       set it automatically. Using this method in those cases will most
  *       likely break audio recording.
  *
  * Declare the description of the audio stream. This method MUST be called before
@@ -500,9 +493,9 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
  *
  * This enables or disables voice recording.
  *
- *      1. Your user can activate (i.e. turn on microphone voice recording) 
+ *      1. Your user can activate (i.e. turn on microphone voice recording)
  *          in the Kamcord Settings UI
- *      2. You can activate it on behalf of the user by calling 
+ *      2. You can activate it on behalf of the user by calling
  *          `[Kamcord activateVoiceOverlay:YES]`.
  *
  * The main reason this method exists is to disable voice overlay in your games
@@ -518,7 +511,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 /**
  *
  * Once voice overlay is enabled, the user must activate it by going to the
- * Kamcord Settings UI and enabling it there. You can also programatically 
+ * Kamcord Settings UI and enabling it there. You can also programatically
  * activate it with the following API calls.
  *
  * Please note that voice overlay *MUST* first be enabled before trying to
@@ -571,7 +564,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 
 /**
  *
- * Set the ways users can share their videos. You can use this method to choose which 
+ * Set the ways users can share their videos. You can use this method to choose which
  * forms of social media users will have access to when they go to share a replay. By default
  * the sharing options are Facebook, Twitter, Youtube, Email. You must pass in
  * exactly four valid distinct KCShareDestination enums, else nothing will be changed. The order
@@ -735,12 +728,12 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
                // Call FBAppCall's handleOpenURL:sourceApplication to handle Facebook app responses
                BOOL wasHandled = [FBAppCall handleOpenURL:url sourceApplication:sourceApplication] &&
                                  [Kamcord handleOpenURL:url];
-         
+
                return wasHandled;
            }
- 
+
    @param       url         The URL that was passed to your app from the Facebook app callback.
- 
+
  */
 + (BOOL)handleOpenURL:(NSURL *)url;
 
@@ -924,7 +917,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 /// ------------------------------------------------------------------
 /**
  *
- * Requires users to verify they are at least thirteen years old prior to allowing 
+ * Requires users to verify they are at least thirteen years old prior to allowing
  * them to turn on voice overlay.
  *
  * @param       restricted  Require age check before allowing the user to enable voice overlay?
@@ -952,7 +945,7 @@ typedef void(^KCAgeGateStatusUpdatedBlock)(KCAgeGateStatus status);
 + (BOOL)isAgeRestrictionEnabled __deprecated;
 
 /**
- * This will return the current status of the age gate. You may also use the optional block when setting 
+ * This will return the current status of the age gate. You may also use the optional block when setting
  * age restriction enabled.
  *
  * @returns     The current status of the age gate for the user.

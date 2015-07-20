@@ -1,0 +1,418 @@
+"WeChat Sharing Disabled" = "ปิดการแชร์ไป WeChat";
+
+"Most Liked" = "ถูกไลค์มากที่สุด";
+
+"Request Failed" = "คำร้องล้มเหลว";
+
+"Please sign-in again and authorize posting to share to Facebook." = "กรุณาลงชื่อเข้าอีกครั้งและอนุญาตให้แชร์สิ่งที่โพสต์ขึ้น Facebook ได้.";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "คุณได้ออกจา Kamford เนื่องจากประเด็นเรื่องอายุ";
+
+"Sign in" = "ลงชื่อเข้า";
+
+"Facebook" = "Facebook";
+
+"Day" = "วัน";
+
+"Kamcord Policy" = "นโยบายของ Kamcord";
+
+"Featured" = "น่าสนใจ";
+
+"OK" = "ตกลง";
+
+"Likers" = "ผู้ชื่นชอบ";
+
+"No videos match your search." = "ไม่พบวิดีโอที่ตรงกับการค้นหา";
+
+"You must install the LINE App before you can share to LINE." = "คุณต้องติดตั้งแอพ LINE ก่อนจะแชร์ไปที";
+
+"Uh oh" = "โอ๊ะโอ";
+
+"Error retrieving videos." = "มีปัญหาในการกู้คืนวิดีโอ";
+
+"Private" = "ส่วนตัว";
+
+"Some of the data you've entered is invalid!" = "ข้อมูลบางอย่างที่คุณกรอกไม่ถูกต้อง!";
+
+"Followers" = "ผู้ติดตาม";
+
+"Save" = "บันทึก";
+
+"Sent" = "ส่งแล้ว";
+
+"Error retrieving users." = "มีปัญหาในการกู้คืนผู้ใช้.";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "กรุณาใส่อย่างน้อยหนึ่งบัญชีในการตั้งค่า -> Twitter และอนุญาตให้แอพพลิเคชั่นนี้ใช้งาน";
+
+"Upload failed" = "การอัพโหลดล้มเหลว";
+
+"Video" = "วิดีโอ";
+
+"Line" = "Line";
+
+"Please set your correct birthday. You are missing: %@" = "กรุณาใส่วันเกิดที่ถูกต้อง คุณยังไม่ได้กรอก: %@";
+
+"Be the first to comment!" = "คอมเม้นท์เป็นคนแรก!";
+
+"Settings" = "การตั้งค่า";
+
+"Uploading" = "กำลังอัพโหลด";
+
+"You must install the WeChat App before you can share to WeChat." = "คุณต้องติดตั้งแอพ WeChat ก่อนแชร์ไป WeChat";
+
+"Voice Overlay Activated!" = "เปิดใช้งานว็อยซ์โอเวอร์เลย์!";
+
+"You have unsaved changes. Are you sure you want to go back?" = "คุณยังไม่ได้บันทึกการเปลี่ยนแปลง แน่ใจว่าจะย้อนกลับไปหรือไม่?";
+
+"LINE App Not Found" = "ไม่พบแอพ LINE";
+
+"Could not load users.\nPull down to try again." = "ไม่พบผู้ใช้\nลากลงเพื่อลองใหม่อีกครั้ง";
+
+"You have been signed out" = "คุณออกจากระบบแล้ว";
+
+"gameplay" = "เกมเพลย์";
+
+"Not Authorized" = "ไม่ได้รับอนุญาต";
+
+"Videos" = "วิดีโอ";
+
+"Reset Password" = "ตั้งรหัสผ่านใหม่";
+
+"Month" = "เดือน";
+
+"WeChat App Not Found" = "ไม่พบแอพ WeChat";
+
+"Before you can record your voice,\nplease enter your birth date." = "ก่อนจะบันทึกเสียง\nกรุณากรอกวันเกิดของคุณ.";
+
+"Invalid Birthday" = "วันเกิดไม่ถูกต้อง";
+
+"Yes" = "ใช่";
+
+"Unsaved Changes" = "การเปลี่ยนแปลงยังไม่ถูกบันทึก";
+
+"No Email Accounts" = "ไม่มีบัญชีอีเมล";
+
+"No" = "ไม่";
+
+"Most Popular" = "ยอดนิยมสุด";
+
+"Save Birthday" = "บันทึกวันเกิด";
+
+"Trending Now" = "กำลังอินเทรนด์";
+
+"Video Shared!" = "แชร์วิดีโอแล้ว!";
+
+"Tags" = "แท็ก";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "การรับรอง Facebook ของคุณเปลี่ยนไปแล้ว กรุณาเปิดการตั้งค่า iOS ไปที่ Facebook ลงชื่อออกและเข้าใหม่อีกครั้งเพื่อรีเฟรชการเข้าใช้.";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "ยังไม่ได้ตั้งค่าบัญชีอีเมลในเครื่องนี้ กรุณาเพิ่มบัญชีอีเมลเพื่อส่งฟีดแบ็คให้เรา!";
+
+"Voice Overlay will be enabled for future videos." = "จะสามารถใช้ว็อยซ์โอเวอร์เลย์ได้ในวิดีโอหน้า";
+
+"Report For Offensive Conduct" = "แจ้งการกระทำที่ทำให้ไม่พอใจ";
+
+"Not authorized" = "ไม่ได้รับอนุญาต";
+
+"Success" = "สำเร็จ";
+
+"Error" = "ผิดพลาด";
+
+"Following" = "กำลังติดตาม";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "กรุณาลงชื่อเข้าใช้ในการตั้งค่า> Twitter และอนุญาตให้แอพพลิเคชั่นนี้เข้าใช้งาน";
+
+"Feedback" = "ฟีดแบ็ค";
+
+"Edit Info" = "แก้ไขข้อมูล";
+
+"Follow" = "ติดตาม";
+
+"Sign Up" = "สมัคร";
+
+"Sign In" = "ลงชื่อเข้า";
+
+"Twitter" = "Twitter";
+
+"Follower" = "ผู้ติดตาม";
+
+"Done" = "เรียบร้อย";
+
+"Cancel" = "ยกเลิก";
+
+"Close" = "ปิด";
+
+"No account connected" = "ไม่มีบัญชีที่เชื่อมอยู่";
+
+"You cannot share to WeChat on this device." = "คุณไม่สามารถแชร์ขึ้น WeChat จากเครื่องนี้ได้";
+
+"Failed to change password" = " ไม่สามารถแปลี่ยนรหัสผ่าน";
+
+"NicoNico" = "NicoNico";
+
+"Are you sure you want to sign out?" = "คุณแน่ใจว่าต้องการออกหรือไม่";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "วิดีโอของคุณถูกแชร์ขึ้น Kamcord แล้ว คุณยังสามารถแชร์ไปที่อื่นได้โดยเลือกแอพเหล่านั้นแล้วแชร์อีกครั้ง.";
+
+"Voice Overlay will be activated for future videos." = "จะสามารถใช้ว็อยซ์โอเวอร์เลย์ได้ในวิดีโอหน้า";
+
+"Please reconnect and try again." = "กรุณาเชื่อมต่อใหม่และลองอีกครั้ง";
+
+"Tagline failed to save" = "ไม่สามารถบันทึกแท็กไลน์ได้";
+
+"Profile" = "โปรไฟล์";
+
+"Please try again later." = "กรุณาลองใหม่คราวหน้า";
+
+"Sign Out" = "ลงชื่อออก";
+
+"No Internet Connection" = "ไม่มีการเชื่อมต่ออินเทอร์เน็ต";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "กรุณาลงชื่อเข้าใน การตั้งค่า> Facebook และอนุญาตให้แอพนี้เข้าใช้งาน";
+
+"Password" = "รหัสผ่าน";
+
+"Voice Overlay Enabled!" = "เปิดว็อยซ์โอเวอร์เลย์แล้ว!";
+
+"Log Out" = "ลงชื่อออก";
+
+"WeChat" = "WeChat";
+
+"Try Again" = "ลองใหม่";
+
+"Upload Failed!" = "การอัพโหลดล้มเหลว!";
+
+"Microphone Permission Disabled!" = "ปิดการอนุญาตใช้งานไมโครโฟนแล้ว!";
+
+"Share Replay" = "แชร์การเล่นซ้ำ";
+
+"Delete Video" = "ลบวิดีโอ";
+
+"Please setup an email account in Settings > Mail." = "กรุณาตั้งค่าบัญชีอีเมลใน การตั้งค่า > เมล";
+
+"Year" = "ปี";
+
+"Select Twitter account to use" = "เลือกบัญชี Twitter เพื่อใช้";
+
+"Email too long." = "อีเมลยาวเกินไป";
+
+"Email taken." = "ใช้อีเมลนี้ไปแล้ว";
+
+"Invalid email" = "อีเมลไม่ถูกต้อง";
+
+"Password too short." = "รหัสผ่านสั้นเกินไป";
+
+"Password too long." = "รหัสผ่านยาวเกินไป";
+
+"Invalid password." = "รหัสผ่านไม่ถูกต้อง";
+
+"Username too short." = "ชื่อผู้ใช้สั้นเกินไป";
+
+"Username too long." = "ชื่อผู้ใช้ยาวเกินไป";
+
+"Invalid characters in username." = "ใช้อักษรนี้ในชื่อผู้ใช้ไม่ได้";
+
+"Username taken." = "ชื่อนี้ถูกใช้ไปแล้ว";
+
+"Social" = "สังคม";
+
+"Support" = "ช่วยเหลือ";
+
+"Account" = "บัญชี";
+
+"Terms of Service" = "เงื่อนไขของบริการ";
+
+"Privacy Policy" = "นโยบายความเป็นส่วนตัว";
+
+"Send Feedback about Kamcord" = "ส่งฟีดแบ็คเกี่ยวกับ Kamcord";
+
+"Voice Overlay" = "ว็อยซ์โอเวอร์เลย์";
+
+"Change Password" = "เปลี่ยนรหัสผ่าน";
+
+"Confirm Facebook Sign Out" = "ยืนยันลงชื่อออกจาก Facebook";
+
+"Confirm YouTube Sign Out" = "ยืนยันลงชื่อออกจาก YouTube";
+
+"Confirm Twitter Sign Out" = "ยืนยันลงชื่อออกจาก Twitter";
+
+"Confirm niconico Sign Out" = "ยืนยันลงชื่อออกจาก niconico";
+
+"Write a title..." = "ตั้งชื่อ...";
+
+"Write a description..." = "ใส่คำบรรยาย...";
+
+"Liked" = "ถูกไลค์";
+
+"Like" = "ไลค์";
+
+"Make Private" = "ทำให้เป็นส่วนตัว";
+
+"Make Public" = "ทำให้เป็นสาธารณะ";
+
+"Report Video" = "รายงานวิดีโอ";
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "สร้างโปรไฟล์";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "ล็อกอิน";
+
+"Report Offensive Content" = "แจ้งเนื้อหาที่ทำให้ไม่พอใจ";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "ในการแตะที่ \"สร้างโปร์ไฟล์\" ที่ด้านล่าง แสดงว่าคุณตกลงรับเงื่อนไขบริการและนโยบายความเป็นส่วนตัวของ Kamford";
+
+"Loading YouTube sign-in..." = "กำลังโหลดการลงชื่อเข้า YouTube ...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "สร้างโปรไฟล์ Kamford เพื่อคอมเมนท์ ติดตามผู้ใช้ และเพิ่มการเข้าชมวิดีโอของคุณ!";
+
+"There are no popular videos at the moment!" = "ขณะนี้ไม่มีวิดีโอยอดนิยม!";
+"Your likes feed is empty because you haven't liked any videos :(" = "ฟีดไลค์ของคุณว่างเปล่า เนื่องจากคุณยังไม่ได้ไลค์วิดีโอเลย(";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "ฟีดการติดตามของคุณว่างเปล่า เนื่องจากคุณยังไม่ได้ติดตามใครเลย :(\n\nติดตามคนอื่นเพิ่มขึ้นเพื่อสร้างฟีดของคุณเอง!";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "เป็นส่วนหนึ่งของชุมชน!";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "ว็อยซ์โอเวอร์เลย์";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "เชื่อมต่อแล้ว";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "ที่แล้ว";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "วัน";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "วัน";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "ชั่วโมง";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "ชั่วโมง";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "ชั่วโมง";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "ชั่วโมง";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "เดี๋ยวนี้";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "เดือนที่แล้ว";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "สัปดาห์ที่แล้ว";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "ปีที่แล้ว";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "นาที";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "นาที";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "นาที";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "นาที";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "เดือน";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "เดือน";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "เดือน";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "เดือน";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "วินาที";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "วินาที";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "สัปดาห์";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "สัปดาห์";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "สัปดาห์";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "สัปดาห์";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "ปี";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "ปี";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "เมื่อวาน";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "ปี";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "ปี";
+
+"By" = "โดย";
+"Guest Player" = "ผู้ใช้ที่ยังไม่ได้สมัคร";
+"Report" = "รายงาน";
+"Likes" = "ไลค์";
+"Connect" = "เชื่อมต่อ";
+"Disconnect" = "เลิกเชื่อมต่อ";
+"Sort" = "เรียง";
+"Filter Search" = "ค้นหาโดยตัวกรอง";
+"Something went wrong. Please try again" = "มีข้อผิดพลาด กรุณาลองใหม่";
+"Password must be at least 6 characters" = "รหัสผ่านต้องมีอย่างน้อย 6 อักษร";
+"Password cannot be over 30 characters" = "รหัสผ่านไม่สามารถเกิน 30 อักษรได้";
+"Current password incorrect" = "รหัสผ่านนี้ไม่ถูกต้อง";
+"Password reset attempts exceeded" = "พยายามตั้งรหัสใหม่เกินกำหนด";
+"Password cannot be blank" = "รหัสผ่านไม่สามารถเว้นว่างได้";
+"Email is not valid" = "อีเมลไม่ถูกต้อง";
+"Email cannot be over 64 characters" = "อีเมลยาวเกิน 64 อักษรไม่ได้";
+"Email already exists" = "มีการใช้อีเมลนี้แล้ว";
+"Email cannot be blank" = "อีเมลเว้นว่างไม่ได้";
+"Username cannot be blank" = "ชื่อผู้ใช้เว้นว่างไม่ได้";
+"Username already exists" = "ชื่อผู้ใช้นี้ใช้ไปแล้ว";
+"Username must be at least 3 characters" = "ชื่อผู้ใช้ต้องมีอย่างน้อย 3 อักษร";
+"Username cannot be over 15 characters" = "ชื่อผู้ใช้ยาวเกิน 15 อักษรไม่ได้";
+"Username can only contain letters and numbers" = "ชื่อผู้ใช้ใช้ได้แค่อักษรและหมายเลขเท่านั้น";
+"A Social Network For Gamers" = "เครือข่ายสังคมสำหรับนักเล่นเกม";
+"Gamers" = "นักเล่นเกม";
+"Sign up for a profile so people\ncan follow you" = "สมัครโปรไฟล์เพื่อให้ใครๆ \nสามารถติดตามคุณได้";
+
+"Could not load notifications. Pull down to try again." = "ไม่สามารถโหลดการแจ้งเตือนได้ กรุณาลองใหม่.";
+"Error retrieving notifications." = "ไม่สามารถเรียกคืนการแจ้งเตือนได้";
+"Notifications" = "การแจ้งเตือน";
+"Could not load users.\nPull down to try again." = "ไม่สามารถโหลดผู้ใช้\nลากลงเพื่อลองใหม่";
+"Videos you share will show up here. Pull down to refresh." = "วิดีโอที่คุณแชร์จะแสดงที่นี่ ลากลงเพื่อรีเฟรช";
+"Failed to load notification. Tap to retry." = "ไม่สามารถโหลดการแจ้งเตือนได้ แตะเพื่อลองใหม่";
+"Nobody has liked this video." = "ไม่มีใครไลค์วิดีโอนี้";
+
+"There are no users." = "There are no users.";
+"You have no notifications." = "You have no notifications.";
+"Username / password is not valid" = "Username / password is not valid";
+"Facebook Credentials Changed" = "หนังสือรับรองของ Facebook Credentials เปลี่ยน";

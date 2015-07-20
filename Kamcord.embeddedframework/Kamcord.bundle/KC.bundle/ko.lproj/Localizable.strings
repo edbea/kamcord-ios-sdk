@@ -1,0 +1,418 @@
+"WeChat Sharing Disabled" = "WeChat 공유가 비활성화됨";
+
+"Most Liked" = "최고 라이크수";
+
+"Request Failed" = "요청 실패";
+
+"Please sign-in again and authorize posting to share to Facebook." = "Facebook 공유를 위해 다시 로그인한 후 포스팅을 인증해 주세요";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "귀하는 나이 때문에 Kamcord에서 로그아웃되셨습니다";
+
+"Sign in" = "로그인";
+
+"Facebook" = "Facebook";
+
+"Day" = "일";
+
+"Kamcord Policy" = "Kamcord 정책";
+
+"Featured" = "메인";
+
+"OK" = "네";
+
+"Likers" = "라이크한 유저";
+
+"No videos match your search." = "검색 결과 일치하는 비디오 없음.";
+
+"You must install the LINE App before you can share to LINE." = "LINE에 공유하기 전에 LINE 앱을 설치하셔야 합니다.";
+
+"Uh oh" = "이런";
+
+"Error retrieving videos." = "에러 발생 비디오";
+
+"Private" = "프라이빗";
+
+"Some of the data you've entered is invalid!" = "입력하신 데이터 중 일부가 유효하지 않습니다!";
+
+"Followers" = "팔로워";
+
+"Save" = "저장";
+
+"Sent" = "보냄";
+
+"Error retrieving users." = "에러 발생 사용자";
+
+"Facebook Credentials Changed" = "Facebook 인증정보 변경됨";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "이 어플리케이션에 권한을 주려면 설정 -> Twitter에서 최소한 하나의 계정을 활성화해 주세요.";
+
+"Upload failed" = "업로드 실패";
+
+"Video" = "비디오";
+
+"Line" = "Line";
+
+"Please set your correct birthday. You are missing: %@" = "올바른 생년월일을 입력해 주세요. 다음 정보가 빠져 있습니다: %@";
+
+"Be the first to comment!" = "첫번째로 댓글을 작성해 보세요!";
+
+"Settings" = "설정";
+
+"Uploading" = "업로드";
+
+"You must install the WeChat App before you can share to WeChat." = "WeChat에 공유하기 전에 WeChat 앱을 설치하셔야 합니다.";
+
+"Voice Overlay Activated!" = "음성 입력 활성화됨!";
+
+"You have unsaved changes. Are you sure you want to go back?" = "저장되지 않은 변경사항이 있습니다. 정말 뒤로 돌아가시겠습니까?";
+
+"LINE App Not Found" = "LINE 앱 없음";
+
+"Could not load users.\nPull down to try again." = "사용자들을 로드하지 못했습니다.\n다시 시도하려면 아래로 끌어내려주세요.";
+
+"You have been signed out" = "귀하는 로그아웃되셨습니다";
+
+"gameplay" = "게임 플레이";
+
+"Not Authorized" = "인증되지 않음";
+
+"Videos" = "비디오";
+
+"Reset Password" = "패스워드 리셋";
+
+"Month" = "월";
+
+"WeChat App Not Found" = "WeChat 앱 없음";
+
+"Before you can record your voice,\nplease enter your birth date." = "음성을 녹음하시기 전에,\n생년월일을 입력해 주세요.";
+
+"Invalid Birthday" = "유효하지 않은 생년월일";
+
+"Yes" = "네";
+
+"Unsaved Changes" = "저장되지 않은 변경사항";
+
+"No Email Accounts" = "이메일 계정 없음";
+
+"No" = "아니오";
+
+"Most Popular" = "가장 인기있는";
+
+"Save Birthday" = "생년월일 저장";
+
+"Trending Now" = "지금 유행하는";
+
+"Video Shared!" = "비디오 공유됨!";
+
+"Tags" = "태그";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "귀하의 Facebook 인증정보가 변경되었습니다. 로그인 정보 재설정을 위해 iOS 설정 앱을 연 후, Facebook으로 가서, 로그아웃 후 다시 로그인해 주세요.";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "이 기기에 설정된 이메일 계정이 없습니다. 저희에게 의견을 보내시려면 이메일 계정을 추가해 주세요.";
+
+"Voice Overlay will be enabled for future videos." = "다음 비디오부터 음성 입력 기능이 활성화될 것입니다.";
+
+"Report For Offensive Conduct" = "공격적인 행동 보고하기";
+
+"Not authorized" = "인증되지 않음";
+
+"Success" = "성공";
+
+"Error" = "에러";
+
+"Following" = "팔로잉";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "설정 > Twitter에서 로그인하신 후 이 앱에 권한을 부여해 주세요.";
+
+"Feedback" = "의견";
+
+"Edit Info" = "정보 수정";
+
+"Follow" = "팔로우";
+
+"Sign Up" = "가입";
+
+"Sign In" = "로그인";
+
+"Twitter" = "Twitter";
+
+"Follower" = "팔로워";
+
+"Done" = "완료";
+
+"Cancel" = "취소";
+
+"Close" = "닫기";
+
+"No account connected" = "연결된 계정 없음";
+
+"You cannot share to WeChat on this device." = "이 기기에서는 WeChat에 공유하하실 수 없습니다.";
+
+"Failed to change password" = "패스워드 변경 실패";
+
+"NicoNico" = "NicoNico";
+
+"Are you sure you want to sign out?" = "정말 로그아웃하기를 원하십니까?";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "귀하의 비디오가 Kamcord에 공유되었습니다! 비디오를 선택해서 다시 공유하기를 하시면 다른 소셜네트워크에도 공유할 수 있습니다.";
+
+"Voice Overlay will be activated for future videos." = "다음 비디오부터 음성 입력 기능이 활성화될 것입니다.";
+
+"Please reconnect and try again." = "재접속한 후 다시 시도해 주세요.";
+
+"Tagline failed to save" = "태그라인 저장 실패";
+
+"Profile" = "프로필";
+
+"Please try again later." = "나중에 다시 시도해 주세요";
+
+"Sign Out" = "로그아웃";
+
+"No Internet Connection" = "인터넷 연결 없음";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "설정 > Facebook에서 로그인하신 후 이 앱에 권한을 부여해 주세요.";
+
+"Password" = "패스워드";
+
+"Voice Overlay Enabled!" = "음성 입력 활성화됨!";
+
+"Log Out" = "로그아웃";
+
+"WeChat" = "WeChat";
+
+"Try Again" = "다시 시도하기";
+
+"Upload Failed!" = "업로드 실패!";
+
+"Microphone Permission Disabled!" = "마이크 사용권한 없음!";
+
+"Share Replay" = "리플레이 공유하기";
+
+"Delete Video" = "비디오 삭제";
+
+"Please setup an email account in Settings > Mail." = "설정 > 메일에서 이메일 계정을 설정해 주세요.";
+
+"Year" = "년도";
+
+"Select Twitter account to use" = "사용하실 Twitter 계정을 선택해 주세요";
+
+"Email too long." = "이메일이 너무 깁니다.";
+
+"Email taken." = "사용중인 이메일.";
+
+"Invalid email" = "유효하지 않은 이메일";
+
+"Password too short." = "패스워드가 너무 짧습니다.";
+
+"Password too long." = "패스워드가 너무 깁니다.";
+
+"Invalid password." = "유효하지 않은 패스워드";
+
+"Username too short." = "사용자명이 너무 짧습니다.";
+
+"Username too long." = "사용자명이 너무 깁니다.";
+
+"Invalid characters in username." = "사용자명에 유효하지 않은 문자열";
+
+"Username taken." = "사용중인 사용자명";
+
+"Social" = "소셜";
+
+"Support" = "지원";
+
+"Account" = "계정";
+
+"Terms of Service" = "이용자 약관";
+
+"Privacy Policy" = "개인정보보호 정책";
+
+"Send Feedback about Kamcord" = "Kamcord에 대한 의견을 보내 주세요";
+
+"Voice Overlay" = "음성 입력";
+
+"Change Password" = "패스워드 변경";
+
+"Confirm Facebook Sign Out" = "Facebook 로그아웃 확인";
+
+"Confirm YouTube Sign Out" = "Youtube 로그아웃 확인";
+
+"Confirm Twitter Sign Out" = "Twitter 로그아웃 확인";
+
+"Confirm niconico Sign Out" = "niconico 로그아웃 확인";
+
+"Write a title..." = "제목을 작성하세요...";
+
+"Write a description..." = "설명을 작성하세요...";
+
+"Liked" = "라이크됨";
+
+"Like" = "라이크";
+
+"Make Private" = "프라이빗으로 만들기";
+
+"Make Public" = "퍼블릭으로 만들기";
+
+"Report Video" = "비디오 보고하기";
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "프로필 만들기";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "로그인";
+
+"Report Offensive Content" = "";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "아래의 \"프로필 만들기\"를 탭함으로서, 귀하는 Kamcord의 이용자 약관 및 개인정보보호 정책에 동의하시는 것입니다.";
+
+"Loading YouTube sign-in..." = "YouTube 로그인 로딩중...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "덧글 및 팔로우 기능을 사용하고 비디오에 대한 더 많은 뷰를 얻으시려면, Kamcord 프로필을 만들어 주세요.";
+
+"There are no popular videos at the moment!" = "현재 인기 비디오가 없습니다!";
+"Your likes feed is empty because you haven't liked any videos :(" = "아직 라이크하신 비디오가 없기 때문에 귀하의 라이크 피드가 비었습니다 :(";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "아직 팔로우한 사용자가 없기 때문에 귀하의 팔로우 피드가 비었습니다 :(\n\n피드를 생성하려면 더 많은 사용자를 팔로우해 주세요!";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "저희 커뮤니티의 일원이 되세요!";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "음성 입력";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "접속됨";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "이전";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "일";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "일";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "시간";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "시간";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "시간";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "시간";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "지금";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "지난 달";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "지난 주";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "지난 해";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "분";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "분";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "분";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "분";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "개월";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "개월";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "개월";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "개월";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "초";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "초";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "주";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "주";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "주";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "주";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "년";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "년";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "어제";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "년";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "년";
+
+"By" = "기준";
+"Guest Player" = "게스트 플레이어";
+"Report" = "보고";
+"Likes" = "라이크";
+"Connect" = "접속";
+"Disconnect" = "접속해제";
+"Sort" = "정렬";
+"Filter Search" = "필터 검색";
+"Something went wrong. Please try again" = "무언가 잘못됐습니다. 다시 시도해 주세요";
+"Password must be at least 6 characters" = "패스워드는 최소 6 글자입니다";
+"Password cannot be over 30 characters" = "패스워드는 30 글자를 넘을 수 없습니다";
+"Current password incorrect" = "현재 패스워드가 잘못 입력됨";
+"Password reset attempts exceeded" = "패스워드 리셋시도 횟수 초과";
+"Password cannot be blank" = "패스워드는 공란이 될 수 없습니다";
+"Email is not valid" = "이메일이 유효하지 않습니다";
+"Email cannot be over 64 characters" = "이메일은 64 글자를 넘을 수 없습니다";
+"Email already exists" = "이미 존재하는 이메일";
+"Email cannot be blank" = "이메일은 공란이 될 수 없습니다";
+"Username cannot be blank" = "사용자명은 공란이 될 수 없습니다";
+"Username already exists" = "이미 존재하는 사용자명";
+"Username must be at least 3 characters" = "사용자명은 최소 3 글자 이상입니다";
+"Username cannot be over 15 characters" = "사용자명은 15 글자를 넘을 수 없습니다";
+"Username can only contain letters and numbers" = "사용자명은 문자 및 숫자만 포함될 수 있습니다";
+"Username / password is not valid" = "사용자명 / 패스워드가 유효하지 않습니다";
+"A Social Network For Gamers" = "게이머들을 위한 소셜 네트워크";
+"Gamers" = "게이머들";
+"Sign up for a profile so people\ncan follow you" = "사용자들이 귀하를 팔로우할 수 있게\n프로필을 등록해 주세요";
+
+"Could not load notifications. Pull down to try again." = "알림을 로드하지 못했습니다. 끌어내림을 해서 다시 시도하세요.";
+"You have no notifications." = "아직 알림이 없습니다.";
+"Error retrieving notifications." = "에러 발생 알림.";
+"Notifications" = "알림";
+"Could not load users.\nPull down to try again." = "사용자들을 로드하지 못했습니다.\n끌어내림을 해서 다시 시도하세요.";
+"There are no users." = "사용자가 없습니다.";
+"Videos you share will show up here. Pull down to refresh." = "귀하가 공유한 비디오가 여기에 나타날 것입니다. 새로고침하려면 끌어내림해 주세요.";
+"Failed to load notification. Tap to retry." = "알림 로딩 실패. 다시 시도하려면 탭하세요.";
+"Nobody has liked this video." = "이 비디오를 라이크한 사용자가 없습니다.";

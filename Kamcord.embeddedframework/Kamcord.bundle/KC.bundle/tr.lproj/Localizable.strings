@@ -1,0 +1,416 @@
+"WeChat Sharing Disabled" = "Wechat Paylaşımı Devre Dışı";
+"Most Liked" = "En Çok Beğenilen";
+
+"Request Failed" = "İstek Başarısız";
+
+"Please sign-in again and authorize posting to share to Facebook." = "Lütfen yeniden oturum açın ve Facebook'ta paylaşmak için yetkilendirme gönderin.";
+
+"YouTube" = "YouTube";
+
+"You have been signed out of Kamcord due to your age." = "Yaşınız nedeniyle Kamcord'un dışına imzalamışsınız.";
+
+"Sign in" = "Oturum aç";
+
+"Facebook" = "Facebook";
+
+"Day" = "Gün";
+
+"Kamcord Policy" = "Kamcord Politikası";
+
+"Featured" = "Öne Çıkan";
+
+"OK" = "TAMAM";
+
+"Likers" = "Beğenenler";
+
+"No videos match your search." = "Hiçbir video arama kriterlerinize uymuyor.";
+
+"You must install the LINE App before you can share to LINE." = "LINE'ı paylaşmanızdan önce LINE Uygulamasını yüklemeniz gerekiyor.";
+
+"Uh oh" = "Eyvah";
+
+"Error retrieving videos." = "Videolar alınırken hata oluştu.";
+
+"Private" = "Özel";
+
+"Some of the data you've entered is invalid!" = "Girdiğiniz verilerin bazıları geçersiz!";
+
+"Followers" = "Takipçiler";
+
+"Save" = "Kaydet";
+
+"Sent" = "Gönderilen";
+
+"Error retrieving users." = "Kullanıcılar alınırken hata oluştu.";
+
+"Facebook Credentials Changed" = "Facebook Kimlik Bilgileri Değiştirildi";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions." = "Lütfen Ayarlar'ın üzerinde en az bir hesap etkinleştirin -> Twitter ve bu uygulama izinlerini verin";
+
+"Upload failed" = "Yükleme başarısız";
+
+"Video" = "Video";
+
+"Line" = "Line";
+
+"Please set your correct birthday. You are missing: %@" = "Lütfen doğru doğum gününüzü belirleyin. Eksiğiniz:%@";
+
+"Be the first to comment!" = "İlk yorumu siz yapın!";
+
+"Settings" = "Ayarlar";
+
+"Uploading" = "Yükleniyor";
+
+"You must install the WeChat App before you can share to WeChat." = "Wechat'i paylaşmadan önce Wechat Uygulamasını yüklemeniz gerekir.";
+
+"Voice Overlay Activated!" = "Ses Yükleme Etkinleştirildi!";
+
+"You have unsaved changes. Are you sure you want to go back?" = "Kaydedilmemiş değişiklikler var. Geri dönmek istediğinizden emin misiniz?";
+
+"LINE App Not Found" = "LINE Uygulaması Bulunamadı";
+"Could not load users.\nPull down to try again." = "Kullanıcılar yüklenemedi. \nYeniden denemek için aşağı çekin";
+
+"You have been signed out" = "Dışarı imzalandı";
+
+"gameplay" = "Oyun";
+
+"Not Authorized" = "Yetkili Değil";
+
+"Videos" = "Videolar";
+
+"Reset Password" = "Şifreyi Sıfırla";
+
+"Month" = "Ay";
+
+"WeChat App Not Found" = "WeChat Uygulaması Bulunamadı";
+
+"Before you can record your voice,\nplease enter your birth date." = "Önce sesinizi kaydedebilirsiniz,\nlütfen doğum tarihinizi girin";
+
+"Invalid Birthday" = "Geçersiz Doğumgünü";
+
+"Yes" = "Evet";
+
+"Unsaved Changes" = "Kaydedilmemiş Değişiklikler";
+
+"No Email Accounts" = "E-posta Hesapları Yok";
+
+"No" = "Hayır";
+
+"Most Popular" = "En Popüler";
+
+"Save Birthday" = "Doğum Gününü Kaydet";
+
+"Trending Now" = "Şimdi Popülerliği Artıyor";
+
+"Video Shared!" = "Video Paylaşıldı!";
+
+"Tags" = "Etiketler";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login." = "Facebook'unuzda kimlik değişti. Lütfen iOS Ayarları uygulamasını açmaya Facebook'a gidin ve oturumu kapatın ve giriş yenilemek için tekrar oturum açın.";
+
+"No email account is setup on this device. Please add an email account to send us feedback!" = "Hiçbir e-posta hesabı bu cihazda kurulu değil. Lütfen bize geribildirim göndermek için bir e-posta hesabı ekleyin!";
+
+"Voice Overlay will be enabled for future videos." = "Ses Yükleme gelecek videolar için etkin olacaktır.";
+
+"Report For Offensive Conduct" = "Saldırgan Davranış İçin İhbar Et";
+
+"Not authorized" = "Yetkili Değil";
+
+"Success" = "Başarılı";
+
+"Error" = "Hata";
+
+"Following" = "Takip ediliyor";
+
+"Please sign-in in Settings > Twitter and grant this application permission." = "Lütfen Ayarlar'da oturum açın > Twitter ve bu uygulamaya izin verin.";
+
+"Feedback" = "Geri Bildirim";
+
+"Edit Info" = "Düzenleme Bilgisi";
+
+"Follow" = "Takip et";
+
+"Sign Up" = "Kaydol";
+
+"Sign In" = "Giriş Yap";
+
+"Twitter" = "Twitter";
+
+"Follower" = "Takipçi";
+
+"Done" = "Bitti";
+
+"Cancel" = "İptal";
+
+"Close" = "Kapat";
+
+"No account connected" = "Bağlanmış hesap yok";
+
+"You cannot share to WeChat on this device." = "Bu cihazda WeChat paylaşımı yapamazsınız.";
+
+"Failed to change password" = "Şifreyi değiştirmek başarısız oldu";
+
+"NicoNico" = "NicoNico";
+
+"Are you sure you want to sign out?" = "Çıkış yapmak istediğinizden emin misiniz?";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again." = "Videonuz Kamcord'da paylaşıldı! Siz yine de onları seçtiğiniz diğer ağlarda paylaşabilirsiniz ve tekrar paylaşın.";
+
+"Voice Overlay will be activated for future videos." = "Ses Yükleme gelecek videolar için devreye girecektir.";
+
+"Please reconnect and try again." = "Lütfen yeniden bağlayın ve yeniden deneyin.";
+
+"Tagline failed to save" = "Slogan kaydetmek başarısız oldu";
+
+"Profile" = "Profil";
+
+"Please try again later." = "Lütfen daha sonra tekrar deneyin.";
+
+"Sign Out" = "Oturumu Kapat";
+
+"No Internet Connection" = "İnternet Bağlantısı Yok";
+
+"Please sign-in in Settings > Facebook and grant this application permission." = "Lütfen Ayarlar'a giriş yap > Facebook ve bu uygulamaya izin verin.";
+
+"Password" = "Şifre";
+
+"Voice Overlay Enabled!" = "Ses Yükleme Etkin!";
+
+"Log Out" = "Çıkış Yap";
+
+"WeChat" = "WeChat";
+
+"Try Again" = "Tekrar Dene";
+
+"Upload Failed!" = "Yükleme Başarısız!";
+
+"Microphone Permission Disabled!" = "Mikrofon İzni Devre Dışı!";
+
+"Share Replay" = "Tekrar Paylaş";
+
+"Delete Video" = "Video Sil";
+
+"Please setup an email account in Settings > Mail." = "Lütfen Ayarlar'da bir e-posta hesabı kurun > E-posta.";
+
+"Year" = "Yıl";
+
+"Select Twitter account to use" = "Kullanmak için Twitter hesabını seçin";
+
+"Email too long." = "Çok uzun e-posta.";
+
+"Email taken." = "E-posta alınmıştır.";
+
+"Invalid email" = "Geçersiz e-posta";
+
+"Password too short." = "Şifre çok kısa.";
+
+"Password too long." = "Şifre çok uzun.";
+
+"Invalid password." = "Geçersiz şifre.";
+
+"Username too short." = "Kullanıcı adı çok kısa.";
+
+"Username too long." = "Kullanıcı adı çok uzun.";
+
+"Invalid characters in username." = "Kullanıcı adında geçersiz karakterler.";
+
+"Username taken." = "Kullanıcı adı alınmış.";
+
+"Social" = "Sosyal";
+
+"Support" = "Destek";
+
+"Account" = "Hesap";
+
+"Terms of Service" = "Hizmet Şartları";
+
+"Privacy Policy" = "Gizlilik Politikası";
+
+"Send Feedback about Kamcord" = "Kamcord hakkında geri bildirim gönder";
+
+"Voice Overlay" = "Ses Yükleme";
+
+"Change Password" = "Şifre Değiştir";
+
+"Confirm Facebook Sign Out" = "Facebook Oturumu Kapat'ı Onayla";
+
+"Confirm YouTube Sign Out" = "YouTube Oturumu Kapat'ı Onayla";
+
+"Confirm Twitter Sign Out" = "Twitter Oturumu Kapat'ı Onayla";
+
+"Confirm Niconico Sign Out" = "Niconico Oturumu Kapat'ı Onayla";
+
+"Write a title..." = "Bir başlık yazın ...";
+
+"Write a description..." = "Bir açıklama yazın ...";
+
+"Liked" = "Beğendim";
+
+"Like" = "Beğen";
+
+"Make Private" = "Özelleştir";
+
+"Make Public" = "Açıklama Yap";
+
+"Report Video" = "Video İhbar Et";
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "Profil Oluştur";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "Oturum Aç";
+
+"Report Offensive Content" = "Saldırgan İçerik Bildir";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "Dokunarak \"Profil Oluştur\" aşağıda, Hizmet ve Gizlilik Politikasının Şartlarını Kamcord'un  kabul etmiş olursunuz.";
+
+"Loading YouTube sign-in..." = "YouTube oturum açma Yükleniyor ...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "Yorumlamak için bir Kamcord profili oluşturun, oyuncuları izleyin, ve videolarınızda daha fazla görünümler olsun!";
+
+"There are no popular videos at the moment!" = "Şu anda herhangi bir popüler video yok!";
+"Your likes feed is empty because you haven't liked any videos :(" = "Yeminiz boş çünkü herhangi bir video beğenmediniz :(";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "Sizin takip eden yeminiz boş çünkü kimseyi takip etmiyorsunuz: (\n\nKendi yeminizi oluşturmak için daha fazla kişi takip edin!";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "Topluluğun parçası ol!";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "Ses Yükle";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "Bağlandı";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "önce";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "gün";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "günler";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "saat";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "saatler";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "sa";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "saatler";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "tam şimdi";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "geçen ay";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "geçen hafta";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "geçen yıl";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "dakika";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "dakikalar";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "dakika";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "dakikalar";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "ay";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "ay";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "aylar";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "aylar";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "saniye";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "saniyeler";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "hafta";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "haftalar";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "hft";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "hft";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "yıl";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "yıllar";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "dün";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "yıl";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "yıl";
+
+"By" = "Tarafından";
+"Guest Player" = "Misafir Oyuncu";
+"Report" = "Rapor";
+"Likes" = "Beğenenler";
+"Connect" = "Bağlanın";
+"Disconnect" = "Bağlantıyı kesin";
+"Sort" = "Sıralayın";
+"Filter Search" = "Filtre Arayın";
+"Something went wrong. Please try again" = "Bir şeyler ters gitti. Lütfen tekrar deneyin";
+"Password must be at least 6 characters" = "Şifre en az 6 karakter olmalı";
+"Password cannot be over 30 characters" = "Şifre üzerinde 30'dan fazla karakter olamaz";
+"Current password incorrect" = "Mevcut şifre yanlış";
+"Password reset attempts exceeded" = "Parola sıfırlama girişimleri aşıldı";
+"Password cannot be blank" = "Şifre boş olamaz";
+"Email is not valid" = "E-posta geçerli değil";
+"Email cannot be over 64 characters" = "E-posta üzerinde 64 karakterden fazla olamaz";
+"Email already exists" = "E-posta zaten var";
+"Email cannot be blank" = "E-posta boş olamaz";
+"Username cannot be blank" = "Kullanıcı adı boş olamaz";
+"Username already exists" = "Kullanıcı adı zaten var";
+"Username must be at least 3 characters" = "Kullanıcı adı en az 3 karakter olmalıdır";
+"Username cannot be over 15 characters" = "Kullanıcı Adı  15 karakterden fazla olamaz";
+"Username can only contain letters and numbers" = "Kullanıcı adı sadece harf ve rakamları içerebilir";
+"Username / password is not valid" = "Kullanıcı adı / şifre geçerli değil";
+"A Social Network For Gamers" = "Oyuncular için Bir Sosyal Ağ";
+"Gamers" = "Oyuncular";
+"Sign up for a profile so people\ncan follow you" = "İnsanlar öylesine bir profil için kaydolabilir\nseni takip edebilir";
+
+"Could not load notifications. Pull down to try again." = "Bildirimler yüklenemedi. Tekrar denemek için aşağı çekin.";
+"You have no notifications." = "Hiç bildiriminiz yok.";
+"Error retrieving notifications." = "Bildirimleri alınırken hata oluştu.";
+"Notifications" = "Bildirimler";
+"Could not load users.\nPull down to try again." = "Kullanıcılar yüklenemedi. \nTekrar denemek için aşağı çekin.";
+"There are no users." = "Hiçbir kullanıcı yok.";
+"Videos you share will show up here. Pull down to refresh." = "Paylaştığınız videolar burada görünecektir. Yenilemek için aşağı çekin.";
+"Failed to load notification. Tap to retry." = "Bildirim yüklenemedi. Yeniden denemek için dokunun.";
+"Nobody has liked this video." = "Kimse bu videoyu sevmedi.";

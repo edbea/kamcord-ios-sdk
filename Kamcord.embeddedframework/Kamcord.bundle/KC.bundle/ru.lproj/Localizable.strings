@@ -1,0 +1,419 @@
+"WeChat Sharing Disabled"="Функция WeChat Поделиться отключена";
+
+"Most Liked"="Самые популярные";
+
+"Request Failed"="Ошибка запроса";
+
+"Please sign-in again and authorize posting to share to Facebook."="Пожалуйста, войдите  снова и авторизируйтесь, чтобы делиться публикациями на Facebook";
+
+"YouTube"="YouTube";
+
+"You have been signed out of Kamcord due to your age."="Вы были отписаны от  Kamcord  из-за вашего возраста.";
+
+"Sign in"="Войти";
+
+"Facebook"="Facebook";
+
+"Day"="День";
+
+"Kamcord Policy"="Политика Kamcord";
+
+"Featured"="Отображаемые";
+
+"OK"="OK";
+
+"Likers"="Кому понравилось";
+
+"No videos match your search."="Нет видео, соответствующих вашим условиям поиска";
+
+"You must install the LINE App before you can share to LINE."="Вы должны установить приложение LINE,  прежде чем вы сможете поделиться через LINE";
+
+"Uh oh"="Ой-ой";
+
+"Error retrieving videos."="Ошибка получения видео";
+
+"Private"="Личный";
+
+"Some of the data you've entered is invalid!"="Некоторое, из того, что вы ввели, является недопустимым!";
+
+"Followers"="Читатели";
+
+"Save"="Сохранить";
+
+"Sent"="Отправить";
+
+"Error retrieving users."="Ошибка поиска пользователей";
+
+"Facebook Credentials Changed"="Учетные данные Facebook изменены";
+
+"Please enable at least one account in Settings -> Twitter and grant this application permissions."="Пожалуйста, включите хотя бы один аккаунт в Настройках -> Twitter и предоставьте  разрешения для этого приложения";
+
+"Upload failed"="Загрузка не удалась";
+
+"Video"="Видео";
+
+"Line"="Line";
+
+"Please set your correct birthday. You are missing: %@"="Пожалуйста, установите правильный день рождения. Вы забыли указать:% @.";
+
+"Be the first to comment!"="Оставьте первый комментарий!";
+
+"Settings"="Настройки";
+
+"Uploading"="Загрузка";
+
+"You must install the WeChat App before you can share to WeChat."="Вы должны установить приложение WeChat, прежде чем вы сможете поделиться через WeChat";
+
+"Voice Overlay Activated!"="Наложение голоса активировано!";
+
+"You have unsaved changes. Are you sure you want to go back?"="Вы не сохранили изменения. Вы уверены, что хотите вернуться?";
+
+"LINE App Not Found"="Приложение LINE  не найдено";
+
+"Could not load users.\nPull down to try again."="Не удалось загрузить пользователей. \nПотяните вниз, чтобы попытаться еще раз";
+
+"You have been signed out"="Вы вышли из системы";
+
+"gameplay"="геймплей";
+
+"Not Authorized"="Вы не авторизованы";
+
+"Videos"="Видео";
+
+"Reset Password"="Сброс пароля";
+
+"Month"="Месяц";
+
+"WeChat App Not Found"="Приложение WeChat не найдено";
+
+"Before you can record your voice,\nplease enter your birth date."="Прежде, чем вы сможете записать свой голос, \nпожалуйста, введите дату своего рождения";
+
+"Invalid Birthday"="Неверная дата рождения";
+
+"Yes"="Да";
+
+"Unsaved Changes"="Несохраненные изменения";
+
+"No Email Accounts"="Нет учетных записей электронной почты";
+
+"No"="Нет";
+
+"Most Popular"="Самые популярные";
+
+"Save Birthday"="Сохранить дату рождения";
+
+"Trending Now"="Актуальные";
+
+"Video Shared!"="Вы поделились видео!";
+
+"Tags"="Теги";
+
+"Your Facebook credentials have changed. Please open the iOS Settings app, go to Facebook, and sign out and sign in again to refresh your login."="Ваши учетные данные Facebook изменились. Пожалуйста, откройте Настройки приложения IOS, перейдите на Facebook, выйдите и войдите снова, чтобы обновить свою учетную запись";
+
+"No email account is setup on this device. Please add an email account to send us feedback!"="На этом устройстве нет ни одной настроенной учетной записи электронной почты. Пожалуйста, добавьте учетную запись электронной почты, чтобы отправить нам отзыв!";
+
+"Voice Overlay will be enabled for future videos."="Наложение голоса будет включено для будущих видео";
+
+"Report For Offensive Conduct"="Сообщить об оскорбительном поведении";
+
+"Not authorized"="Вы не авторизованы";
+
+"Success"="Успешно";
+
+"Error"="Ошибка";
+
+"Following"="Читаемые";
+
+"Please sign-in in Settings > Twitter and grant this application permission."="Пожалуйста, войдите в Настройки> Twitter и предоставьте разрешение для этого приложения";
+
+"Feedback"="Обратная связь";
+
+"Edit Info"="Редактировать информацию";
+
+"Follow"="Подписаться";
+
+"Sign Up"="Войти в систему";
+
+"Sign In"="Вход";
+
+"Twitter"="Twitter";
+
+"Follower"="Подписчик";
+
+"Done"="Готово";
+
+"Cancel"="Отменить";
+
+"Close"="Закрыть";
+
+"No account connected"="Нет связанных аккаунтов";
+
+"You cannot share to WeChat on this device."="Вы не можете поделиться с WeChat на этом устройстве.";
+
+"Failed to change password"="Не удалось изменить пароль";
+
+"NicoNico"="NicoNico";
+
+"Are you sure you want to sign out?"="Вы уверены, что хотите выйти?";
+
+"Your video has been shared to Kamcord! You can still share to other networks by selecting them and sharing again."="Вы поделились вашим видео через Kamcord! Вы также можете поделиться через другие сети, выбрав их и поделиться снова.";
+
+"Voice Overlay will be activated for future videos."="Наложение голоса будет активировано для будущих видео.";
+
+"Please reconnect and try again."="Пожалуйста, подключитесь и попробуйте еще раз.";
+
+"Tagline failed to save"="Не удалось сохранить теги";
+
+"Profile"="Профиль";
+
+"Please try again later."="Пожалуйста, повторите попытку позже.";
+
+"Sign Out"="Выход";
+
+"No Internet Connection"="Нет подключения к Интернету";
+
+"Please sign-in in Settings > Facebook and grant this application permission."="Пожалуйста, войдите в Настройки> Facebook и предоставьте разрешения для этого приложения.";
+
+"Password"="Пароль";
+
+"Voice Overlay Enabled!"="Наложение голоса включено!";
+
+"Log Out"="Выход";
+
+"WeChat"="WeChat";
+
+"Try Again"="Попробуйте еще раз";
+
+"Upload Failed!"="Загрузка не удалась!";
+
+"Microphone Permission Disabled!"="Доступ к микрофону отключен!";
+
+"Share Replay"="Поделиться Повторить";
+
+"Delete Video"="Удалить видео";
+
+"Please setup an email account in Settings > Mail."="Пожалуйста, установите учетную запись электронной почты в меню Настройки> Почта.";
+
+"Year"="Год";
+
+"Select Twitter account to use"="Выберите аккаунт Twitter, который необходимо использовать";
+
+"Email too long."="Слишком длинный адрес электронной почты.";
+
+"Email taken."="Адрес электронной почты принят.";
+
+"Invalid email"="Неверный адрес электронной почты";
+
+"Password too short."="Пароль слишком короткий.";
+
+"Password too long."="Пароль слишком длинный.";
+
+"Invalid password."="Неверный пароль.";
+
+"Username too short."="Имя пользователя слишком короткое.";
+
+"Username too long."="Имя пользователя слишком длинное.";
+
+"Invalid characters in username."="Недопустимые символы в имени пользователя.";
+
+"Username taken."="Имя пользователя принято.";
+
+"Social"="Социальный";
+
+"Support"="Поддержка";
+
+"Account"="Аккаунт";
+
+"Terms of Service"="Условия предоставления услуг";
+
+"Privacy Policy"="Политика конфиденциальности";
+
+"Send Feedback about Kamcord"="Отправить отзыв о Kamcord";
+
+"Voice Overlay"="Наложение голоса";
+
+"Change Password"="Изменить пароль";
+
+"Confirm Facebook Sign Out"="Подтвердите выход из Facebook";
+
+"Confirm YouTube Sign Out"="Подтвердите выход из YouTube";
+
+"Confirm Twitter Sign Out"="Подтвердите выход из Twitter";
+
+"Confirm niconico Sign Out"="Подтвердите выход из niconico";
+
+"Write a title..."="Написать название ...";
+
+"Write a description..."="Написать описание ...";
+
+"Liked"="Понравившиеся";
+
+"Like"="Лайк";
+
+"Make Private"="Сделать личным";
+
+"Make Public"="Сделать публичным";
+
+"Report Video"="Сообщить о видео";
+
+
+/*[[[ Class = "UIButton"; normalTitle = "Create a Profile"; ObjectID = "gtt-bh-oHL"; ]]]*/
+"Create a Profile" = "Создать профиль";
+
+/*[[[ Class = "UIViewController"; title = "Log In"; ObjectID = "TSo-Qe-A7J"; ]]]*/
+"Log In" = "Войти в систему";
+
+"Report Offensive Content" = "Сообщить об оскорбительном содержании";
+
+"By tapping \"Create a Profile\" below, you are agreeing to Kamcord's Terms of Service and Privacy Policy." = "При нажатии \"Создать профиль\" ниже, вы соглашаетесь с условиями предоставления услуг и политикой конфиденциальности Kamcord .";
+
+"Loading YouTube sign-in..." = "Загрузка страницы авторизации Youtube ...";
+
+/*[[[ Class = "UILabel"; text = "Create a Kamcord profile to comment, follow players, and get more views on your videos!"; ObjectID = "F3W-y2-4LN"; ]]]*/
+"Create a Kamcord profile to comment, follow players, and get more views on your videos!" = "Создать профиль Kamcord, чтобы комментировать, подписываться на новости и получать больше просмотров вашего видео!";
+
+"There are no popular videos at the moment!" = "Нет популярных видео на данный момент!";
+"Your likes feed is empty because you haven't liked any videos :(" = "Список понравившихся видео пуст, потому что вы еще  не лайкнули ни одного видео :(";
+"Your follows feed is empty because you don't follow anyone :(\n\nFollow more people to create your own feed!" = "Ваша новостная лента пуста, потому что вы еще ни на кого не подписаны:(\n\n Подпишитесь на большее число людей, чтобы создать свою собственную ленту новостей";
+
+/*[[[ Class = "UILabel"; text = "Become part of the community!"; ObjectID = "OIv-v5-a8W"; ]]]*/
+"Become part of the community!" = "Станьте частью нашего сообщества!";
+
+/*[[[ Class = "UILabel"; text = "Voice Overlay"; ObjectID = "ptR-iR-TRt"; ]]]*/
+"Voice Overlay" = "Наложение голоса";
+
+/*[[[ Class = "UILabel"; text = "Connected"; ObjectID = "95e-rp-38P"; ]]]*/
+"Connected" = "Соединение установлено";
+
+/*[[[ Past Deictic Expression ]]]*/
+"ago" = "назад";
+
+/*[[[ Day Unit (Singular, Abbreviated)
+ Day Unit (Singular) ]]]*/
+"day" = "день";
+
+/*[[[ Day Unit (Plural, Abbreviated)
+ Day Unit (Plural) ]]]*/
+"days" = "дни";
+
+/*[[[ Deictic Expression Format (#{Time} #{Ago/From Now} ]]]*/
+"Deictic Expression Format String" = "%1$@%2$@ ";
+
+/*[[[ Hour Unit (Singular) ]]]*/
+"hour" = "час";
+
+/*[[[ Hour Unit (Plural) ]]]*/
+"hours" = "часы";
+
+/*[[[ Hour Unit (Singular, Abbreviated) ]]]*/
+"hr" = "ч.";
+
+/*[[[ Hour Unit (Plural, Abbreviated) ]]]*/
+"hrs" = "ч.";
+
+/*[[[ Present Deictic Expression ]]]*/
+"just now" = "прямо сейчас";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last month" = "в прошлом месяце";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last week" = "на прошлой неделе";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"last year" = "в прошлом году";
+
+/*[[[ Minute Unit (Singular, Abbreviated) ]]]*/
+"min" = "мин.";
+
+/*[[[ Minute Unit (Plural, Abbreviated) ]]]*/
+"mins" = "мин.";
+
+/*[[[ Minute Unit (Singular) ]]]*/
+"minute" = "минута";
+
+/*[[[ Minute Unit (Plural) ]]]*/
+"minutes" = "минуты";
+
+/*[[[ Month Unit (Singular, Abbreviated) ]]]*/
+"mo" = "мес.";
+
+/*[[[ Month Unit (Singular) ]]]*/
+"month" = "месяц";
+
+/*[[[ Month Unit (Plural) ]]]*/
+"months" = "месяцы";
+
+/*[[[ Month Unit (Plural, Abbreviated) ]]]*/
+"mos" = "мес.";
+
+/*[[[ Second Unit (Singular) ]]]*/
+"second" = "секунда";
+
+/*[[[ Second Unit (Plural) ]]]*/
+"seconds" = "секунды";
+
+/*[[[ Week Unit (Singular) ]]]*/
+"week" = "неделя";
+
+/*[[[ Week Unit (Plural) ]]]*/
+"weeks" = "недели";
+
+/*[[[ Week Unit (Singular, Abbreviated) ]]]*/
+"wk" = "нед.";
+
+/*[[[ Week Unit (Plural, Abbreviated) ]]]*/
+"wks" = "нед.";
+
+/*[[[ Year Unit (Singular) ]]]*/
+"year" = "год";
+
+/*[[[ Year Unit (Plural) ]]]*/
+"years" = "лет";
+
+/*[[[ No comment provided by engineer. ]]]*/
+"yesterday" = "вчера";
+
+/*[[[ Year Unit (Singular, Abbreviated) ]]]*/
+"yr" = "г.";
+
+/*[[[ Year Unit (Plural, Abbreviated) ]]]*/
+"yrs" = "лет";
+
+"By"="";
+"Guest Player"="Гостевой Игрок";
+"Report"="Сообщить";
+"Likes"="Лайки";
+"Connect"="Соединиться";
+"Disconnect"="Разорвать соединение";
+"Sort"="Сортировка";
+"Filter Search"="Фильтр поиска";
+"Something went wrong. Please try again"="Что-то пошло не так. Пожалуйста, попробуйте снова.";
+"Password must be at least 6 characters"="Пароль должен содержать минимум 6 символов";
+"Password cannot be over 30 characters"="Пароль не должен превышать 30 символов";
+"Current password incorrect"="Введенный пароль неверен";
+"Password reset attempts exceeded"="Вы исчерпали попытки по восстановлению пароля";
+"Password cannot be blank"="Пароль не может быть пустым";
+"Email is not valid"="Электронный адрес введен неверно";
+"Email cannot be over 64 characters"="Электронный адрес не должен превышать 64 символа";
+"Email already exists"="Такой электронный адрес уже существует";
+"Email cannot be blank"="Электронный адрес не может быть пустым";
+"Username cannot be blank"="Имя пользователя не может быть пустым";
+"Username already exists"="Такое имя пользователя уже существует";
+"Username must be at least 3 characters"="Имя пользователя должно содержать минимум 3 символа";
+"Username cannot be over 15 characters"="Имя пользователя не должно превышать 15 символов";
+"Username can only contain letters and numbers"="Имя пользователя может содержать только буквы и цифры";
+"Username / password is not valid"="Имя пользователя / пароль введены неверно";
+"A Social Network For Gamers"="Социальная сеть для геймеров";
+"Gamers"="Геймеры";
+"Sign up for a profile so people\ncan follow you"="Войдите в свой профиль, чтобы люди\nмогли вас читать";
+
+"Could not load notifications. Pull down to try again."="Не удалось загрузить уведомления. Потяните вниз, чтобы попробовать снова.";
+"You have no notifications."="У вас нет уведомлений.";
+"Error retrieving notifications."="Ошибка получения уведомлений.";
+"Notifications"="Уведомления.";
+"Could not load users.\nPull down to try again."="Не удалось загрузить пользователей. \nПотяните вниз, чтобы попробовать снова.";
+"There are no users."="Здесь нет пользователей.";
+"Videos you share will show up here. Pull down to refresh."="Видео, с которыми вы поделились, будут показаны здесь. Потяните вниз, чтобы обновить.";
+"Failed to load notification. Tap to retry."="Не удалось загрузить уведомление. Нажмите, чтобы попробовать снова.";
+"Nobody has liked this video."="Никто не лайкнул это видео.";
